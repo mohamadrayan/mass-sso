@@ -30,7 +30,7 @@ Files:
 Traefik routes `/ui/console` and `/ui/console-theme` to `console-theme` with priority `350`, which is higher than the generic ZITADEL catch-all route. The proxy forwards Console requests to `zitadel-api:8080` and injects:
 
 ```html
-<link rel="stylesheet" href="/ui/console-theme/mass-console.css">
+<link rel="stylesheet" href="/ui/console-theme/mass-console.css?v=20260510j">
 <script src="/ui/console-theme/mass-console.js"></script>
 ```
 
@@ -107,12 +107,55 @@ Mobile `390x844` spot check for Users:
 |---|---:|---:|---:|---:|---:|
 | Users | true | 0 | 47 | 391 | 390 |
 
+## Iterative Visual QA Follow-up
+
+An additional full-console visual pass was run after the premium Login V2 redesign to improve consistency across internal screens.
+
+Updated Console theme improvements:
+
+- Raised the Console shell from a simple recolor to a polished light Mass Data baseline.
+- Added warmer page surfaces, elevated cards, cleaner button states, table row hover, and consistent gold focus rings.
+- Fixed the outlined-button state where `Learn More` could appear as gold text on a gold background.
+- Removed public page-level horizontal overflow on mobile.
+- Converted mobile tables into compact stacked cards for admin pages such as Users, Role Assignments, Actions, and Events.
+- Hid heavy audit columns such as payload/resource owner/sequence on mobile where they broke layout; desktop remains unchanged.
+- Kept the top navigation horizontally scrollable on mobile instead of forcing the whole page wider.
+
+Final artifact set:
+
+- `.codex-artifacts/sso-visual/iterative-console-2026-05-10/console-final.json`
+- `.codex-artifacts/sso-visual/iterative-console-2026-05-10/*-final.png`
+- `.codex-artifacts/sso-visual/iterative-console-2026-05-10/instance-events-mobile390-r6-scroll900.png`
+
+Final checked routes:
+
+- `/ui/console/`
+- `/ui/console/users`
+- `/ui/console/projects`
+- `/ui/console/org`
+- `/ui/console/grants`
+- `/ui/console/actions`
+- `/ui/console/instance`
+- `/ui/console/instance?id=branding`
+- `/ui/console/instance?id=login`
+- `/ui/console/instance?id=domain`
+- `/ui/console/instance?id=events`
+- `/ui/console/instance?id=languages`
+
+Final visual scan summary:
+
+| Scope | Checked pages | Desktop old blue | Desktop overflow | Mobile old blue | Mobile page overflow |
+|---|---:|---:|---:|---:|---:|
+| Console final pass | 12 | 0 on all | 0 on all | 0 on all | 0 on all |
+
+The Events page was also checked after scrolling on mobile because the audit table sits below the initial instance summary. The table renders as stacked cards without widening the page.
+
 ## Known Limitations
 
 - This is a CSS/JS injection layer, not a compiled ZITADEL Console theme.
 - Future ZITADEL upgrades can change internal class names or CSS variables and may require retesting this proxy.
 - The Console remains a vendor admin UI. For a fully controlled UAE Design System experience, build a separate Mass Data admin portal or a custom ZITADEL Console image.
-- Mobile table layouts still inherit some vendor behavior. The visual theme is applied, but the underlying table UX is not redesigned.
+- Mobile table layouts are improved through CSS, but they are still a vendor Console adaptation rather than a native Mass Data admin-table component.
 
 ## Rollback
 
