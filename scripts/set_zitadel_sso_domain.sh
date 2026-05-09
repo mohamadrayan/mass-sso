@@ -4,6 +4,22 @@ set -euo pipefail
 # DESTRUCTIVE: this script reinitializes ZITADEL and deletes Docker volumes,
 # including the Postgres database volume.
 
+cat <<'WARNING'
+WARNING: this script mutates /opt/zitadel-compose configuration and then runs:
+
+  docker compose --env-file .env -f docker-compose.yml down -v
+
+That deletes the ZITADEL Docker volumes, including the Postgres database
+volume. Continue only for a deliberate reinitialization after backups have
+been verified.
+WARNING
+
+read -r -p "Type DELETE ZITADEL DATA to continue: " CONFIRM
+if [ "${CONFIRM}" != "DELETE ZITADEL DATA" ]; then
+  echo "Aborted. No files, containers, or volumes were changed."
+  exit 1
+fi
+
 cd /opt/zitadel-compose
 
 ADMIN_PASSWORD="${ZITADEL_ADMIN_PASSWORD:-CHANGE_ME_STRONG_INITIAL_PASSWORD}"
@@ -49,22 +65,6 @@ fi
 
 if ! grep -q '^ZITADEL_ADMIN_PASSWORD=' .env; then
   echo "ZITADEL_ADMIN_PASSWORD=${ADMIN_PASSWORD}" >> .env
-fi
-
-cat <<'WARNING'
-WARNING: this script will run:
-
-  docker compose --env-file .env -f docker-compose.yml down -v
-
-That deletes the ZITADEL Docker volumes, including the Postgres database
-volume. Continue only for a deliberate reinitialization after backups have
-been verified.
-WARNING
-
-read -r -p "Type DELETE ZITADEL DATA to continue: " CONFIRM
-if [ "${CONFIRM}" != "DELETE ZITADEL DATA" ]; then
-  echo "Aborted. No containers or volumes were removed."
-  exit 1
 fi
 
 docker compose --env-file .env -f docker-compose.yml down -v
