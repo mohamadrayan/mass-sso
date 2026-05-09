@@ -194,3 +194,24 @@ Possible only with explicit approval:
 - Patch static/runtime assets inside the running container.
 
 Those options are brittle compared with a supported portal or a custom Console build, and they should be handled as a separate engineering decision.
+
+## Follow-up: Console Theme Proxy
+
+After this QA finding, a controlled `/ui/console` theme proxy was added and deployed on `2026-05-10`.
+
+See:
+
+- `docs/SSO-CONSOLE-THEME-PROXY-2026-05-10.md`
+- `compose/console-theme/nginx.conf`
+- `compose/console-theme/mass-console.css`
+- `compose/console-theme/mass-console.js`
+
+Post-deployment visual audit showed:
+
+| Page | Theme CSS loaded | Old blue count | Gold count |
+|---|---:|---:|---:|
+| Users | true | 0 | 53 |
+| Instance branding | true | 0 | 33 |
+| Projects | true | 0 | 35 |
+
+This closes the visible blue-theme issue through an injected CSS/JS wrapper. It does not convert the vendor Console into a native UAE Design System application, so future ZITADEL upgrades must retest the proxy.
