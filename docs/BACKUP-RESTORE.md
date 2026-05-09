@@ -13,8 +13,7 @@ This deployment stores ZITADEL data in PostgreSQL inside Docker.
 Run on the server:
 
 ```bash
-ssh tariq@31.210.173.252
-set -euo pipefail
+ssh tariq@31.210.173.252 'bash -seuo pipefail' <<'EOF'
 cd /opt/zitadel-compose
 mkdir -p backups
 STAMP="$(date +%Y%m%d%H%M%S)"
@@ -24,6 +23,7 @@ docker exec zitadel-postgres-1 pg_dump -U postgres -d zitadel | gzip > "$TMP"
 gzip -t "$TMP"
 mv "$TMP" "$BACKUP"
 sha256sum "$BACKUP" > "${BACKUP}.sha256"
+EOF
 ```
 
 Also back up the server-only `.env` file separately into the approved secrets backup location. Do not commit `.env`.
