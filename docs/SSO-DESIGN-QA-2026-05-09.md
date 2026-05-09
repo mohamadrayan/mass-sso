@@ -17,6 +17,8 @@ Not covered as a redesign target:
 
 ## Live Branding Applied
 
+Update on `2026-05-10`: the live instance and `Mass Data` organization label policies were changed from `THEME_MODE_AUTO` to `THEME_MODE_LIGHT` so the default/ordinary visual baseline is light mode and the Mass Data gold styling is easier to see in normal browser conditions.
+
 Light mode:
 
 - Background: `#FCFCFC`
@@ -24,12 +26,17 @@ Light mode:
 - Warning: `#B73417`
 - Font: `#1A1A1A`
 
-Dark mode:
+Dark palette after the light-default change:
 
-- Background: `#1A1A1A`
+- Background: `#FCFCFC`
 - Primary: `#92722A`
-- Warning: `#F5AC7C`
-- Font: `#FCFCFC`
+- Warning: `#B73417`
+- Font: `#1A1A1A`
+
+Theme mode:
+
+- Instance label policy: `THEME_MODE_LIGHT`
+- `Mass Data` organization label policy: `THEME_MODE_LIGHT`
 
 Project setting:
 
@@ -59,10 +66,12 @@ Viewport and state matrix:
 - Keyboard focus state
 - Forced `dir="rtl"` layout check
 - 175% and 200% zoom checks
+- `2026-05-10` light-default verification under `.codex-artifacts/sso-visual/light-default-2026-05-10/`
 
 Result summary:
 
 - `Mass AI Core` real auth request uses the UAE gold primary button after the header fix.
+- A fresh normal/light browser renders the Login V2 screen in the light visual baseline with the Mass Data gold focus/primary styling.
 - Automated style audit found `oldBlue=0` on checked `Mass AI Core` login states.
 - Primary button contrast measured `4.66:1`.
 - Light body contrast measured `16.96:1`.
@@ -72,6 +81,7 @@ Result summary:
 - Empty login form disables `Continue`, preventing invalid submit.
 - Keyboard focus is visible.
 - Mobile and desktop screenshots showed no obvious overlap, clipping, or unintended horizontal scrolling on the checked login states.
+- ZITADEL Login V2 still exposes its own dark-mode toggle and may render a dark class when the browser explicitly prefers dark mode; the official label policy API reports `THEME_MODE_LIGHT`, but the Login V2 renderer does not fully suppress that toggle behavior.
 
 ## Accessibility Findings
 

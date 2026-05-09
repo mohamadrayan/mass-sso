@@ -28,10 +28,13 @@ Organization branding API verification returned:
 - Light warning: `#B73417`
 - Light font: `#1A1A1A`
 - Dark primary: `#92722A`
-- Dark background: `#1A1A1A`
-- Dark warning: `#F5AC7C`
-- Dark font: `#FCFCFC`
+- Dark background: `#FCFCFC`
+- Dark warning: `#B73417`
+- Dark font: `#1A1A1A`
+- Theme mode: `THEME_MODE_LIGHT`
 - `disableWatermark`: `true`
+
+The `2026-05-10` follow-up intentionally makes the default branding baseline light mode, not automatic dark/light switching, so reviewers can see the Mass Data styling change clearly under normal browser settings.
 
 ## Internal Console Route Inventory Checked
 

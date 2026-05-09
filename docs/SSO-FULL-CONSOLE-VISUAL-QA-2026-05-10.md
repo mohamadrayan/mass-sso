@@ -72,6 +72,13 @@ Total coverage:
 
 The Login V2 path remains correctly branded, but the authenticated ZITADEL Console system screens are **not fully compliant with the UAE/Mass Data visual design**.
 
+Follow-up branding baseline change:
+
+- Instance label policy was changed from `THEME_MODE_AUTO` to `THEME_MODE_LIGHT`.
+- `Mass Data` organization label policy was changed from `THEME_MODE_AUTO` to `THEME_MODE_LIGHT`.
+- The dark palette values were aligned to the light palette: background `#FCFCFC`, font `#1A1A1A`, warning `#B73417`, primary `#92722A`.
+- Normal/light browser verification renders Login V2 as the light baseline. ZITADEL Login V2 still exposes a user/browser dark-mode toggle and can render a dark class when the browser explicitly prefers dark mode.
+
 The broader pass confirms the earlier finding:
 
 - All `82` checked Console cases still contain ZITADEL/Angular Material blue styling.
