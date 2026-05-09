@@ -1,0 +1,92 @@
+# Backup and Restore Runbook
+
+This deployment stores ZITADEL data in PostgreSQL inside Docker.
+
+- Compose service: `postgres`
+- Container name: `zitadel-postgres-1`
+- Database: `zitadel`
+- Data volume: `zitadel_postgres-data`
+- Compose directory: `/opt/zitadel-compose`
+
+## Backup
+
+Run on the server:
+
+```bash
+ssh tariq@31.210.173.252
+cd /opt/zitadel-compose
+mkdir -p backups
+STAMP="$(date +%Y%m%d%H%M%S)"
+docker exec zitadel-postgres-1 pg_dump -U postgres -d zitadel | gzip > "backups/zitadel-${STAMP}.sql.gz"
+sha256sum "backups/zitadel-${STAMP}.sql.gz" > "backups/zitadel-${STAMP}.sql.gz.sha256"
+```
+
+Also back up the server-only `.env` file separately into the approved secrets backup location. Do not commit `.env`.
+
+## Verify Backup File
+
+```bash
+cd /opt/zitadel-compose
+gzip -t backups/zitadel-YYYYMMDDHHMMSS.sql.gz
+sha256sum -c backups/zitadel-YYYYMMDDHHMMSS.sql.gz.sha256
+```
+
+## Restore Test on a Non-Production Host
+
+1. Copy the repo, `.env`, and selected backup to the test host.
+2. Start Postgres only:
+
+   ```bash
+   cd /opt/zitadel-compose
+   docker compose --env-file .env -f docker-compose.yml up -d postgres
+   ```
+
+3. Restore the database:
+
+   ```bash
+   gzip -dc backups/zitadel-YYYYMMDDHHMMSS.sql.gz |
+     docker exec -i zitadel-postgres-1 psql -U postgres -d zitadel
+   ```
+
+4. Start the full stack:
+
+   ```bash
+   docker compose --env-file .env -f docker-compose.yml up -d --wait
+   docker compose --env-file .env -f docker-compose.yml ps
+   ```
+
+5. Confirm login and console access on the test endpoint.
+
+## Production Restore
+
+Use only during an approved incident or disaster recovery window.
+
+```bash
+cd /opt/zitadel-compose
+docker compose --env-file .env -f docker-compose.yml down
+docker compose --env-file .env -f docker-compose.yml up -d postgres
+gzip -dc backups/zitadel-YYYYMMDDHHMMSS.sql.gz |
+  docker exec -i zitadel-postgres-1 psql -U postgres -d zitadel
+docker compose --env-file .env -f docker-compose.yml up -d --wait
+```
+
+Do not use `docker compose down -v` during a normal restore unless the recovery plan explicitly calls for deleting the existing Docker volumes.
+
+## Schedule and Retention
+
+- Take a backup after bootstrap and before every upgrade.
+- Take daily backups for production use.
+- Keep at least 14 daily backups and 4 weekly backups unless a stronger retention policy is required.
+- Store at least one recent backup outside the server.
+- Test restore at least monthly and after major ZITADEL/Postgres upgrades.
+
+## Recovery Requirements
+
+A rebuild requires:
+
+- This repo.
+- Server-only `.env`.
+- Latest verified database backup.
+- TLS certificate material or a plan to reissue certificates.
+- DNS and Cloudflare access.
+- ZITADEL master key from the secrets vault.
