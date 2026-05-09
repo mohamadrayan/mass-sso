@@ -23,13 +23,18 @@ Files:
 - `compose/console-theme/nginx.conf`
 - `compose/console-theme/mass-console.css`
 - `compose/console-theme/mass-console.js`
+- `compose/console-theme/mass-login.css`
+- `compose/console-theme/mass-login.js`
+- `compose/console-theme/massdata-logo.png`
 
-Traefik routes `/ui/console` and `/ui/console-theme` to `console-theme` with priority `350`, which is higher than the generic ZITADEL catch-all route. The proxy forwards requests to `zitadel-api:8080` and injects:
+Traefik routes `/ui/console` and `/ui/console-theme` to `console-theme` with priority `350`, which is higher than the generic ZITADEL catch-all route. The proxy forwards Console requests to `zitadel-api:8080` and injects:
 
 ```html
 <link rel="stylesheet" href="/ui/console-theme/mass-console.css">
 <script src="/ui/console-theme/mass-console.js"></script>
 ```
+
+The same proxy now also routes `/` and `/ui/v2/login` to the Login V2 container and injects the premium Mass Data login theme. See `docs/SSO-LOGIN-PREMIUM-THEME-2026-05-10.md`.
 
 ## Theme Behavior
 
