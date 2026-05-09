@@ -10,7 +10,7 @@ This deployment stores ZITADEL data in PostgreSQL inside Docker.
 
 ## Backup
 
-Run on the server:
+Run from an operator machine with SSH access:
 
 ```bash
 ssh tariq@31.210.173.252 'bash -seuo pipefail' <<'EOF'
