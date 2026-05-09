@@ -31,6 +31,8 @@ services:
   zitadel-api:
     image: ghcr.io/zitadel/zitadel:${ZITADEL_VERSION}
     restart: unless-stopped
+    # Required for the current bootstrap token volume workflow on v4.13.0.
+    # See docs/NONROOT-CONTAINER-EVALUATION.md before changing this.
     user: "0"
     command: start-from-init --masterkey "${ZITADEL_MASTERKEY}"
     environment:
@@ -129,6 +131,8 @@ services:
   zitadel-login:
     image: ghcr.io/zitadel/zitadel-login:${ZITADEL_VERSION}
     restart: unless-stopped
+    # Kept aligned with the bootstrap token volume workflow used by zitadel-api.
+    # See docs/NONROOT-CONTAINER-EVALUATION.md before changing this.
     user: "0"
     environment:
       ZITADEL_API_URL: http://zitadel-api:8080
