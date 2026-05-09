@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+cd /opt/zitadel-compose
+
+ADMIN_PASSWORD="${ZITADEL_ADMIN_PASSWORD:-CHANGE_ME_STRONG_INITIAL_PASSWORD}"
+
+cp .env ".env.bak.$(date +%Y%m%d%H%M%S)"
+cp docker-compose.yml "docker-compose.yml.bak.$(date +%Y%m%d%H%M%S)"
+
+sed -i \
+  -e "s/^ZITADEL_DOMAIN=.*/ZITADEL_DOMAIN=sso.massdata.ae/" \
+  -e "s/^PROXY_HTTP_PUBLISHED_PORT=.*/PROXY_HTTP_PUBLISHED_PORT=8081/" \
+  -e "s/^ZITADEL_EXTERNALPORT=.*/ZITADEL_EXTERNALPORT=443/" \
+  -e "s/^ZITADEL_EXTERNALSECURE=.*/ZITADEL_EXTERNALSECURE=true/" \
+  -e "s/^ZITADEL_PUBLIC_SCHEME=.*/ZITADEL_PUBLIC_SCHEME=https/" \
+  .env
+
+if ! grep -q 'ZITADEL_FIRSTINSTANCE_ORG_HUMAN_USERNAME' docker-compose.yml; then
+  sed -i '/ZITADEL_FIRSTINSTANCE_ORG_HUMAN_PASSWORDCHANGEREQUIRED: false/a\
+      ZITADEL_FIRSTINSTANCE_ORG_HUMAN_USERNAME: zitadel-admin\
+      ZITADEL_FIRSTINSTANCE_ORG_HUMAN_FIRSTNAME: ZITADEL\
+      ZITADEL_FIRSTINSTANCE_ORG_HUMAN_LASTNAME: Admin\
+      ZITADEL_FIRSTINSTANCE_ORG_HUMAN_EMAIL_ADDRESS: admin@sso.massdata.ae\
+      ZITADEL_FIRSTINSTANCE_ORG_HUMAN_EMAIL_VERIFIED: true\
+      ZITADEL_FIRSTINSTANCE_ORG_HUMAN_PASSWORD: ${ZITADEL_ADMIN_PASSWORD}' docker-compose.yml
+else
+  sed -i \
+    -e "s/ZITADEL_FIRSTINSTANCE_ORG_HUMAN_EMAIL_ADDRESS:.*/ZITADEL_FIRSTINSTANCE_ORG_HUMAN_EMAIL_ADDRESS: admin@sso.massdata.ae/" \
+    -e "s/ZITADEL_FIRSTINSTANCE_ORG_HUMAN_PASSWORD:.*/ZITADEL_FIRSTINSTANCE_ORG_HUMAN_PASSWORD: \${ZITADEL_ADMIN_PASSWORD}/" \
+    docker-compose.yml
+fi
+
+if ! grep -q '^ZITADEL_ADMIN_PASSWORD=' .env; then
+  echo "ZITADEL_ADMIN_PASSWORD=${ADMIN_PASSWORD}" >> .env
+fi
+
+docker compose --env-file .env -f docker-compose.yml down -v
+docker compose --env-file .env -f docker-compose.yml up -d --wait
+docker compose --env-file .env -f docker-compose.yml ps
+
+echo
+echo "ZITADEL is configured for:"
+echo "  https://sso.massdata.ae"
+echo "Admin login:"
+echo "  zitadel-admin@zitadel.sso.massdata.ae"
+echo "Password:"
+echo "  value of ZITADEL_ADMIN_PASSWORD in /opt/zitadel-compose/.env"
