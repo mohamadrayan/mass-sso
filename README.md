@@ -33,7 +33,7 @@ The initialized admin login for the current server setup is:
 Mass.Admin@zitadel.sso.massdata.ae
 ```
 
-The temporary bootstrap password was shared in the setup chat. Change it immediately after first successful login. Do not commit real production passwords to the repo.
+The temporary bootstrap password was shared in the setup chat. The template requires a password change on first login. Rotate the bootstrap password and login-client PAT after setup, and do not commit real production passwords to the repo.
 
 ## Files
 
