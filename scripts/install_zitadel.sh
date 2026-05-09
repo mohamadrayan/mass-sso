@@ -86,13 +86,17 @@ if [ ! -f .env ]; then
 
   MASTERKEY="$(rand32)"
   POSTGRES_PASSWORD="$(rand32)"
+  ADMIN_PASSWORD="$(rand32)"
+  LOGIN_CLIENT_PAT_EXPIRATION="$(date -u -d '+90 days' +%Y-%m-%dT%H:%M:%SZ)"
   sed -i \
     -e "s/^ZITADEL_DOMAIN=.*/ZITADEL_DOMAIN=${DOMAIN}/" \
     -e "s/^PROXY_HTTP_PUBLISHED_PORT=.*/PROXY_HTTP_PUBLISHED_PORT=${PUBLIC_PORT}/" \
     -e "s/^ZITADEL_EXTERNALPORT=.*/ZITADEL_EXTERNALPORT=443/" \
     -e "s/^ZITADEL_EXTERNALSECURE=.*/ZITADEL_EXTERNALSECURE=true/" \
     -e "s/^ZITADEL_PUBLIC_SCHEME=.*/ZITADEL_PUBLIC_SCHEME=https/" \
+    -e "s/^ZITADEL_ADMIN_PASSWORD=.*/ZITADEL_ADMIN_PASSWORD=${ADMIN_PASSWORD}/" \
     -e "s/^ZITADEL_MASTERKEY=.*/ZITADEL_MASTERKEY=${MASTERKEY}/" \
+    -e "s/^LOGIN_CLIENT_PAT_EXPIRATION=.*/LOGIN_CLIENT_PAT_EXPIRATION=${LOGIN_CLIENT_PAT_EXPIRATION}/" \
     -e "s/^POSTGRES_ADMIN_PASSWORD=.*/POSTGRES_ADMIN_PASSWORD=${POSTGRES_PASSWORD}/" \
     -e "s#^ZITADEL_DATABASE_POSTGRES_DSN=.*#ZITADEL_DATABASE_POSTGRES_DSN=postgresql://postgres:${POSTGRES_PASSWORD}@postgres:5432/zitadel?sslmode=disable#" \
     .env
@@ -116,5 +120,6 @@ echo "ZITADEL is running:"
 echo "  Local URL: http://127.0.0.1:${PUBLIC_PORT}"
 echo "  Public URL requires nginx/TLS: https://${DOMAIN}/ui/console"
 echo "  Do not expose ${PUBLIC_PORT} publicly."
+echo "  Store the generated ZITADEL_ADMIN_PASSWORD from ${INSTALL_DIR}/.env in the vault and change it after first login."
 echo
 sudo docker compose ps
