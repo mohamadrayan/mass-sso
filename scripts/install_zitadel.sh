@@ -1,11 +1,30 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-DOMAIN="${1:-31.210.173.252}"
+# LEGACY/HISTORICAL: kept for audit of the first bootstrap flow.
+# Prefer the checked-in compose/ and nginx/ templates for production rebuilds.
+
+cat <<'WARNING'
+WARNING: install_zitadel.sh is a legacy bootstrap helper.
+
+It installs Docker packages, mutates /opt/zitadel-compose, and starts a fresh
+ZITADEL stack. Prefer the checked-in compose/ and nginx/ templates for
+production. Continue only on a new host or an approved rebuild window.
+WARNING
+
+read -r -p "Type RUN LEGACY INSTALL to continue: " CONFIRM
+if [ "${CONFIRM}" != "RUN LEGACY INSTALL" ]; then
+  echo "Aborted. No changes were made."
+  exit 1
+fi
+
+DOMAIN="${1:-sso.massdata.ae}"
 PUBLIC_PORT="${2:-8081}"
 INSTALL_DIR="${INSTALL_DIR:-/opt/zitadel-compose}"
-COMPOSE_URL="https://raw.githubusercontent.com/zitadel/zitadel/main/deploy/compose/docker-compose.yml"
-ENV_URL="https://raw.githubusercontent.com/zitadel/zitadel/main/deploy/compose/.env.example"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_DIR="$(cd "${SCRIPT_DIR}/.." && pwd)"
+COMPOSE_TEMPLATE="${REPO_DIR}/compose/docker-compose.yml"
+ENV_TEMPLATE="${REPO_DIR}/compose/.env.example"
 
 need_cmd() {
   command -v "$1" >/dev/null 2>&1
@@ -60,9 +79,9 @@ sudo mkdir -p "$INSTALL_DIR"
 sudo chown "$USER:$USER" "$INSTALL_DIR"
 cd "$INSTALL_DIR"
 
-curl -fsSLo docker-compose.yml "$COMPOSE_URL"
+cp "$COMPOSE_TEMPLATE" docker-compose.yml
 if [ ! -f .env ]; then
-  curl -fsSLo .env.example "$ENV_URL"
+  cp "$ENV_TEMPLATE" .env.example
   cp .env.example .env
 
   MASTERKEY="$(rand32)"
@@ -70,9 +89,9 @@ if [ ! -f .env ]; then
   sed -i \
     -e "s/^ZITADEL_DOMAIN=.*/ZITADEL_DOMAIN=${DOMAIN}/" \
     -e "s/^PROXY_HTTP_PUBLISHED_PORT=.*/PROXY_HTTP_PUBLISHED_PORT=${PUBLIC_PORT}/" \
-    -e "s/^ZITADEL_EXTERNALPORT=.*/ZITADEL_EXTERNALPORT=${PUBLIC_PORT}/" \
-    -e "s/^ZITADEL_EXTERNALSECURE=.*/ZITADEL_EXTERNALSECURE=false/" \
-    -e "s/^ZITADEL_PUBLIC_SCHEME=.*/ZITADEL_PUBLIC_SCHEME=http/" \
+    -e "s/^ZITADEL_EXTERNALPORT=.*/ZITADEL_EXTERNALPORT=443/" \
+    -e "s/^ZITADEL_EXTERNALSECURE=.*/ZITADEL_EXTERNALSECURE=true/" \
+    -e "s/^ZITADEL_PUBLIC_SCHEME=.*/ZITADEL_PUBLIC_SCHEME=https/" \
     -e "s/^ZITADEL_MASTERKEY=.*/ZITADEL_MASTERKEY=${MASTERKEY}/" \
     -e "s/^POSTGRES_ADMIN_PASSWORD=.*/POSTGRES_ADMIN_PASSWORD=${POSTGRES_PASSWORD}/" \
     -e "s#^ZITADEL_DATABASE_POSTGRES_DSN=.*#ZITADEL_DATABASE_POSTGRES_DSN=postgresql://postgres:${POSTGRES_PASSWORD}@postgres:5432/zitadel?sslmode=disable#" \
@@ -82,14 +101,10 @@ else
   sed -i \
     -e "s/^ZITADEL_DOMAIN=.*/ZITADEL_DOMAIN=${DOMAIN}/" \
     -e "s/^PROXY_HTTP_PUBLISHED_PORT=.*/PROXY_HTTP_PUBLISHED_PORT=${PUBLIC_PORT}/" \
-    -e "s/^ZITADEL_EXTERNALPORT=.*/ZITADEL_EXTERNALPORT=${PUBLIC_PORT}/" \
-    -e "s/^ZITADEL_EXTERNALSECURE=.*/ZITADEL_EXTERNALSECURE=false/" \
-    -e "s/^ZITADEL_PUBLIC_SCHEME=.*/ZITADEL_PUBLIC_SCHEME=http/" \
+    -e "s/^ZITADEL_EXTERNALPORT=.*/ZITADEL_EXTERNALPORT=443/" \
+    -e "s/^ZITADEL_EXTERNALSECURE=.*/ZITADEL_EXTERNALSECURE=true/" \
+    -e "s/^ZITADEL_PUBLIC_SCHEME=.*/ZITADEL_PUBLIC_SCHEME=https/" \
     .env
-fi
-
-if sudo ufw status 2>/dev/null | grep -q '^Status: active'; then
-  sudo ufw allow "${PUBLIC_PORT}/tcp"
 fi
 
 echo "Starting ZITADEL..."
@@ -98,8 +113,8 @@ sudo docker compose --env-file .env -f docker-compose.yml up -d --wait
 
 echo
 echo "ZITADEL is running:"
-echo "  URL: http://${DOMAIN}:${PUBLIC_PORT}"
-echo "  Console URL: http://${DOMAIN}:${PUBLIC_PORT}/ui/console"
-echo "  Configure an initial human admin before using this script for production."
+echo "  Local URL: http://127.0.0.1:${PUBLIC_PORT}"
+echo "  Public URL requires nginx/TLS: https://${DOMAIN}/ui/console"
+echo "  Do not expose ${PUBLIC_PORT} publicly."
 echo
 sudo docker compose ps
