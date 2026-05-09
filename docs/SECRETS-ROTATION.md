@@ -62,12 +62,11 @@ Changing `LOGIN_CLIENT_PAT_EXPIRATION` after first initialization does not rotat
    cd /opt/zitadel-compose
    read -r -s -p "New login-client PAT: " NEW_LOGIN_PAT
    echo
-   docker run --rm \
-     -v zitadel_zitadel-bootstrap:/zitadel/bootstrap \
-     alpine:3.20 \
-     sh -c 'cat > /zitadel/bootstrap/login-client.pat' <<EOF
-   ${NEW_LOGIN_PAT}
-   EOF
+   printf '%s\n' "$NEW_LOGIN_PAT" |
+     docker run --rm -i \
+       -v zitadel_zitadel-bootstrap:/zitadel/bootstrap \
+       alpine:3.20 \
+       sh -c 'cat > /zitadel/bootstrap/login-client.pat'
    unset NEW_LOGIN_PAT
    ```
 
