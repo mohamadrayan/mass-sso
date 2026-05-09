@@ -5,7 +5,7 @@ This folder contains the handoff for the ZITADEL SSO setup on:
 - Server: `tariq@31.210.173.252`
 - Target domain: `https://sso.massdata.ae`
 - Install path on server: `/opt/zitadel-compose`
-- Public Docker port: `8081`
+- Local Docker port: `127.0.0.1:8081`
 - Reverse proxy: nginx on ports `80` and `443`
 - DNS: `sso.massdata.ae` is behind Cloudflare
 
@@ -17,13 +17,13 @@ ZITADEL is installed and running in Docker Compose on the server. It has been re
 https://sso.massdata.ae
 ```
 
-The Docker stack is healthy and reachable directly on:
+The Docker stack should be reachable only from the server over the local proxy port:
 
 ```text
-http://31.210.173.252:8081
+http://127.0.0.1:8081
 ```
 
-The final nginx link from `https://sso.massdata.ae` to `127.0.0.1:8081` is prepared but not applied yet because `sudo` rejected the password for user `tariq`.
+The final nginx link from `https://sso.massdata.ae` to `127.0.0.1:8081` must be applied before production use. Public access to port `8081` must be blocked by binding the Compose port to localhost and enforcing firewall rules.
 
 ## Initial Admin
 
@@ -70,6 +70,8 @@ Expected result:
 ```text
 nginx is now proxying https://sso.massdata.ae to ZITADEL.
 ```
+
+After nginx is applied, confirm public ingress is limited to ports `80` and `443`. Port `8081` must not be reachable from the internet.
 
 ## Useful Server Commands
 
