@@ -38,7 +38,7 @@ sha256sum -c backups/zitadel-YYYYMMDDHHMMSS.sql.gz.sha256
 
    ```bash
    cd /opt/zitadel-compose
-   docker compose --env-file .env -f docker-compose.yml up -d postgres
+   docker compose --env-file .env -f docker-compose.yml up -d --wait postgres
    ```
 
 3. Clean the target database and restore:
@@ -70,7 +70,7 @@ Use only during an approved incident or disaster recovery window.
 ```bash
 cd /opt/zitadel-compose
 docker compose --env-file .env -f docker-compose.yml down
-docker compose --env-file .env -f docker-compose.yml up -d postgres
+docker compose --env-file .env -f docker-compose.yml up -d --wait postgres
 docker exec zitadel-postgres-1 psql -U postgres -d postgres -c \
   "SELECT pg_terminate_backend(pid) FROM pg_stat_activity WHERE datname = 'zitadel';"
 docker exec zitadel-postgres-1 psql -U postgres -d postgres -c \
