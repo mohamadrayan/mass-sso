@@ -30,7 +30,7 @@ The final nginx link from `https://sso.massdata.ae` to `127.0.0.1:8081` is prepa
 The initialized admin login for the current server setup is:
 
 ```text
-zitadel-admin@zitadel.sso.massdata.ae
+Mass.Admin@zitadel.sso.massdata.ae
 ```
 
 The temporary bootstrap password was shared in the setup chat. Change it immediately after first successful login. Do not commit real production passwords to the repo.
