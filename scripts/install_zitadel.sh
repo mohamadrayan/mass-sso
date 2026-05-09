@@ -31,7 +31,7 @@ need_cmd() {
 }
 
 rand32() {
-  tr -dc A-Za-z0-9 </dev/urandom | head -c 32
+  od -An -N16 -tx1 /dev/urandom | tr -d ' \n'
 }
 
 echo "Checking sudo access..."
@@ -78,11 +78,13 @@ echo "Preparing ZITADEL compose stack in ${INSTALL_DIR}..."
 sudo mkdir -p "$INSTALL_DIR"
 sudo chown "$USER:$USER" "$INSTALL_DIR"
 cd "$INSTALL_DIR"
+umask 077
 
 cp "$COMPOSE_TEMPLATE" docker-compose.yml
 if [ ! -f .env ]; then
   cp "$ENV_TEMPLATE" .env.example
   cp .env.example .env
+  chmod 600 .env
 
   MASTERKEY="$(rand32)"
   POSTGRES_PASSWORD="$(rand32)"
@@ -102,6 +104,7 @@ if [ ! -f .env ]; then
     .env
 else
   echo ".env already exists; keeping existing secrets and updating public endpoint only."
+  chmod 600 .env
   sed -i \
     -e "s/^ZITADEL_DOMAIN=.*/ZITADEL_DOMAIN=${DOMAIN}/" \
     -e "s/^PROXY_HTTP_PUBLISHED_PORT=.*/PROXY_HTTP_PUBLISHED_PORT=${PUBLIC_PORT}/" \

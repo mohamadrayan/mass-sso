@@ -14,11 +14,16 @@ Run on the server:
 
 ```bash
 ssh tariq@31.210.173.252
+set -euo pipefail
 cd /opt/zitadel-compose
 mkdir -p backups
 STAMP="$(date +%Y%m%d%H%M%S)"
-docker exec zitadel-postgres-1 pg_dump -U postgres -d zitadel | gzip > "backups/zitadel-${STAMP}.sql.gz"
-sha256sum "backups/zitadel-${STAMP}.sql.gz" > "backups/zitadel-${STAMP}.sql.gz.sha256"
+BACKUP="backups/zitadel-${STAMP}.sql.gz"
+TMP="${BACKUP}.tmp"
+docker exec zitadel-postgres-1 pg_dump -U postgres -d zitadel | gzip > "$TMP"
+gzip -t "$TMP"
+mv "$TMP" "$BACKUP"
+sha256sum "$BACKUP" > "${BACKUP}.sha256"
 ```
 
 Also back up the server-only `.env` file separately into the approved secrets backup location. Do not commit `.env`.
