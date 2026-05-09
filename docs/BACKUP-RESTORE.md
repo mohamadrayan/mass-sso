@@ -41,9 +41,15 @@ sha256sum -c backups/zitadel-YYYYMMDDHHMMSS.sql.gz.sha256
    docker compose --env-file .env -f docker-compose.yml up -d postgres
    ```
 
-3. Restore the database:
+3. Clean the target database and restore:
 
    ```bash
+   docker exec zitadel-postgres-1 psql -U postgres -d postgres -c \
+     "SELECT pg_terminate_backend(pid) FROM pg_stat_activity WHERE datname = 'zitadel';"
+   docker exec zitadel-postgres-1 psql -U postgres -d postgres -c \
+     "DROP DATABASE IF EXISTS zitadel;"
+   docker exec zitadel-postgres-1 psql -U postgres -d postgres -c \
+     "CREATE DATABASE zitadel;"
    gzip -dc backups/zitadel-YYYYMMDDHHMMSS.sql.gz |
      docker exec -i zitadel-postgres-1 psql -U postgres -d zitadel
    ```
@@ -65,10 +71,18 @@ Use only during an approved incident or disaster recovery window.
 cd /opt/zitadel-compose
 docker compose --env-file .env -f docker-compose.yml down
 docker compose --env-file .env -f docker-compose.yml up -d postgres
+docker exec zitadel-postgres-1 psql -U postgres -d postgres -c \
+  "SELECT pg_terminate_backend(pid) FROM pg_stat_activity WHERE datname = 'zitadel';"
+docker exec zitadel-postgres-1 psql -U postgres -d postgres -c \
+  "DROP DATABASE IF EXISTS zitadel;"
+docker exec zitadel-postgres-1 psql -U postgres -d postgres -c \
+  "CREATE DATABASE zitadel;"
 gzip -dc backups/zitadel-YYYYMMDDHHMMSS.sql.gz |
   docker exec -i zitadel-postgres-1 psql -U postgres -d zitadel
 docker compose --env-file .env -f docker-compose.yml up -d --wait
 ```
+
+This restore path intentionally drops and recreates the `zitadel` database before loading the backup. Restoring a plain SQL dump into an already-populated ZITADEL database is unsafe because it can fail on duplicate objects or leave mixed old/new state.
 
 Do not use `docker compose down -v` during a normal restore unless the recovery plan explicitly calls for deleting the existing Docker volumes.
 
