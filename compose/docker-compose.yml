@@ -138,7 +138,7 @@ services:
       ZITADEL_API_URL: http://zitadel-api:8080
       NEXT_PUBLIC_BASE_PATH: /ui/v2/login
       ZITADEL_SERVICE_USER_TOKEN_FILE: /zitadel/bootstrap/login-client.pat
-      CUSTOM_REQUEST_HEADERS: Host:${ZITADEL_DOMAIN},X-Forwarded-Proto:${ZITADEL_PUBLIC_SCHEME}
+      CUSTOM_REQUEST_HEADERS: Host:${ZITADEL_DOMAIN},X-Forwarded-Proto:${ZITADEL_PUBLIC_SCHEME},x-zitadel-public-host:${ZITADEL_DOMAIN},x-zitadel-instance-host:${ZITADEL_DOMAIN}
 
       # Future-ready placeholders for upcoming Login OTEL support.
       OTEL_SERVICE_NAME: ${LOGIN_OTEL_SERVICE_NAME}
