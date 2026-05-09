@@ -225,6 +225,7 @@ button[type="submit"],
 .mass-login-register {
   display: inline-flex !important;
   width: fit-content !important;
+  margin-block-start: 0.62rem !important;
   padding: 0 !important;
   border: 0 !important;
   background: transparent !important;
@@ -380,5 +381,354 @@ form a:focus-visible {
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* Premium Mass Data Identity Command redesign. Kept last to override vendor Login V2 utilities. */
+:root,
+html,
+body,
+.light-theme,
+.dark {
+  --mass-login-red: #ef232a;
+  --mass-login-gold: #b9913a;
+  --mass-login-gold-deep: #92722a;
+  --mass-login-night: #090b0f;
+  --mass-login-graphite: #11151d;
+  --mass-login-panel: rgba(12, 15, 21, 0.86);
+  --mass-login-cream: #f7f3e9;
+  --mass-login-paper: rgba(255, 255, 255, 0.94);
+  --mass-login-line: rgba(185, 145, 58, 0.26);
+  --mass-login-focus: 0 0 0 4px rgba(185, 145, 58, 0.24);
+}
+
+html,
+body {
+  background:
+    linear-gradient(115deg, rgba(9, 11, 15, 0.98) 0%, rgba(15, 18, 25, 0.94) 43%, rgba(238, 235, 228, 1) 43.2%, rgba(246, 243, 237, 1) 100%) !important;
+}
+
+body::before {
+  background:
+    linear-gradient(90deg, rgba(185, 145, 58, 0.13) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(185, 145, 58, 0.08) 1px, transparent 1px),
+    linear-gradient(135deg, rgba(239, 35, 42, 0.13), transparent 44%) !important;
+  background-size: 58px 58px, 58px 58px, 100% 100% !important;
+  mask-image: linear-gradient(100deg, #000 0%, rgba(0, 0, 0, 0.9) 42%, transparent 68%) !important;
+  opacity: 1 !important;
+}
+
+body::after {
+  inset: auto auto 5vh 39vw !important;
+  width: 1px !important;
+  height: 86vh !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: linear-gradient(180deg, transparent, rgba(185, 145, 58, 0.72), transparent) !important;
+  box-shadow: 0 0 34px rgba(185, 145, 58, 0.28) !important;
+}
+
+.mass-login-brand-panel {
+  inset-block: 2.5rem !important;
+  inset-inline-start: clamp(1.6rem, 3.8vw, 4rem) !important;
+  width: min(42vw, 43rem) !important;
+  min-width: 30rem !important;
+  overflow: hidden;
+  padding: clamp(1.4rem, 2vw, 2.2rem) !important;
+  border-color: rgba(185, 145, 58, 0.34) !important;
+  border-radius: 34px !important;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.02)),
+    linear-gradient(180deg, rgba(239, 35, 42, 0.08), rgba(185, 145, 58, 0.08)),
+    var(--mass-login-panel) !important;
+  box-shadow:
+    0 32px 120px rgba(0, 0, 0, 0.42),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
+}
+
+.mass-login-brand-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(120deg, transparent 0 42%, rgba(185, 145, 58, 0.16) 42.2% 42.6%, transparent 43%),
+    linear-gradient(35deg, transparent 0 66%, rgba(239, 35, 42, 0.14) 66.2% 66.8%, transparent 67%),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.045) 0 1px, transparent 1px 46px);
+}
+
+.mass-login-brand-panel::after {
+  content: "";
+  position: absolute;
+  inset: 1rem;
+  pointer-events: none;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 26px;
+}
+
+.mass-login-brand-lockup,
+.mass-login-brand-copy,
+.mass-login-chips,
+.mass-login-signal,
+.mass-login-visual,
+.mass-login-metrics {
+  position: relative;
+  z-index: 1;
+}
+
+.mass-login-logo {
+  width: min(12.5rem, 46%) !important;
+  filter:
+    drop-shadow(0 14px 24px rgba(239, 35, 42, 0.24))
+    drop-shadow(0 0 22px rgba(239, 35, 42, 0.16)) !important;
+}
+
+.mass-login-eyebrow {
+  border-color: rgba(185, 145, 58, 0.42) !important;
+  background: rgba(185, 145, 58, 0.11) !important;
+  color: #f6d992 !important;
+  letter-spacing: 0 !important;
+}
+
+.mass-login-visual {
+  min-height: clamp(13rem, 31vh, 20rem);
+  margin-block: clamp(1rem, 2.2vh, 1.8rem);
+  border: 1px solid rgba(185, 145, 58, 0.22);
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.015)),
+    radial-gradient(circle at 20% 18%, rgba(239, 35, 42, 0.22), transparent 32%),
+    radial-gradient(circle at 82% 74%, rgba(185, 145, 58, 0.2), transparent 34%);
+}
+
+.mass-login-mesh {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+}
+
+.mass-login-mesh path {
+  fill: none;
+  stroke: url(#massMeshLine);
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  opacity: 0.68;
+}
+
+.mass-login-mesh circle {
+  fill: #f6d992;
+  stroke: var(--mass-login-red);
+  stroke-width: 2;
+}
+
+.mass-login-orbit-card {
+  position: absolute;
+  display: grid;
+  gap: 0.1rem;
+  min-width: 7.2rem;
+  padding: 0.62rem 0.72rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  background: rgba(8, 10, 14, 0.64);
+  color: #ffffff;
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.24);
+}
+
+.mass-login-orbit-card strong {
+  color: #f6d992;
+  font-size: 0.95rem;
+  letter-spacing: 0;
+}
+
+.mass-login-orbit-card span {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.72rem;
+}
+
+.mass-login-orbit-card-a {
+  inset-block-start: 1.2rem;
+  inset-inline-start: 1.2rem;
+}
+
+.mass-login-orbit-card-b {
+  inset-block-start: 44%;
+  inset-inline-end: 1rem;
+}
+
+.mass-login-orbit-card-c {
+  inset-block-end: 1rem;
+  inset-inline-start: 24%;
+}
+
+.mass-login-brand-copy {
+  margin-block: 0 1rem !important;
+  max-width: 35rem !important;
+}
+
+.mass-login-brand-copy h1 {
+  color: #ffffff !important;
+  font-size: 5.85rem !important;
+  line-height: 0.86 !important;
+  letter-spacing: 0 !important;
+  text-wrap: balance;
+}
+
+.mass-login-brand-copy p {
+  max-width: 31rem;
+  color: rgba(255, 255, 255, 0.72) !important;
+  font-size: 1.08rem !important;
+}
+
+.mass-login-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin-block: 1rem;
+}
+
+.mass-login-metrics div {
+  padding: 0.8rem;
+  border: 1px solid rgba(185, 145, 58, 0.2);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.mass-login-metrics strong {
+  display: block;
+  color: #f6d992;
+  font-size: 1.22rem;
+  line-height: 1;
+}
+
+.mass-login-metrics span {
+  display: block;
+  margin-block-start: 0.35rem;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.72rem;
+  line-height: 1.25;
+}
+
+.mass-login-chips span,
+.mass-login-signal {
+  border-color: rgba(185, 145, 58, 0.3) !important;
+  background: rgba(185, 145, 58, 0.1) !important;
+  color: #f6d992 !important;
+}
+
+@media (min-width: 1024px) {
+  body > div:not(.mass-login-brand-panel),
+  main,
+  [id="__next"] {
+    min-height: 100vh !important;
+    margin-inline-start: min(48vw, 48rem) !important;
+  }
+
+  body > div:not(.mass-login-brand-panel) {
+    background:
+      linear-gradient(90deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.7)),
+      linear-gradient(180deg, #eeebe4, #f8f6f0) !important;
+  }
+
+  body > div:not(.mass-login-brand-panel) > div,
+  main > div,
+  [id="__next"] > div {
+    transform: translateX(-2vw);
+  }
+}
+
+main form,
+[id="__next"] form,
+form {
+  border: 1px solid rgba(185, 145, 58, 0.18) !important;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(255, 255, 255, 0.9)),
+    var(--mass-login-paper) !important;
+  box-shadow:
+    0 26px 70px rgba(24, 22, 18, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
+}
+
+input {
+  min-height: 3.1rem;
+}
+
+.mass-login-submit {
+  min-height: 3rem;
+  padding-inline: 1.25rem !important;
+}
+
+@media (max-width: 1023px) {
+  html,
+  body {
+    background:
+      linear-gradient(180deg, var(--mass-login-night) 0%, #151922 42%, #f0ece4 42.2%, #f9f7f1 100%) !important;
+  }
+
+  .mass-login-brand-panel {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 auto 1rem !important;
+    box-sizing: border-box;
+    padding: 1rem !important;
+    background:
+      linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02)),
+      var(--mass-login-panel) !important;
+  }
+
+  .mass-login-logo {
+    width: 9.2rem !important;
+  }
+
+  .mass-login-visual {
+    min-height: 11rem;
+    margin-block: 0.8rem;
+  }
+
+  .mass-login-eyebrow {
+    font-size: 0.68rem !important;
+    padding: 0.42rem 0.58rem !important;
+  }
+
+  .mass-login-orbit-card {
+    min-width: 5.8rem;
+    padding: 0.48rem 0.55rem;
+  }
+
+  .mass-login-brand-copy h1 {
+    font-size: 2.72rem !important;
+    line-height: 0.92 !important;
+  }
+
+  .mass-login-brand-copy p {
+    font-size: 0.92rem !important;
+    line-height: 1.45 !important;
+  }
+
+  .mass-login-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .mass-login-metrics div {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.64rem 0.72rem;
+  }
+
+  .mass-login-metrics span {
+    margin-block-start: 0;
+    text-align: end;
+  }
+}
+
+@media (min-width: 1536px) {
+  .mass-login-brand-copy h1 {
+    font-size: 6.55rem !important;
   }
 }
