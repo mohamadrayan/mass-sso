@@ -21,7 +21,7 @@ Applied design choices:
 - Official Mass Data logo from `https://massdata.ae/assets/img/logo.png`, copied into the repo as `compose/console-theme/massdata-logo.png`.
 - Large branded left/upper panel with:
   - Mass Data logo.
-  - `Private Access Gateway` heading.
+  - `Identity Command` heading.
   - network/identity-control visual.
   - SSO, OIDC, and adaptive-risk signal cards.
   - security chips.
@@ -52,15 +52,15 @@ Routes:
 The proxy injects:
 
 ```html
-<link rel="stylesheet" href="/ui/login-theme/mass-login.css?v=20260510l">
-<script src="/ui/login-theme/mass-login.js?v=20260510f"></script>
+<link rel="stylesheet" href="/ui/login-theme/mass-login.css?v=20260510m">
+<script src="/ui/login-theme/mass-login.js?v=20260510g"></script>
 ```
 
 The injected script:
 
 - Forces light theme preference.
 - Adds the Mass Data brand panel.
-- Adds the Private Access Gateway visual system and metrics.
+- Adds the Identity Command visual system and metrics.
 - Updates headline/supporting copy.
 - Adds form trust text.
 - Classifies primary, back, and register buttons so the visual treatment does not accidentally style secondary actions as primary.
@@ -86,7 +86,7 @@ No database changes were made.
 
 Generated local artifacts:
 
-- `.codex-artifacts/sso-visual/login-premium-2026-05-10/login-polish5-qa.json`
+- `.codex-artifacts/sso-visual/login-premium-2026-05-10/login-fix-wide1-qa.json`
 - `.codex-artifacts/sso-visual/login-premium-2026-05-10/*.png`
 
 Checked states:
@@ -111,11 +111,11 @@ Result summary:
 
 Follow-up polish after visual review:
 
-- Rebalanced the desktop split so the left brand panel is strong but less overpowering.
-- Changed the hero message from `Identity Command` to `Private Access Gateway`.
+- Rebalanced the desktop split so the left brand panel owns roughly half the screen and no longer looks undersized on wide monitors.
+- Restored the stronger `Identity Command` hero message.
 - Removed the desktop extra vertical scroll caused by the vendor root layout.
 - Turned the right-side ZITADEL form into one clean premium access card instead of nested cards.
-- Verified login and password states at desktop `1440x1000`, mobile `390x844`, and mobile `360x800` with no old blue, no horizontal overflow, and no clipped controls.
+- Verified login and password states at wide desktop `2048x1152`, desktop `1440x1000`, mobile `390x844`, and mobile `360x800` with no old blue, no horizontal overflow, and no clipped controls. Wide and desktop viewports have no vertical scroll.
 
 Automated accessibility findings remaining from vendor Login V2 markup:
 

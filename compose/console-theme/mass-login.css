@@ -980,3 +980,90 @@ form.mass-login-form .mass-login-back {
     min-height: auto !important;
   }
 }
+
+/* Wide-screen correction: restore the dramatic left panel and remove the weak centered-card feel. */
+@media (min-width: 1024px) {
+  html,
+  body {
+    height: 100vh !important;
+    min-height: 100vh !important;
+    overflow: hidden !important;
+    background:
+      linear-gradient(110deg, rgba(7, 9, 13, 1) 0%, rgba(11, 13, 19, 0.99) 51.5%, rgba(253, 251, 247, 1) 51.7%, rgba(247, 244, 238, 1) 100%) !important;
+  }
+
+  body::before {
+    background:
+      linear-gradient(90deg, rgba(185, 145, 58, 0.12) 1px, transparent 1px),
+      linear-gradient(180deg, rgba(185, 145, 58, 0.08) 1px, transparent 1px),
+      radial-gradient(circle at 18% 22%, rgba(239, 35, 42, 0.2), transparent 25rem),
+      radial-gradient(circle at 42% 82%, rgba(185, 145, 58, 0.16), transparent 28rem) !important;
+    background-size: 64px 64px, 64px 64px, 100% 100%, 100% 100% !important;
+    mask-image: linear-gradient(100deg, #000 0%, #000 49%, transparent 70%) !important;
+  }
+
+  body::after {
+    inset: 0 auto 0 51.7vw !important;
+    height: 100vh !important;
+    background: linear-gradient(180deg, transparent, rgba(185, 145, 58, 0.56), transparent) !important;
+  }
+
+  .mass-login-brand-panel {
+    inset-block: clamp(1.25rem, 3vh, 2.5rem) !important;
+    inset-inline-start: clamp(1.5rem, 3vw, 3.75rem) !important;
+    width: calc(51.7vw - clamp(3rem, 6vw, 7.5rem)) !important;
+    min-width: 35rem !important;
+    max-width: 57rem !important;
+    height: calc(100vh - clamp(2.5rem, 6vh, 5rem)) !important;
+    padding: clamp(1.4rem, 1.8vw, 2rem) !important;
+  }
+
+  .mass-login-logo {
+    width: clamp(10.5rem, 12vw, 15.5rem) !important;
+  }
+
+  .mass-login-visual {
+    min-height: clamp(12.5rem, 26vh, 18.5rem) !important;
+  }
+
+  .mass-login-brand-copy h1 {
+    max-width: 44rem !important;
+    font-size: clamp(4.8rem, 5.8vw, 7.4rem) !important;
+    line-height: 0.86 !important;
+  }
+
+  .mass-login-brand-copy p {
+    max-width: 38rem !important;
+    font-size: clamp(1rem, 1.05vw, 1.18rem) !important;
+  }
+
+  .mass-login-metrics div {
+    min-height: 4.1rem !important;
+  }
+
+  body > div:not(.mass-login-brand-panel),
+  main,
+  [id="__next"] {
+    position: fixed !important;
+    inset: 0 0 0 51.7vw !important;
+    width: auto !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+  }
+
+  body > div:not(.mass-login-brand-panel) {
+    display: grid !important;
+    place-items: center !important;
+    padding: clamp(2rem, 4vw, 5rem) !important;
+    background:
+      radial-gradient(circle at 42% 45%, rgba(185, 145, 58, 0.15), transparent 20rem),
+      radial-gradient(circle at 60% 24%, rgba(239, 35, 42, 0.06), transparent 20rem),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(248, 246, 240, 0.96)) !important;
+  }
+
+  .mass-login-card-shell {
+    width: clamp(31rem, 34vw, 40rem) !important;
+    max-width: min(40rem, calc(100vw - 56vw)) !important;
+    padding: clamp(2rem, 2.8vw, 3rem) !important;
+  }
+}

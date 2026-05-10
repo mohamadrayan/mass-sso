@@ -1,8 +1,8 @@
 (function () {
   var brandCopy = {
     title: "Mass Data",
-    subtitle: "Private Access Gateway",
-    body: "A controlled identity gateway for Mass Data platforms, governed sessions, and intelligent digital services.",
+    subtitle: "Identity Command",
+    body: "A private access layer for Mass Data platforms, governed sessions, and intelligent digital services.",
     eyebrow: "Mass Data SSO",
     chips: ["Zero-trust ready", "OIDC secured", "UAE hosted"],
     footer: "Protected by Mass Data SSO"
