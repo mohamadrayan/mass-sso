@@ -732,3 +732,251 @@ input {
     font-size: 6.55rem !important;
   }
 }
+
+/* Executive polish pass: rebalance the split view and make the sign-in surface feel first-class. */
+html,
+body {
+  background:
+    linear-gradient(112deg, rgba(7, 9, 13, 0.99) 0%, rgba(13, 16, 22, 0.97) 39%, rgba(252, 250, 246, 1) 39.2%, rgba(247, 244, 237, 1) 100%) !important;
+}
+
+body::before {
+  background:
+    linear-gradient(90deg, rgba(185, 145, 58, 0.1) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(185, 145, 58, 0.07) 1px, transparent 1px),
+    radial-gradient(circle at 22% 25%, rgba(239, 35, 42, 0.18), transparent 24rem),
+    radial-gradient(circle at 88% 34%, rgba(185, 145, 58, 0.14), transparent 22rem) !important;
+  background-size: 64px 64px, 64px 64px, 100% 100%, 100% 100% !important;
+  mask-image: linear-gradient(100deg, #000 0%, rgba(0, 0, 0, 0.92) 38%, transparent 68%) !important;
+}
+
+body::after {
+  inset: 0 auto 0 39.1vw !important;
+  width: 1px !important;
+  height: 100vh !important;
+  background: linear-gradient(180deg, transparent, rgba(185, 145, 58, 0.52), transparent) !important;
+  box-shadow: 0 0 48px rgba(185, 145, 58, 0.2) !important;
+}
+
+.mass-login-brand-panel {
+  inset-block: clamp(1.5rem, 3.5vh, 2.5rem) !important;
+  inset-inline-start: clamp(1.5rem, 3.2vw, 3.6rem) !important;
+  width: min(35.5vw, 39rem) !important;
+  min-width: 28rem !important;
+  padding: clamp(1.35rem, 1.8vw, 2rem) !important;
+  border-radius: 24px !important;
+  border-color: rgba(185, 145, 58, 0.26) !important;
+  background:
+    linear-gradient(150deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.025)),
+    linear-gradient(180deg, rgba(239, 35, 42, 0.07), rgba(185, 145, 58, 0.07)),
+    rgba(13, 15, 20, 0.88) !important;
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.38),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
+}
+
+.mass-login-brand-panel::after {
+  inset: 0.85rem !important;
+  border-radius: 18px !important;
+}
+
+.mass-login-logo {
+  width: min(10.4rem, 42%) !important;
+}
+
+.mass-login-eyebrow {
+  padding: 0.44rem 0.68rem !important;
+  font-size: 0.72rem !important;
+}
+
+.mass-login-visual {
+  min-height: clamp(11.5rem, 25vh, 15.5rem) !important;
+  margin-block: clamp(0.9rem, 1.8vh, 1.25rem) !important;
+  border-radius: 18px !important;
+}
+
+.mass-login-orbit-card {
+  min-width: 6.4rem !important;
+  padding: 0.52rem 0.62rem !important;
+  border-radius: 10px !important;
+}
+
+.mass-login-brand-copy {
+  max-width: 31rem !important;
+}
+
+.mass-login-brand-copy h1 {
+  max-width: 29rem !important;
+  font-size: 4.85rem !important;
+  line-height: 0.9 !important;
+}
+
+.mass-login-brand-copy p {
+  max-width: 28rem !important;
+  margin-block-start: 1rem !important;
+  color: rgba(255, 255, 255, 0.76) !important;
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+}
+
+.mass-login-metrics {
+  gap: 0.55rem !important;
+  margin-block: 0.8rem !important;
+}
+
+.mass-login-metrics div {
+  padding: 0.7rem !important;
+  border-radius: 8px !important;
+}
+
+.mass-login-chips span,
+.mass-login-signal {
+  border-radius: 999px !important;
+}
+
+@media (min-width: 1024px) {
+  body > div:not(.mass-login-brand-panel),
+  main,
+  [id="__next"] {
+    min-height: 100vh !important;
+    margin-inline-start: min(42vw, 42rem) !important;
+  }
+
+  body > div:not(.mass-login-brand-panel) {
+    position: fixed !important;
+    inset: 0 0 0 min(42vw, 42rem) !important;
+    width: auto !important;
+    margin: 0 !important;
+    display: grid !important;
+    place-items: center !important;
+    padding: clamp(2rem, 4vw, 4.5rem) !important;
+    background:
+      radial-gradient(circle at 48% 50%, rgba(185, 145, 58, 0.12), transparent 19rem),
+      radial-gradient(circle at 58% 28%, rgba(239, 35, 42, 0.05), transparent 18rem),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(248, 246, 240, 0.96)) !important;
+  }
+
+  body > div:not(.mass-login-brand-panel) > div,
+  main > div,
+  [id="__next"] > div {
+    transform: none !important;
+  }
+}
+
+.mass-login-form-host {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.mass-login-card-shell {
+  width: 31rem !important;
+  max-width: min(31rem, 100%) !important;
+  padding: clamp(1.65rem, 2.6vw, 2.2rem) !important;
+  border: 1px solid rgba(185, 145, 58, 0.22) !important;
+  border-radius: 8px !important;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(255, 255, 255, 0.94)),
+    var(--mass-login-paper) !important;
+  box-shadow:
+    0 28px 80px rgba(22, 20, 15, 0.15),
+    0 0 0 1px rgba(255, 255, 255, 0.72) inset !important;
+}
+
+form.mass-login-form,
+main form.mass-login-form,
+[id="__next"] form.mass-login-form {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-height: 0 !important;
+  padding: 1.4rem 0 0 !important;
+  border: 0 !important;
+  border-radius: 8px !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+form.mass-login-form h1,
+form.mass-login-form h2 {
+  margin-block-end: 0.65rem !important;
+  color: #111317 !important;
+  font-size: 1.65rem !important;
+  line-height: 1.16 !important;
+}
+
+form.mass-login-form p {
+  color: #4f4a42 !important;
+  line-height: 1.55 !important;
+}
+
+form.mass-login-form label {
+  color: #5a4a2b !important;
+  font-weight: 650 !important;
+}
+
+form.mass-login-form input {
+  min-height: 3.35rem !important;
+  border-radius: 8px !important;
+  border-color: rgba(185, 145, 58, 0.38) !important;
+  background: #fffefb !important;
+}
+
+form.mass-login-form .mass-login-submit,
+form.mass-login-form button[type="submit"] {
+  min-height: 3.25rem !important;
+  border-radius: 8px !important;
+}
+
+form.mass-login-form .mass-login-back {
+  min-height: 3rem !important;
+  border-radius: 8px !important;
+}
+
+.mass-login-trust-row {
+  margin-block-start: 1.55rem !important;
+  font-size: 0.76rem !important;
+}
+
+@media (min-width: 1536px) {
+  .mass-login-brand-copy h1 {
+    font-size: 5.35rem !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  .mass-login-brand-panel {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 0 auto 1rem !important;
+    border-radius: 16px !important;
+  }
+
+  .mass-login-visual {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .mass-login-brand-copy h1 {
+    font-size: 2.55rem !important;
+  }
+
+  .mass-login-form-host,
+  .mass-login-card-shell,
+  form.mass-login-form {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  form.mass-login-form {
+    min-height: auto !important;
+  }
+}

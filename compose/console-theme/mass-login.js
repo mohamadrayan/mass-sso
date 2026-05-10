@@ -1,8 +1,8 @@
 (function () {
   var brandCopy = {
     title: "Mass Data",
-    subtitle: "Identity Command",
-    body: "A private access layer for Mass Data platforms, governed sessions, and intelligent digital services.",
+    subtitle: "Private Access Gateway",
+    body: "A controlled identity gateway for Mass Data platforms, governed sessions, and intelligent digital services.",
     eyebrow: "Mass Data SSO",
     chips: ["Zero-trust ready", "OIDC secured", "UAE hosted"],
     footer: "Protected by Mass Data SSO"
@@ -104,6 +104,15 @@
   }
 
   function enhanceForm() {
+    var form = document.querySelector("form");
+    if (form) {
+      form.classList.add("mass-login-form");
+      var parent = form.parentElement;
+      if (parent) parent.classList.add("mass-login-form-host");
+      var shell = form.closest('[class*="bg-background-light"]') || (parent && parent.parentElement && parent.parentElement.parentElement);
+      if (shell) shell.classList.add("mass-login-card-shell");
+    }
+
     var inputs = Array.from(document.querySelectorAll("input"));
     inputs.forEach(function (input) {
       input.setAttribute("autocomplete", input.type === "password" ? "current-password" : "username");
@@ -125,7 +134,6 @@
       var trust = document.createElement("div");
       trust.className = "mass-login-trust-row";
       trust.innerHTML = '<span></span><strong>' + brandCopy.footer + "</strong><span></span>";
-      var form = document.querySelector("form");
       if (form) form.appendChild(trust);
     }
   }
