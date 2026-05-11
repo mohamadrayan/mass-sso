@@ -1067,3 +1067,433 @@ form.mass-login-form .mass-login-back {
     padding: clamp(2rem, 2.8vw, 3rem) !important;
   }
 }
+
+/* Reference-aligned pass: cinematic left identity panel, light UAE-style form surface, no desktop scroll. */
+@media (min-width: 1024px) {
+  html,
+  body.mass-login-reference-layout {
+    --mass-login-split: 56vw;
+    --mass-login-left-pad: clamp(1.5rem, 3vw, 3.75rem);
+    --mass-login-panel-gap: clamp(1.25rem, 2.6vh, 2rem);
+    height: 100vh !important;
+    min-height: 100vh !important;
+    overflow: hidden !important;
+    background:
+      linear-gradient(90deg, #070a10 0%, #0b1018 var(--mass-login-split), #f5f7f8 calc(var(--mass-login-split) + 1px), #fbfbfa 100%) !important;
+  }
+
+  body.mass-login-reference-layout::before {
+    background:
+      linear-gradient(90deg, rgba(185, 145, 58, 0.12) 1px, transparent 1px),
+      linear-gradient(180deg, rgba(185, 145, 58, 0.07) 1px, transparent 1px),
+      radial-gradient(circle at 17% 12%, rgba(239, 35, 42, 0.18), transparent 24rem),
+      linear-gradient(28deg, transparent 0 27%, rgba(239, 35, 42, 0.14) 27.2% 27.6%, transparent 28%),
+      linear-gradient(112deg, transparent 0 39%, rgba(185, 145, 58, 0.2) 39.2% 39.55%, transparent 40%) !important;
+    background-size: 64px 64px, 64px 64px, 100% 100%, 100% 100%, 100% 100% !important;
+    mask-image: linear-gradient(90deg, #000 0%, #000 calc(var(--mass-login-split) - 5vw), transparent calc(var(--mass-login-split) + 7vw)) !important;
+    opacity: 1 !important;
+  }
+
+  body.mass-login-reference-layout::after {
+    inset: 0 auto 0 var(--mass-login-split) !important;
+    width: 1px !important;
+    height: 100vh !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: linear-gradient(180deg, transparent, rgba(185, 145, 58, 0.42), transparent) !important;
+    box-shadow: 0 0 44px rgba(185, 145, 58, 0.18) !important;
+  }
+
+  .mass-login-reference-layout .mass-login-brand-panel {
+    inset-block: var(--mass-login-panel-gap) !important;
+    inset-inline-start: var(--mass-login-left-pad) !important;
+    width: calc(var(--mass-login-split) - (var(--mass-login-left-pad) * 2)) !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    height: calc(100vh - (var(--mass-login-panel-gap) * 2)) !important;
+    box-sizing: border-box !important;
+    display: grid !important;
+    grid-template-rows: auto minmax(11rem, 0.9fr) auto auto auto auto;
+    gap: clamp(0.7rem, 1.4vh, 1.05rem);
+    padding: clamp(1.15rem, 1.55vw, 1.75rem) !important;
+    border-radius: 18px !important;
+    border-color: rgba(152, 177, 196, 0.22) !important;
+    background:
+      linear-gradient(145deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.025)),
+      radial-gradient(circle at 20% 28%, rgba(239, 35, 42, 0.13), transparent 19rem),
+      radial-gradient(circle at 86% 58%, rgba(185, 145, 58, 0.12), transparent 18rem),
+      rgba(13, 18, 26, 0.88) !important;
+    box-shadow:
+      0 30px 120px rgba(0, 0, 0, 0.42),
+      inset 0 1px 0 rgba(255, 255, 255, 0.13) !important;
+  }
+
+  .mass-login-reference-layout .mass-login-brand-panel::before {
+    background:
+      linear-gradient(120deg, transparent 0 56%, rgba(185, 145, 58, 0.18) 56.15% 56.45%, transparent 56.7%),
+      linear-gradient(34deg, transparent 0 20%, rgba(239, 35, 42, 0.14) 20.2% 20.55%, transparent 20.85%),
+      repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.045) 0 1px, transparent 1px 48px);
+  }
+
+  .mass-login-reference-layout .mass-login-brand-panel::after {
+    inset: 0.8rem !important;
+    border-radius: 12px !important;
+    border-color: rgba(255, 255, 255, 0.085) !important;
+  }
+
+  .mass-login-reference-layout .mass-login-logo {
+    width: clamp(9.8rem, 11vw, 13.2rem) !important;
+  }
+
+  .mass-login-reference-layout .mass-login-eyebrow {
+    padding: 0.36rem 0.58rem !important;
+    border-radius: 999px !important;
+    background: rgba(10, 14, 20, 0.48) !important;
+    color: #f4d890 !important;
+    font-size: clamp(0.58rem, 0.62vw, 0.68rem) !important;
+    font-weight: 750 !important;
+  }
+
+  .mass-login-reference-layout .mass-login-visual {
+    align-self: stretch;
+    min-height: 0 !important;
+    height: 100% !important;
+    margin-block: 0 !important;
+    overflow: hidden;
+    border-radius: 8px !important;
+    border-color: rgba(152, 177, 196, 0.19) !important;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.025)),
+      radial-gradient(circle at 20% 22%, rgba(239, 35, 42, 0.22), transparent 34%),
+      radial-gradient(circle at 84% 70%, rgba(185, 145, 58, 0.2), transparent 34%) !important;
+  }
+
+  .mass-login-reference-layout .mass-login-visual::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    background-size: 4.25rem 4.25rem;
+  }
+
+  .mass-login-reference-layout .mass-login-mesh {
+    padding: clamp(0.8rem, 1.2vw, 1.2rem);
+  }
+
+  .mass-login-reference-layout .mass-login-mesh path {
+    stroke-width: 1.8;
+    opacity: 0.8;
+  }
+
+  .mass-login-reference-layout .mass-login-mesh circle {
+    opacity: 0;
+  }
+
+  .mass-login-reference-layout .mass-login-node-layer {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .mass-login-reference-layout .mass-login-node {
+    position: absolute;
+    display: grid;
+    width: clamp(2rem, 2.6vw, 2.8rem);
+    aspect-ratio: 1;
+    place-items: center;
+    border: 1px solid rgba(246, 217, 146, 0.42);
+    border-radius: 50%;
+    background:
+      linear-gradient(145deg, rgba(255, 255, 255, 0.18), rgba(15, 18, 22, 0.76)),
+      rgba(30, 28, 25, 0.72);
+    box-shadow:
+      0 0 0 6px rgba(185, 145, 58, 0.08),
+      0 14px 28px rgba(0, 0, 0, 0.34);
+  }
+
+  .mass-login-reference-layout .mass-login-node svg {
+    width: 54%;
+    height: 54%;
+    fill: none;
+    stroke: #f3d58a;
+    stroke-width: 1.65;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .mass-login-reference-layout .mass-login-node-key {
+    inset-block-start: 41%;
+    inset-inline-start: 12%;
+  }
+
+  .mass-login-reference-layout .mass-login-node-shield {
+    inset-block-start: 27%;
+    inset-inline-start: 31%;
+  }
+
+  .mass-login-reference-layout .mass-login-node-scan {
+    inset-block-start: 35%;
+    inset-inline-start: 48%;
+  }
+
+  .mass-login-reference-layout .mass-login-node-fingerprint {
+    inset-block-start: 45%;
+    inset-inline-start: 59%;
+  }
+
+  .mass-login-reference-layout .mass-login-node-lock {
+    inset-block-start: 31%;
+    inset-inline-start: 72%;
+  }
+
+  .mass-login-reference-layout .mass-login-node-route {
+    inset-block-start: 55%;
+    inset-inline-start: 79%;
+  }
+
+  .mass-login-reference-layout .mass-login-orbit-card {
+    z-index: 3;
+    min-width: clamp(4.9rem, 7.2vw, 7.1rem) !important;
+    padding: 0.46rem 0.56rem !important;
+    border-radius: 8px !important;
+    background: rgba(9, 10, 14, 0.76) !important;
+  }
+
+  .mass-login-reference-layout .mass-login-orbit-card-a {
+    inset-block-start: 0.75rem;
+    inset-inline-start: 0.75rem;
+  }
+
+  .mass-login-reference-layout .mass-login-orbit-card-b {
+    inset-block-start: 43%;
+    inset-inline-end: 0.75rem;
+  }
+
+  .mass-login-reference-layout .mass-login-orbit-card-c {
+    inset-block-end: 0.75rem;
+    inset-inline-start: 23%;
+  }
+
+  .mass-login-reference-layout .mass-login-brand-copy {
+    margin-block: 0 !important;
+    max-width: min(43rem, 100%) !important;
+  }
+
+  .mass-login-reference-layout .mass-login-brand-copy h1 {
+    max-width: 46rem !important;
+    color: #ffffff !important;
+    font-size: clamp(4.2rem, 6.05vw, 7rem) !important;
+    line-height: 0.88 !important;
+    letter-spacing: 0 !important;
+  }
+
+  .mass-login-reference-layout .mass-login-brand-copy p {
+    max-width: 40rem !important;
+    margin-block-start: 0.65rem !important;
+    color: rgba(255, 255, 255, 0.78) !important;
+    font-size: clamp(0.88rem, 1vw, 1.06rem) !important;
+    line-height: 1.52 !important;
+  }
+
+  .mass-login-reference-layout .mass-login-metrics {
+    margin-block: 0 !important;
+    gap: 0.5rem !important;
+  }
+
+  .mass-login-reference-layout .mass-login-metrics div {
+    position: relative;
+    min-height: 3.55rem !important;
+    padding: 0.58rem 2.3rem 0.58rem 0.64rem !important;
+    border-radius: 8px !important;
+    background: rgba(255, 255, 255, 0.075) !important;
+  }
+
+  .mass-login-reference-layout .mass-login-metrics i {
+    position: absolute;
+    inset-inline-end: 0.58rem;
+    inset-block-start: 50%;
+    display: grid;
+    width: 1.45rem;
+    aspect-ratio: 1;
+    place-items: center;
+    transform: translateY(-50%);
+    border: 1px solid rgba(246, 217, 146, 0.24);
+    border-radius: 50%;
+    color: #f3d58a;
+    font-size: 0.48rem;
+    font-style: normal;
+    font-weight: 800;
+  }
+
+  .mass-login-reference-layout .mass-login-chips {
+    gap: 0.45rem !important;
+  }
+
+  .mass-login-reference-layout .mass-login-chips span,
+  .mass-login-reference-layout .mass-login-signal {
+    padding: 0.48rem 0.62rem !important;
+    font-size: clamp(0.68rem, 0.72vw, 0.8rem) !important;
+  }
+
+  .mass-login-reference-layout .mass-login-signal {
+    margin-block-start: 0.35rem !important;
+  }
+
+  body.mass-login-reference-layout > div:not(.mass-login-brand-panel),
+  body.mass-login-reference-layout main,
+  body.mass-login-reference-layout [id="__next"] {
+    position: fixed !important;
+    inset: 0 0 0 var(--mass-login-split) !important;
+    width: auto !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+  }
+
+  body.mass-login-reference-layout > div:not(.mass-login-brand-panel) {
+    isolation: isolate;
+    display: grid !important;
+    place-items: center !important;
+    padding: clamp(1.5rem, 4vw, 4rem) !important;
+    overflow: hidden !important;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.93), rgba(245, 247, 248, 0.97)) !important;
+  }
+
+  body.mass-login-reference-layout > div:not(.mass-login-brand-panel)::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    width: min(68vw, 58rem);
+    aspect-ratio: 1;
+    inset-inline-start: -18rem;
+    inset-block-start: 7vh;
+    border-radius: 50%;
+    background:
+      radial-gradient(circle at 66% 48%, rgba(8, 14, 22, 0.3) 0 0.45%, transparent 0.55%),
+      radial-gradient(circle at 64% 50%, rgba(30, 46, 58, 0.13), transparent 24%),
+      repeating-radial-gradient(circle at 64% 50%, transparent 0 5.3rem, rgba(185, 145, 58, 0.13) 5.34rem 5.42rem);
+    opacity: 0.86;
+  }
+
+  body.mass-login-reference-layout > div:not(.mass-login-brand-panel)::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: min(64vw, 56rem);
+    height: min(32vw, 29rem);
+    inset-inline-start: -12rem;
+    inset-block-start: 26vh;
+    border-block: 1px solid rgba(185, 145, 58, 0.34);
+    border-radius: 50%;
+    transform: rotate(-12deg);
+    box-shadow:
+      18rem 1rem 0 -17.9rem rgba(239, 35, 42, 0.42),
+      30rem 8rem 0 -29.88rem rgba(185, 145, 58, 0.54);
+  }
+
+  .mass-login-reference-layout .mass-login-card-shell {
+    width: clamp(28rem, 29vw, 34rem) !important;
+    max-width: min(34rem, calc(100vw - var(--mass-login-split) - 5rem)) !important;
+    padding: clamp(1.9rem, 2.35vw, 2.45rem) !important;
+    border-radius: 8px !important;
+    border-color: rgba(152, 160, 168, 0.22) !important;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.78)) !important;
+    box-shadow:
+      0 30px 90px rgba(37, 35, 30, 0.15),
+      0 0 0 1px rgba(255, 255, 255, 0.76) inset !important;
+    backdrop-filter: blur(20px);
+  }
+
+  .mass-login-reference-layout form.mass-login-form {
+    padding: 0 !important;
+  }
+
+  .mass-login-reference-layout form.mass-login-form h1,
+  .mass-login-reference-layout form.mass-login-form h2 {
+    text-align: center;
+    font-size: clamp(1.42rem, 1.55vw, 1.75rem) !important;
+  }
+
+  .mass-login-reference-layout form.mass-login-form p {
+    margin-block-end: 1.4rem !important;
+    text-align: center;
+    font-size: 0.86rem !important;
+  }
+
+  .mass-login-reference-layout form.mass-login-form input {
+    min-height: 3.25rem !important;
+    border-radius: 8px !important;
+    background: rgba(255, 253, 248, 0.9) !important;
+  }
+
+  .mass-login-reference-layout form.mass-login-form input::placeholder {
+    color: rgba(74, 70, 62, 0.58);
+  }
+
+  .mass-login-reference-layout form.mass-login-form .mass-login-submit,
+  .mass-login-reference-layout form.mass-login-form button[type="submit"] {
+    min-height: 3.05rem !important;
+    background: linear-gradient(135deg, #2b3035 0%, #7b6041 56%, #9a7a4f 100%) !important;
+  }
+
+  .mass-login-reference-layout form.mass-login-form .mass-login-back {
+    min-height: 3.05rem !important;
+    background: rgba(255, 255, 255, 0.72) !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  html,
+  body.mass-login-reference-layout {
+    --mass-login-split: clamp(58vw, 61vw, calc(100vw - 34rem));
+  }
+}
+
+@media (min-width: 1536px) {
+  html,
+  body.mass-login-reference-layout {
+    --mass-login-split: 62.5vw;
+  }
+
+  .mass-login-reference-layout .mass-login-brand-copy h1 {
+    font-size: clamp(5.2rem, 5.65vw, 7.2rem) !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  body.mass-login-reference-layout {
+    overflow-x: hidden !important;
+  }
+
+  .mass-login-node-layer {
+    display: none;
+  }
+
+  .mass-login-reference-layout .mass-login-brand-panel {
+    display: flex !important;
+    gap: 0 !important;
+  }
+}
+
+.mass-login-reference-layout form.mass-login-form label {
+  display: block !important;
+  margin-block-end: 0.36rem !important;
+}
+
+.mass-login-reference-layout .mass-login-metrics i {
+  color: #f3d58a;
+  font-style: normal;
+  font-weight: 800;
+}
+
+@media (max-width: 1023px) {
+  .mass-login-reference-layout .mass-login-metrics i {
+    color: #f3d58a !important;
+    font-size: 0.72rem;
+  }
+}

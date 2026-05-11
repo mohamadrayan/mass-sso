@@ -52,8 +52,8 @@ Routes:
 The proxy injects:
 
 ```html
-<link rel="stylesheet" href="/ui/login-theme/mass-login.css?v=20260510m">
-<script src="/ui/login-theme/mass-login.js?v=20260510g"></script>
+<link rel="stylesheet" href="/ui/login-theme/mass-login.css?v=20260511a">
+<script src="/ui/login-theme/mass-login.js?v=20260511a"></script>
 ```
 
 The injected script:
@@ -61,6 +61,7 @@ The injected script:
 - Forces light theme preference.
 - Adds the Mass Data brand panel.
 - Adds the Identity Command visual system and metrics.
+- Adds the reference-aligned identity node map, right-side orbit/globe accent, login input placeholder, and `Go Back` label.
 - Updates headline/supporting copy.
 - Adds form trust text.
 - Classifies primary, back, and register buttons so the visual treatment does not accidentally style secondary actions as primary.
@@ -87,6 +88,7 @@ No database changes were made.
 Generated local artifacts:
 
 - `.codex-artifacts/sso-visual/login-premium-2026-05-10/login-fix-wide1-qa.json`
+- `.codex-artifacts/sso-visual/login-premium-2026-05-10/login-reference2-qa.json`
 - `.codex-artifacts/sso-visual/login-premium-2026-05-10/*.png`
 
 Checked states:
@@ -94,6 +96,7 @@ Checked states:
 - Login name step.
 - Password step.
 - Desktop `1440x1000`.
+- Tablet `768x1024`.
 - Mobile `390x844`.
 - Mobile `360x800`.
 - Browser dark preference forced back to the light branded baseline.
@@ -116,6 +119,8 @@ Follow-up polish after visual review:
 - Removed the desktop extra vertical scroll caused by the vendor root layout.
 - Turned the right-side ZITADEL form into one clean premium access card instead of nested cards.
 - Verified login and password states at wide desktop `2048x1152`, desktop `1440x1000`, mobile `390x844`, and mobile `360x800` with no old blue, no horizontal overflow, and no clipped controls. Wide and desktop viewports have no vertical scroll.
+- Applied the 2026-05-11 reference-aligned pass: the dark identity panel now occupies the intended desktop weight, the network visual uses icon nodes, the right side has the subtle orbit/globe treatment, and the form keeps the light official baseline.
+- Verified login and password states at wide desktop `2048x1152`, desktop `1440x1000`, tablet `768x1024`, mobile `390x844`, and mobile `360x800` with no old blue, no horizontal overflow, and no clipped controls.
 
 Automated accessibility findings remaining from vendor Login V2 markup:
 
