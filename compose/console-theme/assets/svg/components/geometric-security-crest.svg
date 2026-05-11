@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="Geometric security crest">
+  <defs><linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F0CB73"/><stop offset="1" stop-color="#D8A84D"/></linearGradient></defs>
+  <g fill="none" stroke="url(#gold)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M48 5l35 20v40L48 85 13 65V25z"/>
+    <path d="M48 14l25 14v28L48 70 23 56V28z" opacity=".85"/>
+    <path d="M48 25l14 8v16l-14 8-14-8V33z"/>
+    <circle cx="48" cy="41" r="8"/>
+    <path d="M23 28l25 13 25-13M23 56l25-15 25 15M48 14v71" opacity=".5"/>
+  </g>
+</svg>

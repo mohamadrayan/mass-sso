@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1672 941" preserveAspectRatio="none">
+  <defs>
+    <pattern id="hex" width="76" height="66" patternUnits="userSpaceOnUse">
+      <path d="M38 1L75 22v44L38 87 1 66V22z" fill="none" stroke="#D8A84D" stroke-opacity=".14" stroke-width="1"/>
+      <path d="M1 22L38 44 75 22M38 44v43" fill="none" stroke="#D8A84D" stroke-opacity=".075" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="fadeX" x1="0" x2="1"><stop stop-color="white"/><stop offset=".28" stop-color="white" stop-opacity=".55"/><stop offset=".62" stop-color="white" stop-opacity=".08"/><stop offset="1" stop-color="white" stop-opacity="0"/></linearGradient>
+    <mask id="m"><rect width="1672" height="941" fill="black"/><rect width="390" height="941" fill="url(#fadeX)"/><rect x="1435" width="237" height="941" fill="white" opacity=".28"/></mask>
+  </defs>
+  <rect width="1672" height="941" fill="url(#hex)" mask="url(#m)" opacity=".8"/>
+  <path d="M0 914H1672" stroke="#D8A84D" stroke-opacity=".18"/>
+  <path d="M0 895H1672" stroke="#D8A84D" stroke-opacity=".07"/>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="1080" viewBox="0 0 960 1080" fill="none">
+<defs>
+
+<radialGradient id="radarGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(454 465) rotate(90) scale(180 180)">
+  <stop offset="0%" stop-color="#F4D488" stop-opacity="0.32"/>
+  <stop offset="45%" stop-color="#D6AA58" stop-opacity="0.11"/>
+  <stop offset="100%" stop-color="#D6AA58" stop-opacity="0"/>
+</radialGradient>
+<filter id="soft" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="8"/></filter>
+
+</defs>
+<circle cx="454" cy="465" r="210" fill="url(#radarGlow)"/>
+<circle cx="454" cy="465" r="82" stroke="#D6AA58" stroke-width="1.2" opacity="0.18"/>
+<circle cx="454" cy="465" r="125" stroke="#D6AA58" stroke-width="1.2" opacity="0.16"/>
+<circle cx="454" cy="465" r="170" stroke="#D6AA58" stroke-width="1.2" opacity="0.12"/>
+<circle cx="454" cy="465" r="215" stroke="#D6AA58" stroke-width="1.2" opacity="0.08"/>
+<circle cx="454" cy="465" r="270" stroke="#D6AA58" stroke-width="1.2" opacity="0.06"/>
+<line x1="454" y1="465" x2="724.0" y2="465.0" stroke="#D6AA58" stroke-width="1" opacity="0.045"/>
+<line x1="454" y1="465" x2="687.8" y2="600.0" stroke="#D6AA58" stroke-width="1" opacity="0.045"/>
+<line x1="454" y1="465" x2="589.0" y2="698.8" stroke="#D6AA58" stroke-width="1" opacity="0.045"/>
+<line x1="454" y1="465" x2="454.0" y2="735.0" stroke="#D6AA58" stroke-width="1" opacity="0.045"/>
+<line x1="454" y1="465" x2="319.0" y2="698.8" stroke="#D6AA58" stroke-width="1" opacity="0.045"/>
+<line x1="454" y1="465" x2="220.2" y2="600.0" stroke="#D6AA58" stroke-width="1" opacity="0.045"/>
+<line x1="454" y1="465" x2="184.0" y2="465.0" stroke="#D6AA58" stroke-width="1" opacity="0.045"/>
+<line x1="454" y1="465" x2="220.2" y2="330.0" stroke="#D6AA58" stroke-width="1" opacity="0.045"/>
+<line x1="454" y1="465" x2="319.0" y2="231.2" stroke="#D6AA58" stroke-width="1" opacity="0.045"/>
+<line x1="454" y1="465" x2="454.0" y2="195.0" stroke="#D6AA58" stroke-width="1" opacity="0.045"/>
+<line x1="454" y1="465" x2="589.0" y2="231.2" stroke="#D6AA58" stroke-width="1" opacity="0.045"/>
+<line x1="454" y1="465" x2="687.8" y2="330.0" stroke="#D6AA58" stroke-width="1" opacity="0.045"/>
+<circle cx="454" cy="465" r="42" fill="#E0C777" opacity="0.12" filter="url(#soft)"/>
+</svg>

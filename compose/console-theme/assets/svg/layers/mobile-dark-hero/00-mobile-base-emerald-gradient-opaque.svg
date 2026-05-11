@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="430" height="580" viewBox="0 0 430 580" fill="none">
+<defs>
+
+<linearGradient id="mDark" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#031D19"/><stop offset="1" stop-color="#000C0B"/></linearGradient>
+<radialGradient id="mGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(215 250) rotate(90) scale(220 260)"><stop offset="0" stop-color="#D6AA58" stop-opacity=".22"/><stop offset="1" stop-color="#D6AA58" stop-opacity="0"/></radialGradient>
+
+</defs>
+<rect width="430" height="580" fill="url(#mDark)"/><rect width="430" height="580" fill="url(#mGlow)"/>
+</svg>

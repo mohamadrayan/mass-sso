@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 941" preserveAspectRatio="none">
+  <defs>
+    <radialGradient id="r1" cx="64%" cy="48%" r="68%"><stop stop-color="#FFFFFF"/><stop offset="55%" stop-color="#FAF7EF"/><stop offset="100%" stop-color="#F4EDDE"/></radialGradient>
+    <radialGradient id="goldwash" cx="75%" cy="88%" r="45%"><stop stop-color="#D8A84D" stop-opacity=".12"/><stop offset="70%" stop-color="#D8A84D" stop-opacity=".02"/><stop offset="100%" stop-color="#D8A84D" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="900" height="941" fill="url(#r1)"/>
+  <rect width="900" height="941" fill="url(#goldwash)"/>
+</svg>

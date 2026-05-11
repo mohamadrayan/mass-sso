@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="430" height="580" viewBox="0 0 430 580" fill="none">
+<defs>
+
+<linearGradient id="shieldStroke" x1="0" y1="320" x2="0" y2="580">
+  <stop offset="0%" stop-color="#FFE5A6"/>
+  <stop offset="100%" stop-color="#B98232"/>
+</linearGradient>
+<filter id="shieldGlow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+
+</defs>
+<g transform="translate(-239 -245) scale(.72)">
+<g filter="url(#shieldGlow)" opacity="0.98">
+  <path d="M454 342 L548 383 V459 C548 523 506 558 454 586 C402 558 360 523 360 459 V383 Z" fill="#001D18" fill-opacity="0.22" stroke="url(#shieldStroke)" stroke-width="7"/>
+  <path d="M454 363 L526 395 V456 C526 508 493 536 454 558 C415 536 382 508 382 456 V395 Z" stroke="#D6AA58" stroke-width="2" opacity="0.42"/>
+  <circle cx="454" cy="440" r="28" stroke="#FFE6A9" stroke-width="8"/>
+  <path d="M403 516 C413 481 429 468 454 468 C479 468 495 481 505 516" stroke="#FFE6A9" stroke-width="8" stroke-linecap="round"/>
+</g>
+</g>
+</svg>

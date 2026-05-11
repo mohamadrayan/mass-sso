@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="1080" viewBox="0 0 960 1080" fill="none">
+<defs>
+
+<radialGradient id="cardGoldGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(535 515) rotate(90) scale(390 450)">
+ <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+ <stop offset="58%" stop-color="#E7C179" stop-opacity="0.13"/>
+ <stop offset="100%" stop-color="#E7C179" stop-opacity="0"/>
+</radialGradient>
+<filter id="glowBlur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="20"/></filter>
+
+</defs>
+<ellipse cx="535" cy="520" rx="360" ry="420" fill="url(#cardGoldGlow)" filter="url(#glowBlur)" opacity="0.88"/>
+</svg>

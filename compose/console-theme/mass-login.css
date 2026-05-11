@@ -1,4 +1,4 @@
-:root,
+﻿:root,
 html,
 body,
 .light-theme,
@@ -16,12 +16,13 @@ body,
   --mass-login-focus: 0 0 0 4px rgba(146, 114, 42, 0.2);
 }
 
+
 html,
 body {
   min-height: 100% !important;
   background:
     radial-gradient(circle at 14% 22%, rgba(146, 114, 42, 0.16), transparent 28rem),
-    radial-gradient(circle at 82% 14%, rgba(183, 52, 23, 0.09), transparent 26rem),
+    radial-gradient(circle at 82% 14%, rgba(201, 155, 69, 0.09), transparent 26rem),
     linear-gradient(135deg, #ffffff 0%, #f7f4ed 48%, #ede7da 100%) !important;
   color: var(--mass-login-ink) !important;
 }
@@ -90,7 +91,7 @@ body::after {
   width: min(15rem, 58%);
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 12px 22px rgba(146, 24, 24, 0.15));
+  filter: drop-shadow(0 12px 22px rgba(201, 155, 69, 0.15));
 }
 
 .mass-login-eyebrow,
@@ -390,7 +391,7 @@ html,
 body,
 .light-theme,
 .dark {
-  --mass-login-red: #ef232a;
+  --mass-login-red: #c99b45;
   --mass-login-gold: #b9913a;
   --mass-login-gold-deep: #92722a;
   --mass-login-night: #090b0f;
@@ -412,7 +413,7 @@ body::before {
   background:
     linear-gradient(90deg, rgba(185, 145, 58, 0.13) 1px, transparent 1px),
     linear-gradient(180deg, rgba(185, 145, 58, 0.08) 1px, transparent 1px),
-    linear-gradient(135deg, rgba(239, 35, 42, 0.13), transparent 44%) !important;
+    linear-gradient(135deg, rgba(201, 155, 69, 0.13), transparent 44%) !important;
   background-size: 58px 58px, 58px 58px, 100% 100% !important;
   mask-image: linear-gradient(100deg, #000 0%, rgba(0, 0, 0, 0.9) 42%, transparent 68%) !important;
   opacity: 1 !important;
@@ -439,7 +440,7 @@ body::after {
   border-radius: 34px !important;
   background:
     linear-gradient(145deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.02)),
-    linear-gradient(180deg, rgba(239, 35, 42, 0.08), rgba(185, 145, 58, 0.08)),
+    linear-gradient(180deg, rgba(201, 155, 69, 0.08), rgba(185, 145, 58, 0.08)),
     var(--mass-login-panel) !important;
   box-shadow:
     0 32px 120px rgba(0, 0, 0, 0.42),
@@ -453,7 +454,7 @@ body::after {
   pointer-events: none;
   background:
     linear-gradient(120deg, transparent 0 42%, rgba(185, 145, 58, 0.16) 42.2% 42.6%, transparent 43%),
-    linear-gradient(35deg, transparent 0 66%, rgba(239, 35, 42, 0.14) 66.2% 66.8%, transparent 67%),
+    linear-gradient(35deg, transparent 0 66%, rgba(201, 155, 69, 0.14) 66.2% 66.8%, transparent 67%),
     repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.045) 0 1px, transparent 1px 46px);
 }
 
@@ -479,8 +480,8 @@ body::after {
 .mass-login-logo {
   width: min(12.5rem, 46%) !important;
   filter:
-    drop-shadow(0 14px 24px rgba(239, 35, 42, 0.24))
-    drop-shadow(0 0 22px rgba(239, 35, 42, 0.16)) !important;
+    drop-shadow(0 14px 24px rgba(201, 155, 69, 0.24))
+    drop-shadow(0 0 22px rgba(201, 155, 69, 0.16)) !important;
 }
 
 .mass-login-eyebrow {
@@ -497,7 +498,7 @@ body::after {
   border-radius: 28px;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.015)),
-    radial-gradient(circle at 20% 18%, rgba(239, 35, 42, 0.22), transparent 32%),
+    radial-gradient(circle at 20% 18%, rgba(201, 155, 69, 0.22), transparent 32%),
     radial-gradient(circle at 82% 74%, rgba(185, 145, 58, 0.2), transparent 34%);
 }
 
@@ -617,7 +618,7 @@ body::after {
   color: #f6d992 !important;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1101px) {
   body > div:not(.mass-login-brand-panel),
   main,
   [id="__next"] {
@@ -744,7 +745,7 @@ body::before {
   background:
     linear-gradient(90deg, rgba(185, 145, 58, 0.1) 1px, transparent 1px),
     linear-gradient(180deg, rgba(185, 145, 58, 0.07) 1px, transparent 1px),
-    radial-gradient(circle at 22% 25%, rgba(239, 35, 42, 0.18), transparent 24rem),
+    radial-gradient(circle at 22% 25%, rgba(201, 155, 69, 0.18), transparent 24rem),
     radial-gradient(circle at 88% 34%, rgba(185, 145, 58, 0.14), transparent 22rem) !important;
   background-size: 64px 64px, 64px 64px, 100% 100%, 100% 100% !important;
   mask-image: linear-gradient(100deg, #000 0%, rgba(0, 0, 0, 0.92) 38%, transparent 68%) !important;
@@ -768,7 +769,7 @@ body::after {
   border-color: rgba(185, 145, 58, 0.26) !important;
   background:
     linear-gradient(150deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.025)),
-    linear-gradient(180deg, rgba(239, 35, 42, 0.07), rgba(185, 145, 58, 0.07)),
+    linear-gradient(180deg, rgba(201, 155, 69, 0.07), rgba(185, 145, 58, 0.07)),
     rgba(13, 15, 20, 0.88) !important;
   box-shadow:
     0 30px 90px rgba(0, 0, 0, 0.38),
@@ -834,7 +835,7 @@ body::after {
   border-radius: 999px !important;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1101px) {
   body > div:not(.mass-login-brand-panel),
   main,
   [id="__next"] {
@@ -852,7 +853,7 @@ body::after {
     padding: clamp(2rem, 4vw, 4.5rem) !important;
     background:
       radial-gradient(circle at 48% 50%, rgba(185, 145, 58, 0.12), transparent 19rem),
-      radial-gradient(circle at 58% 28%, rgba(239, 35, 42, 0.05), transparent 18rem),
+      radial-gradient(circle at 58% 28%, rgba(201, 155, 69, 0.05), transparent 18rem),
       linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(248, 246, 240, 0.96)) !important;
   }
 
@@ -982,7 +983,7 @@ form.mass-login-form .mass-login-back {
 }
 
 /* Wide-screen correction: restore the dramatic left panel and remove the weak centered-card feel. */
-@media (min-width: 1024px) {
+@media (min-width: 1101px) {
   html,
   body {
     height: 100vh !important;
@@ -996,7 +997,7 @@ form.mass-login-form .mass-login-back {
     background:
       linear-gradient(90deg, rgba(185, 145, 58, 0.12) 1px, transparent 1px),
       linear-gradient(180deg, rgba(185, 145, 58, 0.08) 1px, transparent 1px),
-      radial-gradient(circle at 18% 22%, rgba(239, 35, 42, 0.2), transparent 25rem),
+      radial-gradient(circle at 18% 22%, rgba(201, 155, 69, 0.2), transparent 25rem),
       radial-gradient(circle at 42% 82%, rgba(185, 145, 58, 0.16), transparent 28rem) !important;
     background-size: 64px 64px, 64px 64px, 100% 100%, 100% 100% !important;
     mask-image: linear-gradient(100deg, #000 0%, #000 49%, transparent 70%) !important;
@@ -1057,7 +1058,7 @@ form.mass-login-form .mass-login-back {
     padding: clamp(2rem, 4vw, 5rem) !important;
     background:
       radial-gradient(circle at 42% 45%, rgba(185, 145, 58, 0.15), transparent 20rem),
-      radial-gradient(circle at 60% 24%, rgba(239, 35, 42, 0.06), transparent 20rem),
+      radial-gradient(circle at 60% 24%, rgba(201, 155, 69, 0.06), transparent 20rem),
       linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(248, 246, 240, 0.96)) !important;
   }
 
@@ -1069,7 +1070,7 @@ form.mass-login-form .mass-login-back {
 }
 
 /* Reference-aligned pass: cinematic left identity panel, light UAE-style form surface, no desktop scroll. */
-@media (min-width: 1024px) {
+@media (min-width: 1101px) {
   html,
   body.mass-login-reference-layout {
     --mass-login-split: 56vw;
@@ -1086,8 +1087,8 @@ form.mass-login-form .mass-login-back {
     background:
       linear-gradient(90deg, rgba(185, 145, 58, 0.12) 1px, transparent 1px),
       linear-gradient(180deg, rgba(185, 145, 58, 0.07) 1px, transparent 1px),
-      radial-gradient(circle at 17% 12%, rgba(239, 35, 42, 0.18), transparent 24rem),
-      linear-gradient(28deg, transparent 0 27%, rgba(239, 35, 42, 0.14) 27.2% 27.6%, transparent 28%),
+      radial-gradient(circle at 17% 12%, rgba(201, 155, 69, 0.18), transparent 24rem),
+      linear-gradient(28deg, transparent 0 27%, rgba(201, 155, 69, 0.14) 27.2% 27.6%, transparent 28%),
       linear-gradient(112deg, transparent 0 39%, rgba(185, 145, 58, 0.2) 39.2% 39.55%, transparent 40%) !important;
     background-size: 64px 64px, 64px 64px, 100% 100%, 100% 100%, 100% 100% !important;
     mask-image: linear-gradient(90deg, #000 0%, #000 calc(var(--mass-login-split) - 5vw), transparent calc(var(--mass-login-split) + 7vw)) !important;
@@ -1120,7 +1121,7 @@ form.mass-login-form .mass-login-back {
     border-color: rgba(152, 177, 196, 0.22) !important;
     background:
       linear-gradient(145deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.025)),
-      radial-gradient(circle at 20% 28%, rgba(239, 35, 42, 0.13), transparent 19rem),
+      radial-gradient(circle at 20% 28%, rgba(201, 155, 69, 0.13), transparent 19rem),
       radial-gradient(circle at 86% 58%, rgba(185, 145, 58, 0.12), transparent 18rem),
       rgba(13, 18, 26, 0.88) !important;
     box-shadow:
@@ -1131,7 +1132,7 @@ form.mass-login-form .mass-login-back {
   .mass-login-reference-layout .mass-login-brand-panel::before {
     background:
       linear-gradient(120deg, transparent 0 56%, rgba(185, 145, 58, 0.18) 56.15% 56.45%, transparent 56.7%),
-      linear-gradient(34deg, transparent 0 20%, rgba(239, 35, 42, 0.14) 20.2% 20.55%, transparent 20.85%),
+      linear-gradient(34deg, transparent 0 20%, rgba(201, 155, 69, 0.14) 20.2% 20.55%, transparent 20.85%),
       repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.045) 0 1px, transparent 1px 48px);
   }
 
@@ -1164,7 +1165,7 @@ form.mass-login-form .mass-login-back {
     border-color: rgba(152, 177, 196, 0.19) !important;
     background:
       linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.025)),
-      radial-gradient(circle at 20% 22%, rgba(239, 35, 42, 0.22), transparent 34%),
+      radial-gradient(circle at 20% 22%, rgba(201, 155, 69, 0.22), transparent 34%),
       radial-gradient(circle at 84% 70%, rgba(185, 145, 58, 0.2), transparent 34%) !important;
   }
 
@@ -1391,7 +1392,7 @@ form.mass-login-form .mass-login-back {
     border-radius: 50%;
     transform: rotate(-12deg);
     box-shadow:
-      18rem 1rem 0 -17.9rem rgba(239, 35, 42, 0.42),
+      18rem 1rem 0 -17.9rem rgba(201, 155, 69, 0.42),
       30rem 8rem 0 -29.88rem rgba(185, 145, 58, 0.54);
   }
 
@@ -1495,5 +1496,2991 @@ form.mass-login-form .mass-login-back {
   .mass-login-reference-layout .mass-login-metrics i {
     color: #f3d58a !important;
     font-size: 0.72rem;
+  }
+}
+
+/* UAE bilingual polish: preserve the ZITADEL flow while supporting Arabic/RTL and bento-style status surfaces. */
+.mass-login-reference-layout {
+  --mass-ui-red: #c99b45;
+  --mass-ui-gold: #b9913a;
+  --mass-ui-gold-soft: #f3d58a;
+  --mass-ui-ink: #111317;
+  --mass-ui-muted: #514c44;
+  --mass-ui-surface: rgba(255, 255, 255, 0.82);
+  --mass-ui-border: rgba(185, 145, 58, 0.24);
+}
+
+.mass-login-reference-layout.mass-login-rtl,
+html[dir="rtl"] .mass-login-reference-layout {
+  direction: rtl;
+}
+
+.mass-login-reference-layout .mass-login-metrics div {
+  border-color: rgba(246, 217, 146, 0.2) !important;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.045)),
+    rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(10px);
+}
+
+.mass-login-reference-layout .mass-login-metrics div:hover {
+  border-color: rgba(246, 217, 146, 0.34) !important;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.06)),
+    rgba(255, 255, 255, 0.07) !important;
+}
+
+.mass-login-reference-layout .mass-login-card-shell {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.8)) !important;
+  box-shadow:
+    0 28px 70px rgba(28, 26, 22, 0.13),
+    0 0 0 1px rgba(255, 255, 255, 0.78) inset !important;
+}
+
+.mass-login-reference-layout form.mass-login-form input {
+  border-width: 1.5px !important;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    background-color 160ms ease !important;
+}
+
+.mass-login-reference-layout form.mass-login-form .mass-login-submit,
+.mass-login-reference-layout form.mass-login-form button[type="submit"],
+.mass-login-reference-layout form.mass-login-form .mass-login-back {
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    background-color 160ms ease !important;
+}
+
+.mass-login-reference-layout form.mass-login-form .mass-login-submit:hover:not(:disabled),
+.mass-login-reference-layout form.mass-login-form button[type="submit"]:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 22px rgba(60, 44, 27, 0.2) !important;
+}
+
+.mass-login-reference-layout form.mass-login-form .mass-login-back:hover {
+  background: #ffffff !important;
+}
+
+@media (min-width: 1101px) {
+  body.mass-login-reference-layout.mass-login-rtl,
+  html[dir="rtl"] body.mass-login-reference-layout {
+    background:
+      linear-gradient(270deg, #070a10 0%, #0b1018 var(--mass-login-split), #f5f7f8 calc(var(--mass-login-split) + 1px), #fbfbfa 100%) !important;
+  }
+
+  body.mass-login-reference-layout.mass-login-rtl::before,
+  html[dir="rtl"] body.mass-login-reference-layout::before {
+    transform: scaleX(-1);
+  }
+
+  body.mass-login-reference-layout.mass-login-rtl::after,
+  html[dir="rtl"] body.mass-login-reference-layout::after {
+    inset: 0 var(--mass-login-split) 0 auto !important;
+  }
+
+  body.mass-login-reference-layout.mass-login-rtl .mass-login-brand-panel,
+  html[dir="rtl"] body.mass-login-reference-layout .mass-login-brand-panel {
+    inset-inline-start: auto !important;
+    inset-inline-end: var(--mass-login-left-pad) !important;
+  }
+
+  body.mass-login-reference-layout.mass-login-rtl > div:not(.mass-login-brand-panel),
+  body.mass-login-reference-layout.mass-login-rtl main,
+  body.mass-login-reference-layout.mass-login-rtl [id="__next"],
+  html[dir="rtl"] body.mass-login-reference-layout > div:not(.mass-login-brand-panel),
+  html[dir="rtl"] body.mass-login-reference-layout main,
+  html[dir="rtl"] body.mass-login-reference-layout [id="__next"] {
+    inset: 0 0 0 auto !important;
+    inset-inline-start: 0 !important;
+    inset-inline-end: var(--mass-login-split) !important;
+  }
+
+  body.mass-login-reference-layout.mass-login-rtl > div:not(.mass-login-brand-panel)::before,
+  html[dir="rtl"] body.mass-login-reference-layout > div:not(.mass-login-brand-panel)::before {
+    inset-inline-start: auto;
+    inset-inline-end: -18rem;
+  }
+
+  body.mass-login-reference-layout.mass-login-rtl > div:not(.mass-login-brand-panel)::after,
+  html[dir="rtl"] body.mass-login-reference-layout > div:not(.mass-login-brand-panel)::after {
+    inset-inline-start: auto;
+    inset-inline-end: -12rem;
+    transform: rotate(12deg);
+  }
+
+  .mass-login-reference-layout.mass-login-rtl .mass-login-brand-copy,
+  html[dir="rtl"] .mass-login-reference-layout .mass-login-brand-copy,
+  .mass-login-reference-layout.mass-login-rtl .mass-login-brand-copy p,
+  html[dir="rtl"] .mass-login-reference-layout .mass-login-brand-copy p {
+    text-align: start;
+  }
+
+  .mass-login-reference-layout.mass-login-rtl .mass-login-metrics div,
+  html[dir="rtl"] .mass-login-reference-layout .mass-login-metrics div {
+    padding: 0.58rem 0.64rem 0.58rem 2.3rem !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  .mass-login-reference-layout .mass-login-card-shell {
+    border-radius: 8px !important;
+  }
+
+  .mass-login-reference-layout.mass-login-rtl form.mass-login-form,
+  html[dir="rtl"] .mass-login-reference-layout form.mass-login-form {
+    text-align: start;
+  }
+}
+
+@media (min-width: 1101px) {
+  body.mass-login-reference-layout.mass-login-rtl,
+  html[dir="rtl"] body.mass-login-reference-layout {
+    background:
+      linear-gradient(90deg, #070a10 0%, #0b1018 var(--mass-login-split), #f5f7f8 calc(var(--mass-login-split) + 1px), #fbfbfa 100%) !important;
+  }
+
+  body.mass-login-reference-layout.mass-login-rtl::before,
+  html[dir="rtl"] body.mass-login-reference-layout::before {
+    transform: none;
+  }
+
+  body.mass-login-reference-layout.mass-login-rtl::after,
+  html[dir="rtl"] body.mass-login-reference-layout::after {
+    left: var(--mass-login-split) !important;
+    right: auto !important;
+  }
+
+  body.mass-login-reference-layout.mass-login-rtl .mass-login-brand-panel,
+  html[dir="rtl"] body.mass-login-reference-layout .mass-login-brand-panel {
+    left: var(--mass-login-left-pad) !important;
+    right: auto !important;
+  }
+
+  body.mass-login-reference-layout.mass-login-rtl > div:not(.mass-login-brand-panel),
+  body.mass-login-reference-layout.mass-login-rtl main,
+  body.mass-login-reference-layout.mass-login-rtl [id="__next"],
+  html[dir="rtl"] body.mass-login-reference-layout > div:not(.mass-login-brand-panel),
+  html[dir="rtl"] body.mass-login-reference-layout main,
+  html[dir="rtl"] body.mass-login-reference-layout [id="__next"] {
+    inset: 0 0 0 var(--mass-login-split) !important;
+  }
+
+  body.mass-login-reference-layout.mass-login-rtl > div:not(.mass-login-brand-panel)::before,
+  html[dir="rtl"] body.mass-login-reference-layout > div:not(.mass-login-brand-panel)::before {
+    inset-inline-start: -18rem;
+    inset-inline-end: auto;
+  }
+
+  body.mass-login-reference-layout.mass-login-rtl > div:not(.mass-login-brand-panel)::after,
+  html[dir="rtl"] body.mass-login-reference-layout > div:not(.mass-login-brand-panel)::after {
+    inset-inline-start: -12rem;
+    inset-inline-end: auto;
+    transform: rotate(-12deg);
+  }
+}
+
+.mass-login-reference-layout.mass-login-rtl form.mass-login-form,
+html[dir="rtl"] .mass-login-reference-layout form.mass-login-form,
+.mass-login-reference-layout.mass-login-rtl form.mass-login-form *,
+html[dir="rtl"] .mass-login-reference-layout form.mass-login-form * {
+  box-sizing: border-box;
+}
+
+.mass-login-reference-layout.mass-login-rtl form.mass-login-form input,
+html[dir="rtl"] .mass-login-reference-layout form.mass-login-form input {
+  width: 100% !important;
+  min-width: 0 !important;
+  text-align: start !important;
+}
+
+.mass-login-reference-layout.mass-login-rtl form.mass-login-form label,
+html[dir="rtl"] .mass-login-reference-layout form.mass-login-form label {
+  width: 100% !important;
+  text-align: start !important;
+}
+
+.mass-login-reference-layout form.mass-login-form label {
+  display: flex !important;
+  width: 100% !important;
+  flex-direction: column !important;
+  gap: 0.36rem !important;
+  margin-block-end: 0 !important;
+}
+
+.mass-login-reference-layout form.mass-login-form input {
+  width: 100% !important;
+  min-width: 0 !important;
+  align-self: stretch !important;
+}
+
+/* Cinematic identity pass: all Login V2 pages use the same Mass Data gold identity system. */
+.mass-login-reference-layout {
+  --mass-cinematic-green: #001f1b;
+  --mass-cinematic-green-2: #03110f;
+  --mass-cinematic-gold: #d5a64d;
+  --mass-cinematic-gold-2: #f4d18a;
+  --mass-cinematic-cream: #fffaf1;
+  --mass-cinematic-ink: #15201d;
+}
+
+.mass-login-shield-mark,
+.mass-login-cityline {
+  display: none;
+}
+
+@media (min-width: 1101px) {
+  html,
+  body.mass-login-reference-layout {
+    --mass-login-split: 53.5vw;
+    background:
+      linear-gradient(90deg, var(--mass-cinematic-green-2) 0 var(--mass-login-split), var(--mass-cinematic-cream) var(--mass-login-split) 100%) !important;
+  }
+
+  body.mass-login-reference-layout::before {
+    background:
+      radial-gradient(circle at 36% 27%, rgba(244, 209, 138, 0.17), transparent 15rem),
+      radial-gradient(circle at 20% 20%, rgba(213, 166, 77, 0.11), transparent 22rem),
+      linear-gradient(90deg, rgba(213, 166, 77, 0.08) 1px, transparent 1px),
+      linear-gradient(180deg, rgba(213, 166, 77, 0.045) 1px, transparent 1px) !important;
+    background-size: 100% 100%, 100% 100%, 4.25rem 4.25rem, 4.25rem 4.25rem !important;
+    mask-image: linear-gradient(90deg, #000 0%, #000 calc(var(--mass-login-split) + 1px), transparent calc(var(--mass-login-split) + 12vw)) !important;
+  }
+
+  body.mass-login-reference-layout::after {
+    inset: 0 auto 0 var(--mass-login-split) !important;
+    background: linear-gradient(180deg, transparent, rgba(213, 166, 77, 0.55), transparent) !important;
+  }
+
+  .mass-login-reference-layout .mass-login-brand-panel {
+    inset: 0 auto 0 0 !important;
+    width: var(--mass-login-split) !important;
+    height: 100vh !important;
+    max-width: none !important;
+    padding: clamp(2.2rem, 4.5vw, 5.75rem) clamp(2.4rem, 5vw, 6.5rem) !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    display: grid !important;
+    grid-template-rows: auto minmax(13rem, 0.82fr) auto auto auto;
+    gap: clamp(0.85rem, 1.45vh, 1.25rem) !important;
+    background:
+      radial-gradient(circle at 54% 38%, rgba(16, 82, 68, 0.42), transparent 23rem),
+      linear-gradient(140deg, rgba(3, 17, 15, 0.92), rgba(0, 31, 27, 0.98)),
+      var(--mass-cinematic-green-2) !important;
+    box-shadow: none !important;
+  }
+
+  .mass-login-reference-layout .mass-login-brand-panel::before {
+    background:
+      radial-gradient(circle at 48% 28%, rgba(213, 166, 77, 0.2) 0 0.08rem, transparent 0.1rem),
+      radial-gradient(circle at 28% 30%, rgba(213, 166, 77, 0.18) 0 0.08rem, transparent 0.1rem),
+      radial-gradient(circle at 72% 26%, rgba(213, 166, 77, 0.18) 0 0.08rem, transparent 0.1rem),
+      linear-gradient(118deg, transparent 0 21%, rgba(213, 166, 77, 0.16) 21.15% 21.3%, transparent 21.55%),
+      linear-gradient(34deg, transparent 0 68%, rgba(213, 166, 77, 0.11) 68.2% 68.35%, transparent 68.6%) !important;
+    opacity: 1;
+  }
+
+  .mass-login-reference-layout .mass-login-brand-panel::after {
+    inset: auto 0 0 !important;
+    height: min(24vh, 13rem);
+    border: 0 !important;
+    border-radius: 0 !important;
+    background:
+      linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.22)),
+      repeating-linear-gradient(90deg, transparent 0 1.1rem, rgba(213, 166, 77, 0.34) 1.12rem 1.18rem, transparent 1.2rem 2.6rem);
+    mask-image:
+      linear-gradient(180deg, transparent 0%, #000 38%, #000 100%),
+      linear-gradient(90deg, transparent 0%, #000 12%, #000 88%, transparent 100%);
+  }
+
+  .mass-login-reference-layout .mass-login-logo {
+    width: clamp(14rem, 18vw, 20rem) !important;
+    filter:
+      sepia(1) saturate(0.9) hue-rotate(350deg) brightness(1.35)
+      drop-shadow(0 12px 22px rgba(213, 166, 77, 0.22)) !important;
+  }
+
+  .mass-login-reference-layout .mass-login-eyebrow {
+    background: rgba(213, 166, 77, 0.08) !important;
+    border-color: rgba(213, 166, 77, 0.45) !important;
+    color: var(--mass-cinematic-gold-2) !important;
+  }
+
+  .mass-login-reference-layout .mass-login-visual {
+    position: relative;
+    overflow: visible !important;
+    max-height: none !important;
+    height: 100% !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background:
+      radial-gradient(circle at 52% 45%, rgba(244, 209, 138, 0.22), transparent 5.4rem),
+      radial-gradient(circle at 50% 45%, rgba(213, 166, 77, 0.45) 0 0.08rem, transparent 0.1rem),
+      radial-gradient(circle at 38% 34%, rgba(213, 166, 77, 0.48) 0 0.08rem, transparent 0.1rem),
+      radial-gradient(circle at 68% 33%, rgba(213, 166, 77, 0.48) 0 0.08rem, transparent 0.1rem),
+      radial-gradient(circle at 30% 52%, rgba(213, 166, 77, 0.42) 0 0.07rem, transparent 0.09rem),
+      radial-gradient(circle at 80% 52%, rgba(213, 166, 77, 0.42) 0 0.07rem, transparent 0.09rem),
+      radial-gradient(circle at 50% 45%, transparent 0 6.8rem, rgba(213, 166, 77, 0.14) 6.9rem 7rem, transparent 7.1rem),
+      radial-gradient(circle at 50% 45%, transparent 0 10.5rem, rgba(213, 166, 77, 0.1) 10.6rem 10.7rem, transparent 10.8rem) !important;
+  }
+
+  .mass-login-reference-layout .mass-login-visual::before {
+    background:
+      radial-gradient(circle at 50% 48%, rgba(213, 166, 77, 0.52) 0 0.045rem, transparent 0.055rem),
+      radial-gradient(ellipse at 50% 48%, rgba(213, 166, 77, 0.1), transparent 44%) !important;
+    background-size: 0.62rem 0.62rem, 100% 100% !important;
+    mask-image: radial-gradient(ellipse at 50% 47%, #000 0 44%, transparent 68%);
+    opacity: 0.9;
+  }
+
+  .mass-login-reference-layout .mass-login-mesh {
+    inset: 4% 2% auto !important;
+    height: 82% !important;
+    opacity: 0.58;
+  }
+
+  .mass-login-reference-layout .mass-login-node,
+  .mass-login-reference-layout .mass-login-orbit-card {
+    display: none !important;
+  }
+
+  .mass-login-reference-layout .mass-login-shield-mark {
+    position: absolute;
+    display: block;
+    inset-block-start: 27%;
+    inset-inline-start: 50%;
+    z-index: 3;
+    width: clamp(7rem, 10vw, 11rem);
+    transform: translateX(-50%);
+    filter: drop-shadow(0 0 28px rgba(244, 209, 138, 0.32));
+  }
+
+  .mass-login-reference-layout .mass-login-shield-mark svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    fill: rgba(8, 17, 16, 0.62);
+    stroke: var(--mass-cinematic-gold-2);
+    stroke-width: 2.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .mass-login-reference-layout .mass-login-brand-copy {
+    z-index: 3;
+    margin-block-start: clamp(-3rem, -4vh, -1rem) !important;
+    max-width: 42rem !important;
+  }
+
+  .mass-login-reference-layout .mass-login-brand-copy h1 {
+    color: #ffffff !important;
+    font-size: clamp(4rem, min(5vw, 8.5vh), 6.8rem) !important;
+    line-height: 0.94 !important;
+    text-shadow: 0 18px 32px rgba(0, 0, 0, 0.34);
+  }
+
+  .mass-login-reference-layout .mass-login-brand-copy p {
+    color: var(--mass-cinematic-gold-2) !important;
+    font-size: clamp(1rem, min(1.35vw, 2.4vh), 1.4rem) !important;
+    line-height: 1.4 !important;
+  }
+
+  .mass-login-reference-layout .mass-login-cityline {
+    position: absolute;
+    display: block;
+    z-index: 2;
+    inset-inline: 10%;
+    inset-block-end: 24%;
+    height: min(18vh, 10rem);
+    opacity: 0.74;
+    background:
+      linear-gradient(180deg, transparent 0 24%, rgba(213, 166, 77, 0.32) 24.5% 100%),
+      repeating-linear-gradient(90deg, transparent 0 1.5rem, rgba(213, 166, 77, 0.55) 1.55rem 1.75rem, transparent 1.8rem 3.2rem);
+    clip-path: polygon(0 100%, 0 75%, 3% 75%, 3% 62%, 5% 62%, 5% 100%, 11% 100%, 11% 58%, 13% 58%, 13% 100%, 19% 100%, 19% 70%, 21% 70%, 21% 100%, 31% 100%, 31% 48%, 33% 48%, 33% 100%, 43% 100%, 43% 35%, 45% 18%, 47% 35%, 47% 100%, 57% 100%, 57% 56%, 59% 56%, 59% 100%, 68% 100%, 68% 34%, 70% 34%, 70% 100%, 78% 100%, 78% 22%, 80% 0, 82% 22%, 82% 100%, 91% 100%, 91% 50%, 94% 50%, 94% 100%, 100% 100%);
+  }
+
+  .mass-login-reference-layout .mass-login-metrics {
+    z-index: 3;
+    max-width: 43rem;
+    gap: 0.7rem !important;
+  }
+
+  .mass-login-reference-layout .mass-login-metrics div {
+    min-height: 4.55rem !important;
+    padding: 0.78rem 0.9rem 0.78rem 3.2rem !important;
+    border-color: rgba(213, 166, 77, 0.34) !important;
+    background: rgba(0, 31, 27, 0.52) !important;
+  }
+
+  .mass-login-reference-layout .mass-login-metrics strong {
+    color: var(--mass-cinematic-gold-2) !important;
+    font-size: clamp(1.25rem, 1.65vw, 1.75rem) !important;
+  }
+
+  .mass-login-reference-layout .mass-login-metrics i {
+    inset-inline-start: 0.85rem;
+    inset-inline-end: auto;
+    color: transparent !important;
+    border-color: rgba(213, 166, 77, 0.38);
+  }
+
+  .mass-login-reference-layout .mass-login-metrics i::before {
+    content: "";
+    width: 0.86rem;
+    aspect-ratio: 1;
+    border: 2px solid var(--mass-cinematic-gold-2);
+    border-radius: 50%;
+  }
+
+  .mass-login-reference-layout .mass-login-chips {
+    z-index: 3;
+    max-width: 43rem;
+  }
+
+  .mass-login-reference-layout .mass-login-signal {
+    z-index: 3;
+    margin-block-start: 0.4rem !important;
+    padding: 0.85rem 1.05rem !important;
+    min-width: min(100%, 31rem);
+    border-radius: 999px !important;
+    background: rgba(0, 49, 40, 0.62) !important;
+  }
+
+  .mass-login-reference-layout .mass-login-signal > span:last-child {
+    display: grid;
+    gap: 0.16rem;
+  }
+
+  .mass-login-reference-layout .mass-login-signal small {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.82rem;
+  }
+
+  body.mass-login-reference-layout > div:not(.mass-login-brand-panel),
+  body.mass-login-reference-layout main,
+  body.mass-login-reference-layout [id="__next"] {
+    inset: 0 0 0 var(--mass-login-split) !important;
+  }
+
+  body.mass-login-reference-layout > div:not(.mass-login-brand-panel) {
+    background:
+      radial-gradient(circle at 72% 0%, rgba(213, 166, 77, 0.12), transparent 20rem),
+      linear-gradient(180deg, #fffdf8, #f9f2e5) !important;
+  }
+
+  body.mass-login-reference-layout > div:not(.mass-login-brand-panel)::before {
+    inset-inline-start: auto !important;
+    inset-inline-end: -16rem !important;
+    inset-block-start: -10rem !important;
+    opacity: 0.32 !important;
+  }
+
+  body.mass-login-reference-layout > div:not(.mass-login-brand-panel)::after {
+    inset-inline-start: auto !important;
+    inset-inline-end: 0 !important;
+    inset-block-start: auto !important;
+    inset-block-end: 0 !important;
+    width: 100% !important;
+    height: 13rem !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    transform: none !important;
+    background:
+      linear-gradient(180deg, transparent, rgba(213, 166, 77, 0.08)),
+      repeating-linear-gradient(90deg, transparent 0 1.1rem, rgba(1, 31, 27, 0.12) 1.15rem 1.22rem, transparent 1.25rem 2.8rem);
+    mask-image: linear-gradient(180deg, transparent 0%, #000 45%, #000 100%);
+    box-shadow: none !important;
+  }
+
+  .mass-login-reference-layout .mass-login-card-shell {
+    width: clamp(29rem, 31vw, 37rem) !important;
+    max-width: min(37rem, calc(100vw - var(--mass-login-split) - 5rem)) !important;
+    padding: clamp(2rem, 2.6vw, 3rem) !important;
+    border-color: rgba(213, 166, 77, 0.44) !important;
+    border-radius: 18px !important;
+    background:
+      radial-gradient(circle at 100% 0%, rgba(213, 166, 77, 0.1), transparent 11rem),
+      linear-gradient(180deg, rgba(255, 253, 248, 0.95), rgba(255, 250, 241, 0.88)) !important;
+    box-shadow:
+      0 34px 90px rgba(77, 58, 24, 0.2),
+      0 0 0 1px rgba(255, 255, 255, 0.82) inset !important;
+  }
+
+  .mass-login-reference-layout .mass-login-form-crest {
+    display: grid;
+    place-items: center;
+    margin-block-end: 1rem;
+  }
+
+  .mass-login-reference-layout .mass-login-form-crest svg {
+    width: 3.25rem;
+    height: auto;
+    fill: none;
+    stroke: var(--mass-cinematic-gold);
+    stroke-width: 2;
+  }
+
+  .mass-login-reference-layout form.mass-login-form h1,
+  .mass-login-reference-layout form.mass-login-form h2 {
+    color: var(--mass-cinematic-ink) !important;
+    font-size: clamp(1.65rem, 1.8vw, 2.25rem) !important;
+  }
+
+  .mass-login-reference-layout form.mass-login-form p {
+    color: #6a6762 !important;
+  }
+
+  .mass-login-reference-layout form.mass-login-form input {
+    min-height: 3.55rem !important;
+    padding-inline-start: 3.1rem !important;
+    border-color: rgba(213, 166, 77, 0.38) !important;
+    background-color: rgba(255, 253, 249, 0.78) !important;
+    background-repeat: no-repeat !important;
+    background-size: 1.28rem 1.28rem !important;
+    background-position: left 1.05rem center !important;
+  }
+
+  .mass-login-reference-layout form.mass-login-form input:not([type="password"]) {
+    background-image: url("/ui/login-theme/assets/svg/icons/user.svg") !important;
+  }
+
+  .mass-login-reference-layout form.mass-login-form input[type="password"] {
+    background-image: url("/ui/login-theme/assets/svg/icons/lock.svg") !important;
+  }
+
+  .mass-login-reference-layout form.mass-login-form .mass-login-submit,
+  .mass-login-reference-layout form.mass-login-form button[type="submit"] {
+    background: linear-gradient(135deg, #e6b852 0%, #8b5e1d 100%) !important;
+    color: #fff !important;
+    box-shadow: 0 14px 26px rgba(139, 94, 29, 0.26) !important;
+  }
+
+  .mass-login-reference-layout form.mass-login-form .mass-login-submit::after,
+  .mass-login-reference-layout form.mass-login-form button[type="submit"]::after {
+    content: "->";
+    margin-inline-start: 1.1rem;
+  }
+
+  .mass-login-reference-layout .mass-login-trust-row {
+    color: #77716a !important;
+  }
+
+  .mass-login-reference-layout .mass-login-legal-links {
+    position: absolute;
+    z-index: 2;
+    inset-inline: 0;
+    inset-block-end: clamp(1.2rem, 2.4vh, 2.4rem);
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+  }
+
+  .mass-login-reference-layout .mass-login-legal-links .mass-login-legal-link,
+  .mass-login-reference-layout .mass-login-legal-links > span:not(.mass-login-legal-link) {
+    color: #6a5a3c !important;
+    font-size: 0.92rem;
+    text-decoration: none !important;
+  }
+
+  .mass-login-reference-layout .mass-login-legal-links > span:not(.mass-login-legal-link)::before {
+    content: "|";
+  }
+}
+
+@media (max-width: 1023px) {
+  body.mass-login-reference-layout {
+    background:
+      linear-gradient(180deg, var(--mass-cinematic-green-2) 0 48%, #fff9ee 48.2% 100%) !important;
+  }
+
+  .mass-login-reference-layout .mass-login-brand-panel {
+    padding: 1.2rem !important;
+    border-color: rgba(213, 166, 77, 0.34) !important;
+    background:
+      radial-gradient(circle at 50% 23%, rgba(213, 166, 77, 0.16), transparent 14rem),
+      linear-gradient(180deg, rgba(0, 31, 27, 0.96), rgba(3, 17, 15, 0.97)) !important;
+  }
+
+  .mass-login-reference-layout .mass-login-brand-lockup {
+    justify-content: center !important;
+  }
+
+  .mass-login-reference-layout .mass-login-logo {
+    width: min(13rem, 54%) !important;
+    filter: sepia(1) saturate(0.9) hue-rotate(350deg) brightness(1.35) !important;
+  }
+
+  .mass-login-reference-layout .mass-login-eyebrow {
+    position: absolute;
+    inset-block-start: 3.1rem;
+    inset-inline-end: 1.25rem;
+  }
+
+  .mass-login-reference-layout .mass-login-visual {
+    min-height: 12.5rem !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background:
+      radial-gradient(circle at 50% 45%, rgba(244, 209, 138, 0.19), transparent 4.8rem),
+      radial-gradient(circle at 50% 45%, rgba(213, 166, 77, 0.46) 0 0.05rem, transparent 0.065rem),
+      radial-gradient(circle at 35% 38%, rgba(213, 166, 77, 0.34) 0 0.05rem, transparent 0.065rem),
+      radial-gradient(circle at 66% 35%, rgba(213, 166, 77, 0.34) 0 0.05rem, transparent 0.065rem),
+      radial-gradient(circle at 50% 45%, transparent 0 5.3rem, rgba(213, 166, 77, 0.13) 5.4rem 5.48rem, transparent 5.6rem) !important;
+  }
+
+  .mass-login-reference-layout .mass-login-visual::before {
+    background:
+      radial-gradient(circle at 50% 50%, rgba(213, 166, 77, 0.5) 0 0.04rem, transparent 0.05rem),
+      radial-gradient(ellipse at 50% 50%, rgba(213, 166, 77, 0.1), transparent 48%) !important;
+    background-size: 0.56rem 0.56rem, 100% 100% !important;
+    mask-image: radial-gradient(ellipse at 50% 48%, #000 0 46%, transparent 72%);
+  }
+
+  .mass-login-reference-layout .mass-login-mesh {
+    opacity: 0.45;
+  }
+
+  .mass-login-reference-layout .mass-login-node,
+  .mass-login-reference-layout .mass-login-orbit-card {
+    display: none !important;
+  }
+
+  .mass-login-reference-layout .mass-login-shield-mark {
+    position: absolute;
+    display: block;
+    inset-block-start: 28%;
+    inset-inline-start: 50%;
+    width: 6rem;
+    transform: translateX(-50%);
+    filter: drop-shadow(0 0 24px rgba(244, 209, 138, 0.28));
+  }
+
+  .mass-login-reference-layout .mass-login-shield-mark svg {
+    display: block;
+    width: 100%;
+    fill: rgba(8, 17, 16, 0.62);
+    stroke: var(--mass-cinematic-gold-2);
+    stroke-width: 2.3;
+  }
+
+  .mass-login-reference-layout .mass-login-brand-copy h1 {
+    color: #fff !important;
+    text-align: center;
+  }
+
+  .mass-login-reference-layout .mass-login-brand-copy p {
+    color: var(--mass-cinematic-gold-2) !important;
+    text-align: center;
+  }
+
+  .mass-login-reference-layout .mass-login-signal > span:last-child {
+    display: grid;
+    gap: 0.12rem;
+  }
+
+  .mass-login-reference-layout .mass-login-signal small {
+    display: block;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.76rem;
+  }
+
+  .mass-login-reference-layout .mass-login-card-shell {
+    border-color: rgba(213, 166, 77, 0.34) !important;
+    background: rgba(255, 253, 248, 0.94) !important;
+  }
+
+  .mass-login-reference-layout .mass-login-form-crest {
+    display: grid;
+    place-items: center;
+    margin-block-end: 0.9rem;
+  }
+
+  .mass-login-reference-layout .mass-login-form-crest svg {
+    width: 3rem;
+    fill: none;
+    stroke: var(--mass-cinematic-gold);
+    stroke-width: 2;
+  }
+
+  .mass-login-reference-layout .mass-login-legal-links {
+    display: none;
+  }
+}
+
+/* Stability pass for every ZITADEL Login V2 sub-page: login, password, register, and recovery. */
+.mass-login-reference-layout > div:not(.mass-login-brand-panel),
+.mass-login-reference-layout > div:not(.mass-login-brand-panel) > div,
+.mass-login-reference-layout .mass-login-card-shell,
+.mass-login-reference-layout .mass-login-form-host,
+.mass-login-reference-layout form.mass-login-form {
+  opacity: 1 !important;
+  visibility: visible !important;
+  filter: none !important;
+}
+
+.mass-login-reference-layout .mass-login-card-shell {
+  overflow-x: hidden !important;
+  scrollbar-gutter: stable;
+}
+
+.mass-login-reference-layout form.mass-login-form > * {
+  max-width: 100% !important;
+}
+
+.mass-login-reference-layout form.mass-login-form button,
+.mass-login-reference-layout form.mass-login-form a {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+@media (min-width: 1101px) {
+  .mass-login-reference-layout .mass-login-brand-panel {
+    grid-template-rows: auto minmax(8.5rem, 0.72fr) auto auto auto auto !important;
+    gap: clamp(0.45rem, 1vh, 0.9rem) !important;
+  }
+
+  .mass-login-reference-layout .mass-login-visual {
+    max-height: min(24vh, 16rem) !important;
+  }
+
+  .mass-login-reference-layout .mass-login-brand-copy h1 {
+    font-size: clamp(3.75rem, min(5.1vw, 10.2vh), 6.6rem) !important;
+  }
+
+  .mass-login-reference-layout .mass-login-brand-copy p {
+    margin-block-start: 0.45rem !important;
+    font-size: clamp(0.82rem, min(0.95vw, 1.85vh), 1.04rem) !important;
+    line-height: 1.38 !important;
+  }
+
+  .mass-login-reference-layout .mass-login-metrics div {
+    min-height: 3.2rem !important;
+    padding-block: 0.5rem !important;
+  }
+
+  .mass-login-reference-layout .mass-login-chips span,
+  .mass-login-reference-layout .mass-login-signal {
+    padding-block: 0.42rem !important;
+  }
+
+  .mass-login-reference-layout .mass-login-card-shell {
+    max-height: calc(100vh - clamp(4rem, 8vh, 7rem)) !important;
+    overflow-y: auto !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  .mass-login-reference-layout .mass-login-card-shell {
+    overflow-y: visible !important;
+  }
+}
+
+/* Final programmed Mass Data implementation: live DOM hero with atomic SVG layers. */
+body.mass-login-reference-layout {
+  --md-dark-950: #001f1b;
+  --md-dark-900: #052d27;
+  --md-gold-600: #b5842e;
+  --md-gold-500: #c9963e;
+  --md-gold-400: #d7ad62;
+  --md-gold-300: #f1d38a;
+  --md-ivory-100: #fffaf0;
+  --md-ivory-50: #fffdf8;
+  --md-ink: #102522;
+  --md-muted: #70736d;
+  --md-border: #e7d2aa;
+  --md-success: #31d377;
+  --md-split: 53.8vw;
+  min-height: 100svh !important;
+  background: var(--md-ivory-100) !important;
+  color: var(--md-ink) !important;
+  overflow: hidden !important;
+}
+
+body.mass-login-reference-layout.mass-login-rtl,
+html[dir="rtl"] body.mass-login-reference-layout {
+  --md-split: 56.5vw;
+}
+
+body.mass-login-reference-layout > div:not(.mass-login-brand-panel):not(.mass-login-page-shell) {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+}
+
+body.mass-login-reference-layout > #headlessui-portal-root {
+  display: block !important;
+  position: fixed !important;
+  z-index: 9999 !important;
+  inset: 0 auto auto 0 !important;
+  width: auto !important;
+  height: auto !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: visible !important;
+  pointer-events: none !important;
+}
+
+body.mass-login-reference-layout > #headlessui-portal-root [role="listbox"] {
+  z-index: 10000 !important;
+  max-width: 16rem !important;
+  max-height: 22rem !important;
+  min-width: var(--button-width, 8rem) !important;
+  overflow: auto !important;
+  pointer-events: auto !important;
+  border: 1px solid rgba(181, 132, 46, 0.28) !important;
+  background: rgba(255, 253, 248, 0.98) !important;
+  box-shadow: 0 18px 42px rgba(58, 42, 16, 0.18) !important;
+}
+
+body.mass-login-reference-layout .mass-login-brand-panel {
+  position: fixed !important;
+  z-index: 1 !important;
+  inset-block: 0 !important;
+  inset-inline-start: 0 !important;
+  width: var(--md-split) !important;
+  height: 100svh !important;
+  min-height: 100svh !important;
+  display: block !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: var(--md-dark-950) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: #fff !important;
+}
+
+body.mass-login-reference-layout .mass-login-brand-panel::before,
+body.mass-login-reference-layout .mass-login-brand-panel::after,
+body.mass-login-reference-layout .mass-login-hero-image {
+  display: none !important;
+}
+
+body.mass-login-reference-layout .mass-login-brand-panel > .mass-hero-layer,
+body.mass-login-reference-layout .mass-login-brand-panel > .mass-hero-content {
+  display: block !important;
+}
+
+body.mass-login-reference-layout .mass-hero-layer {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  pointer-events: none !important;
+  user-select: none !important;
+}
+
+body.mass-login-reference-layout .mass-hero-layer-base {
+  z-index: 0 !important;
+}
+
+body.mass-login-reference-layout .mass-hero-layer-pattern {
+  z-index: 1 !important;
+  opacity: 0.92 !important;
+}
+
+body.mass-login-reference-layout .mass-hero-layer-map,
+body.mass-login-reference-layout .mass-hero-layer-arcs {
+  inset: auto !important;
+  left: 16% !important;
+  top: 11% !important;
+  width: 84% !important;
+  height: 45% !important;
+  object-fit: contain !important;
+  opacity: 0.84 !important;
+}
+
+body.mass-login-reference-layout .mass-hero-layer-arcs {
+  z-index: 3 !important;
+  opacity: 0.9 !important;
+}
+
+body.mass-login-reference-layout .mass-hero-layer-map {
+  z-index: 2 !important;
+}
+
+body.mass-login-reference-layout .mass-hero-layer-shield {
+  z-index: 4 !important;
+  inset: auto !important;
+  left: 50% !important;
+  top: 22% !important;
+  width: 32% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  transform: translateX(-4%) !important;
+  filter: drop-shadow(0 20px 50px rgba(215, 173, 98, 0.24)) !important;
+}
+
+body.mass-login-reference-layout .mass-hero-layer-skyline {
+  z-index: 2 !important;
+  inset: auto 0 7% 22% !important;
+  width: 76% !important;
+  height: 22% !important;
+  object-fit: contain !important;
+  opacity: 0.9 !important;
+}
+
+body.mass-login-reference-layout .mass-hero-content {
+  position: relative !important;
+  z-index: 5 !important;
+  min-height: 100svh !important;
+  padding: clamp(3.4rem, 6vw, 5.5rem) clamp(3.6rem, 7vw, 7.5rem) !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+body.mass-login-reference-layout .mass-hero-logo {
+  display: block !important;
+  width: clamp(16.25rem, 25vw, 26.25rem) !important;
+  height: auto !important;
+  object-fit: contain !important;
+  align-self: flex-start !important;
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.22)) !important;
+}
+
+body.mass-login-reference-layout .mass-hero-copy {
+  margin-top: auto !important;
+  padding-bottom: clamp(3.4rem, 7vw, 5.75rem) !important;
+  max-width: 45rem !important;
+}
+
+body.mass-login-reference-layout .mass-hero-title {
+  margin: 0 0 1.1rem !important;
+  color: #fff !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-weight: 600 !important;
+  letter-spacing: 0 !important;
+  line-height: 0.92 !important;
+  font-size: clamp(4.4rem, 5.8vw, 6.4rem) !important;
+  text-shadow: 0 16px 40px rgba(0, 0, 0, 0.34) !important;
+}
+
+body.mass-login-reference-layout.mass-login-rtl .mass-hero-title,
+html[dir="rtl"] body.mass-login-reference-layout .mass-hero-title {
+  font-family: "Noto Kufi Arabic", Tahoma, Arial, sans-serif !important;
+  font-weight: 700 !important;
+  line-height: 1.08 !important;
+  font-size: clamp(3.8rem, 5.3vw, 5.75rem) !important;
+}
+
+body.mass-login-reference-layout .mass-hero-subtitle {
+  margin: 0 0 1.5rem !important;
+  color: var(--md-gold-300) !important;
+  font-size: clamp(1rem, 1.15vw, 1.32rem) !important;
+  font-weight: 600 !important;
+  line-height: 1.55 !important;
+}
+
+body.mass-login-reference-layout .mass-hero-stats {
+  display: flex !important;
+  gap: 0.85rem !important;
+  max-width: 44rem !important;
+  margin: 0 0 1.1rem !important;
+}
+
+body.mass-login-reference-layout .mass-hero-stat {
+  flex: 1 1 0 !important;
+  min-width: 0 !important;
+  border: 1px solid rgba(215, 173, 98, 0.42) !important;
+  border-radius: 12px !important;
+  background: rgba(4, 45, 38, 0.72) !important;
+  backdrop-filter: blur(14px) !important;
+  padding: 1rem 1.1rem !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05) !important;
+}
+
+body.mass-login-reference-layout .mass-hero-stat strong {
+  display: block !important;
+  color: var(--md-gold-300) !important;
+  font-size: 1.8rem !important;
+  line-height: 1 !important;
+  font-weight: 850 !important;
+}
+
+body.mass-login-reference-layout .mass-hero-stat span {
+  display: block !important;
+  margin-top: 0.5rem !important;
+  color: rgba(255, 255, 255, 0.72) !important;
+  font-size: 0.75rem !important;
+  line-height: 1.25 !important;
+}
+
+body.mass-login-reference-layout .mass-hero-pills {
+  display: flex !important;
+  gap: 0.62rem !important;
+  flex-wrap: wrap !important;
+  margin: 0 0 1.5rem !important;
+}
+
+body.mass-login-reference-layout .mass-hero-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  height: 2.25rem !important;
+  padding: 0 1rem !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(215, 173, 98, 0.44) !important;
+  background: rgba(6, 36, 32, 0.72) !important;
+  color: var(--md-gold-300) !important;
+  font-size: 0.82rem !important;
+  font-weight: 800 !important;
+}
+
+body.mass-login-reference-layout .mass-hero-status {
+  width: min(32.5rem, 100%) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.8rem !important;
+  padding: 1rem 1.3rem !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(215, 173, 98, 0.3) !important;
+  background: rgba(4, 65, 55, 0.72) !important;
+  backdrop-filter: blur(14px) !important;
+  color: #fff !important;
+}
+
+body.mass-login-reference-layout .mass-hero-status i {
+  width: 0.8rem !important;
+  height: 0.8rem !important;
+  border-radius: 50% !important;
+  background: var(--md-success) !important;
+  box-shadow: 0 0 0 8px rgba(49, 211, 119, 0.14), 0 0 26px rgba(49, 211, 119, 0.62) !important;
+  flex: none !important;
+}
+
+body.mass-login-reference-layout .mass-hero-status strong,
+body.mass-login-reference-layout .mass-hero-status span {
+  display: block !important;
+}
+
+body.mass-login-reference-layout .mass-hero-status span {
+  margin-top: 0.12rem !important;
+  color: rgba(255, 255, 255, 0.68) !important;
+  font-size: 0.82rem !important;
+}
+
+body.mass-login-reference-layout .mass-login-page-shell {
+  position: fixed !important;
+  z-index: 2 !important;
+  inset-block: 0 !important;
+  inset-inline-start: var(--md-split) !important;
+  inset-inline-end: 0 !important;
+  width: auto !important;
+  min-height: 100svh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 1.6rem !important;
+  padding: 4.5rem 2.65rem 2.65rem !important;
+  overflow: hidden !important;
+  background:
+    url("/ui/login-theme/assets/svg/layers/auth_light/02-subtle-contour-lines.svg") center / cover no-repeat,
+    url("/ui/login-theme/assets/svg/layers/auth_light/03-arabesque-right-border.svg") right top / 46% 100% no-repeat,
+    url("/ui/login-theme/assets/svg/layers/auth_light/04-bottom-skyline-ivory.svg") center bottom / 94% 18% no-repeat,
+    url("/ui/login-theme/assets/svg/layers/auth_light/01-ivory-radial-base.svg") center / cover no-repeat,
+    var(--md-ivory-100) !important;
+}
+
+body.mass-login-reference-layout .mass-login-page-shell::before,
+body.mass-login-reference-layout .mass-login-page-shell::after {
+  display: none !important;
+}
+
+body.mass-login-reference-layout .mass-login-card-frame {
+  width: min(535px, 100%) !important;
+  max-width: 535px !important;
+  margin-inline: auto !important;
+  padding: 0 !important;
+}
+
+body.mass-login-reference-layout .mass-login-card-path:not(.mass-login-card-shell) {
+  width: min(535px, 100%) !important;
+  max-width: 535px !important;
+  margin-inline: auto !important;
+}
+
+body.mass-login-reference-layout .mass-login-card-shell {
+  width: min(535px, 100%) !important;
+  max-width: 535px !important;
+  min-height: 600px !important;
+  max-height: calc(100svh - 7.6rem) !important;
+  margin: 0 auto !important;
+  padding: 2.7rem 3.25rem 2.4rem !important;
+  border-radius: 24px !important;
+  border: 1px solid var(--md-border) !important;
+  background: rgba(255, 253, 248, 0.92) !important;
+  box-shadow: 0 34px 80px rgba(58, 42, 16, 0.16), 0 8px 24px rgba(17, 24, 20, 0.05) !important;
+  backdrop-filter: blur(18px) !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+}
+
+body.mass-login-reference-layout .mass-login-form-crest {
+  display: block !important;
+  width: 4rem !important;
+  height: 4rem !important;
+  margin: 0 auto 1.7rem !important;
+}
+
+body.mass-login-reference-layout .mass-login-form-crest img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+body.mass-login-reference-layout form.mass-login-form h1,
+body.mass-login-reference-layout form.mass-login-form h2 {
+  margin: 0 0 0.65rem !important;
+  color: var(--md-ink) !important;
+  text-align: center !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: 2rem !important;
+  line-height: 1.15 !important;
+  letter-spacing: 0 !important;
+  font-weight: 700 !important;
+}
+
+body.mass-login-reference-layout form.mass-login-form p {
+  margin: 0 0 2.1rem !important;
+  color: var(--md-muted) !important;
+  text-align: center !important;
+  font-size: 0.88rem !important;
+  line-height: 1.5 !important;
+}
+
+body.mass-login-reference-layout form.mass-login-form input {
+  min-height: 3.25rem !important;
+  border-color: #dfcfb5 !important;
+  background-color: rgba(255, 255, 255, 0.64) !important;
+}
+
+body.mass-login-reference-layout form.mass-login-form .mass-login-action-row {
+  display: grid !important;
+  grid-template-columns: 1fr 1.75fr !important;
+  gap: clamp(1rem, 5vw, 5.25rem) !important;
+  align-items: center !important;
+  margin-top: 1.75rem !important;
+}
+
+body.mass-login-reference-layout.mass-login-rtl form.mass-login-form .mass-login-action-row,
+html[dir="rtl"] body.mass-login-reference-layout form.mass-login-form .mass-login-action-row {
+  grid-template-columns: 1.75fr 1fr !important;
+  gap: clamp(1rem, 3.6vw, 3.5rem) !important;
+}
+
+body.mass-login-reference-layout form.mass-login-form .mass-login-submit:not(:disabled):not([aria-disabled="true"]),
+body.mass-login-reference-layout form.mass-login-form button[type="submit"]:not(:disabled):not([aria-disabled="true"]) {
+  background: linear-gradient(180deg, #d9ac59 0%, #a7741d 100%) !important;
+  color: #fff !important;
+  box-shadow: 0 14px 28px rgba(181, 132, 46, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.28) !important;
+}
+
+body.mass-login-reference-layout .mass-login-legal-links {
+  position: relative !important;
+  z-index: 2 !important;
+  order: 30 !important;
+  inset: auto !important;
+  margin: 0 !important;
+  display: flex !important;
+  justify-content: center !important;
+  gap: 1.1rem !important;
+  color: var(--md-muted) !important;
+}
+
+@media (max-width: 1100px) {
+  body.mass-login-reference-layout {
+    min-height: 100svh !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    background: var(--md-dark-950) !important;
+  }
+
+  body.mass-login-reference-layout .mass-login-brand-panel {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: 52svh !important;
+    min-height: 405px !important;
+    max-height: 600px !important;
+  }
+
+  body.mass-login-reference-layout .mass-hero-content {
+    min-height: 100% !important;
+    height: 100% !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 1.9rem 1.5rem 3.5rem !important;
+  }
+
+  body.mass-login-reference-layout .mass-hero-logo {
+    width: min(330px, 76vw) !important;
+    align-self: center !important;
+  }
+
+  body.mass-login-reference-layout .mass-hero-layer-map,
+  body.mass-login-reference-layout .mass-hero-layer-arcs {
+    left: 50% !important;
+    top: 12% !important;
+    width: 114% !important;
+    height: 40% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  body.mass-login-reference-layout .mass-hero-layer-shield {
+    left: 50% !important;
+    top: 22% !important;
+    width: min(230px, 45vw) !important;
+    transform: translateX(-50%) !important;
+  }
+
+  body.mass-login-reference-layout .mass-hero-layer-skyline {
+    left: 0 !important;
+    bottom: 7% !important;
+    width: 100% !important;
+    height: 23% !important;
+  }
+
+  body.mass-login-reference-layout .mass-hero-copy {
+    margin-top: auto !important;
+    padding-bottom: 1.1rem !important;
+    max-width: 100% !important;
+  }
+
+  body.mass-login-reference-layout .mass-hero-title {
+    margin-bottom: 0.6rem !important;
+    text-align: center !important;
+    font-size: clamp(2.75rem, 10.8vw, 4.1rem) !important;
+  }
+
+  body.mass-login-reference-layout.mass-login-rtl .mass-hero-title,
+  html[dir="rtl"] body.mass-login-reference-layout .mass-hero-title {
+    font-size: clamp(2.65rem, 10.5vw, 4rem) !important;
+  }
+
+  body.mass-login-reference-layout .mass-hero-subtitle {
+    margin-bottom: 0 !important;
+    font-size: clamp(1rem, 4vw, 1.35rem) !important;
+  }
+
+  body.mass-login-reference-layout .mass-hero-stats,
+  body.mass-login-reference-layout .mass-hero-pills,
+  body.mass-login-reference-layout .mass-hero-status {
+    display: none !important;
+  }
+
+  body.mass-login-reference-layout .mass-login-page-shell {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    min-height: auto !important;
+    margin-top: -34px !important;
+    padding: 0 14px 36px !important;
+    overflow: visible !important;
+    background: transparent !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    gap: 22px !important;
+  }
+
+  body.mass-login-reference-layout .mass-login-card-path:not(.mass-login-card-shell),
+  body.mass-login-reference-layout .mass-login-card-frame {
+    width: min(860px, 100%) !important;
+    max-width: 860px !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    order: 1 !important;
+  }
+
+  body.mass-login-reference-layout .mass-login-card-shell {
+    width: min(860px, 100%) !important;
+    max-width: 860px !important;
+    min-height: auto !important;
+    max-height: none !important;
+    padding: 2.5rem 1.65rem 2rem !important;
+    border-radius: 24px !important;
+    overflow: visible !important;
+  }
+
+  body.mass-login-reference-layout .mass-login-form-crest {
+    width: 3.75rem !important;
+    height: 3.75rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  body.mass-login-reference-layout form.mass-login-form h1,
+  body.mass-login-reference-layout form.mass-login-form h2 {
+    font-size: clamp(1.95rem, 8vw, 2.65rem) !important;
+  }
+
+  body.mass-login-reference-layout form.mass-login-form p {
+    margin-bottom: 1.9rem !important;
+    font-size: 1rem !important;
+  }
+
+  body.mass-login-reference-layout form.mass-login-form label,
+  body.mass-login-reference-layout form.mass-login-form .mass-login-label {
+    font-size: 0.95rem !important;
+  }
+
+  body.mass-login-reference-layout form.mass-login-form input {
+    min-height: 3.75rem !important;
+    font-size: 1rem !important;
+  }
+
+  body.mass-login-reference-layout form.mass-login-form .mass-login-action-row,
+  body.mass-login-reference-layout.mass-login-rtl form.mass-login-form .mass-login-action-row,
+  html[dir="rtl"] body.mass-login-reference-layout form.mass-login-form .mass-login-action-row {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 0.85rem !important;
+    margin-top: 1.5rem !important;
+  }
+
+  body.mass-login-reference-layout form.mass-login-form .mass-login-submit,
+  body.mass-login-reference-layout form.mass-login-form button[type="submit"] {
+    order: 1 !important;
+    width: 100% !important;
+    min-height: 3.6rem !important;
+    font-size: 1.1rem !important;
+  }
+
+  body.mass-login-reference-layout form.mass-login-form .mass-login-back {
+    order: 2 !important;
+    width: 100% !important;
+    min-height: 3.5rem !important;
+    font-size: 1.1rem !important;
+  }
+
+  body.mass-login-reference-layout .mass-login-legal-links {
+    position: static !important;
+    order: 30 !important;
+    margin: 0 !important;
+    padding: 0 0 0.35rem !important;
+    color: var(--md-gold-300) !important;
+  }
+}
+
+/* Programmed reference pass: compose the hero with real HTML/CSS text over SVG layers. */
+body.mass-login-reference-layout > aside.mass-login-brand-panel,
+body.mass-login-reference-layout.mass-login-rtl > aside.mass-login-brand-panel,
+html[dir="rtl"] body.mass-login-reference-layout > aside.mass-login-brand-panel {
+  background: #031d17 !important;
+  background-image: none !important;
+}
+
+@media (min-width: 1101px) {
+  body.mass-login-reference-layout {
+    --md-split: 53.6vw !important;
+  }
+
+  body.mass-login-reference-layout.mass-login-rtl,
+  html[dir="rtl"] body.mass-login-reference-layout {
+    --md-split: 56.5vw !important;
+  }
+
+  body.mass-login-reference-layout > div.mass-login-page-shell,
+  body.mass-login-reference-layout > div.mass-login-page-shell:not(.mass-login-brand-panel) {
+    left: var(--md-split) !important;
+    right: 0 !important;
+    width: auto !important;
+    background:
+      url("/ui/login-theme/assets/svg/layers/auth_light/02-subtle-contour-lines.svg") center / cover no-repeat,
+      url("/ui/login-theme/assets/svg/layers/auth_light/03-arabesque-right-border.svg") right top / 46% 100% no-repeat,
+      url("/ui/login-theme/assets/svg/layers/auth_light/04-bottom-skyline-ivory.svg") center bottom / 96% 18% no-repeat,
+      radial-gradient(circle at 50% 18%, rgba(185, 145, 58, 0.11), transparent 30rem),
+      linear-gradient(180deg, #fffdf8 0%, #fbf4e8 100%) !important;
+  }
+
+  body.mass-login-reference-layout .mass-login-card-shell {
+    width: 535px !important;
+    min-height: 600px !important;
+  }
+}
+
+@media (max-width: 1100px) {
+  body.mass-login-reference-layout > aside.mass-login-brand-panel,
+  body.mass-login-reference-layout.mass-login-rtl > aside.mass-login-brand-panel,
+  html[dir="rtl"] body.mass-login-reference-layout > aside.mass-login-brand-panel {
+    background-image: none !important;
+    aspect-ratio: 941 / 632 !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+  }
+
+  body.mass-login-reference-layout.mass-login-rtl > aside.mass-login-brand-panel,
+  html[dir="rtl"] body.mass-login-reference-layout > aside.mass-login-brand-panel {
+    aspect-ratio: 941 / 697 !important;
+  }
+
+  body.mass-login-reference-layout > div.mass-login-page-shell,
+  body.mass-login-reference-layout.mass-login-rtl > div.mass-login-page-shell,
+  html[dir="rtl"] body.mass-login-reference-layout > div.mass-login-page-shell,
+  body.mass-login-reference-layout > div.mass-login-page-shell:not(.mass-login-brand-panel) {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+}
+
+/* Final sizing lock: overrides late ZITADEL layout constraints found in visual QA. */
+html.mass-login-enhanced,
+html.mass-login-enhanced body.mass-login-reference-layout {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+body.mass-login-reference-layout,
+body.mass-login-reference-layout * {
+  box-sizing: border-box !important;
+}
+
+@media (min-width: 921px) {
+  body.mass-login-reference-layout .mass-login-page-shell {
+    min-width: 0 !important;
+    inset-inline-start: auto !important;
+    inset-inline-end: auto !important;
+    left: var(--md-split) !important;
+    right: 0 !important;
+  }
+
+  body.mass-login-reference-layout .mass-login-brand-panel {
+    inset-inline-start: auto !important;
+    inset-inline-end: auto !important;
+    left: 0 !important;
+    right: auto !important;
+  }
+
+  body.mass-login-reference-layout.mass-login-rtl .mass-login-brand-panel,
+  html[dir="rtl"] body.mass-login-reference-layout .mass-login-brand-panel {
+    inset-inline-start: auto !important;
+    inset-inline-end: auto !important;
+    left: 0 !important;
+    right: auto !important;
+  }
+
+  body.mass-login-reference-layout.mass-login-rtl .mass-login-page-shell,
+  html[dir="rtl"] body.mass-login-reference-layout .mass-login-page-shell {
+    inset-inline-start: auto !important;
+    inset-inline-end: auto !important;
+    left: var(--md-split) !important;
+    right: 0 !important;
+  }
+
+  body.mass-login-reference-layout > .mass-login-page-shell,
+  body.mass-login-reference-layout.mass-login-rtl > .mass-login-page-shell,
+  html[dir="rtl"] body.mass-login-reference-layout > .mass-login-page-shell {
+    inset-inline-start: auto !important;
+    inset-inline-end: auto !important;
+    left: var(--md-split) !important;
+    right: 0 !important;
+  }
+
+  body.mass-login-reference-layout > aside.mass-login-brand-panel,
+  body.mass-login-reference-layout.mass-login-rtl > aside.mass-login-brand-panel,
+  html[dir="rtl"] body.mass-login-reference-layout > aside.mass-login-brand-panel {
+    inset: 0 auto 0 0 !important;
+    width: var(--md-split) !important;
+    height: 100svh !important;
+  }
+
+  body.mass-login-reference-layout > div.mass-login-page-shell:not(.mass-login-brand-panel),
+  body.mass-login-reference-layout.mass-login-rtl > div.mass-login-page-shell:not(.mass-login-brand-panel),
+  html[dir="rtl"] body.mass-login-reference-layout > div.mass-login-page-shell:not(.mass-login-brand-panel) {
+    position: fixed !important;
+    inset: 0 0 0 var(--md-split) !important;
+    width: auto !important;
+  }
+
+  body.mass-login-reference-layout .mass-login-card-path,
+  body.mass-login-reference-layout .mass-login-card-frame,
+  body.mass-login-reference-layout .mass-login-card-shell {
+    width: 535px !important;
+    min-width: 520px !important;
+    max-width: 535px !important;
+    flex: 0 0 535px !important;
+    align-self: center !important;
+  }
+
+  body.mass-login-reference-layout .mass-login-form-host,
+  body.mass-login-reference-layout form.mass-login-form {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  body.mass-login-reference-layout form.mass-login-form .mass-login-action-row {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    direction: ltr !important;
+    gap: 1.25rem !important;
+  }
+
+  body.mass-login-reference-layout form.mass-login-form .mass-login-action-row button {
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  body.mass-login-reference-layout form.mass-login-form .mass-login-action-row > span {
+    display: none !important;
+  }
+
+  body.mass-login-reference-layout.mass-login-rtl form.mass-login-form .mass-login-action-row button,
+  html[dir="rtl"] body.mass-login-reference-layout form.mass-login-form .mass-login-action-row button {
+    direction: rtl !important;
+  }
+
+  body.mass-login-reference-layout.mass-login-register-page .mass-login-page-shell {
+    gap: 1rem !important;
+    padding-top: 2.1rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  body.mass-login-reference-layout.mass-login-register-page .mass-login-card-shell {
+    min-height: 0 !important;
+    height: auto !important;
+    max-height: calc(100svh - 11rem) !important;
+    padding-top: 2rem !important;
+    padding-bottom: 1.85rem !important;
+  }
+
+  body.mass-login-reference-layout.mass-login-register-page .mass-login-form-crest {
+    width: 3.1rem !important;
+    height: 3.1rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  body.mass-login-reference-layout.mass-login-register-page .mass-login-card-shell > div:not(.mass-login-form-crest) > * + * {
+    margin-top: 1.05rem !important;
+  }
+
+  body.mass-login-reference-layout.mass-login-register-page form.mass-login-form .mass-login-action-row {
+    margin-top: 1.05rem !important;
+  }
+
+  body.mass-login-reference-layout.mass-login-register-page form.mass-login-form .pb-4 {
+    padding-bottom: 0.35rem !important;
+  }
+
+  body.mass-login-reference-layout.mass-login-register-page form.mass-login-form p {
+    margin-top: 0.85rem !important;
+    margin-bottom: 1.05rem !important;
+  }
+}
+
+@media (max-width: 1100px) {
+  html.mass-login-enhanced,
+  html.mass-login-enhanced body.mass-login-reference-layout {
+    overflow-x: hidden !important;
+  }
+
+  body.mass-login-reference-layout {
+    display: block !important;
+  }
+
+  body.mass-login-reference-layout .mass-login-brand-panel {
+    margin: 0 !important;
+    inset: auto !important;
+    width: 100vw !important;
+    max-width: none !important;
+    min-width: 100vw !important;
+    border-radius: 0 !important;
+    transform: none !important;
+  }
+
+  body.mass-login-reference-layout .mass-login-page-shell {
+    width: 100vw !important;
+    max-width: none !important;
+    margin: -34px 0 0 !important;
+    padding-inline: 14px !important;
+  }
+
+  body.mass-login-reference-layout .mass-login-card-path,
+  body.mass-login-reference-layout .mass-login-card-frame,
+  body.mass-login-reference-layout .mass-login-card-shell {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 860px !important;
+    flex: none !important;
+  }
+
+  body.mass-login-reference-layout form.mass-login-form .mass-login-action-row {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    direction: ltr !important;
+    gap: 0.85rem !important;
+  }
+
+  body.mass-login-reference-layout form.mass-login-form .mass-login-action-row button {
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  body.mass-login-reference-layout form.mass-login-form .mass-login-action-row > span {
+    display: none !important;
+  }
+}
+
+body.mass-login-reference-layout form.mass-login-form .mass-login-submit::after,
+body.mass-login-reference-layout form.mass-login-form button[type="submit"]::after {
+  content: "" !important;
+  width: 1.15rem !important;
+  height: 1.15rem !important;
+  margin-inline-start: 0.85rem !important;
+  flex: none !important;
+  background: currentColor !important;
+  -webkit-mask: url("/ui/login-theme/assets/svg/icons/arrow-right.svg") center / contain no-repeat !important;
+  mask: url("/ui/login-theme/assets/svg/icons/arrow-right.svg") center / contain no-repeat !important;
+}
+
+body.mass-login-reference-layout.mass-login-rtl form.mass-login-form .mass-login-submit::after,
+body.mass-login-reference-layout.mass-login-rtl form.mass-login-form button[type="submit"]::after,
+html[dir="rtl"] body.mass-login-reference-layout form.mass-login-form .mass-login-submit::after,
+html[dir="rtl"] body.mass-login-reference-layout form.mass-login-form button[type="submit"]::after {
+  margin-inline-start: 0 !important;
+  margin-inline-end: 0.85rem !important;
+  -webkit-mask-image: url("/ui/login-theme/assets/svg/icons/arrow-left.svg") !important;
+  mask-image: url("/ui/login-theme/assets/svg/icons/arrow-left.svg") !important;
+}
+
+body.mass-login-reference-layout .mass-login-form-crest,
+body.mass-login-reference-layout .mass-login-trust-row {
+  display: none !important;
+}
+
+body.mass-login-reference-layout .mass-login-card-shell::before {
+  content: "" !important;
+  display: block !important;
+  width: 4rem !important;
+  height: 4rem !important;
+  margin: 0 auto 1.7rem !important;
+  background: url("/ui/login-theme/assets/svg/components/geometric-security-crest.svg") center / contain no-repeat !important;
+}
+
+body.mass-login-reference-layout.mass-login-register-page .mass-login-card-shell::before {
+  width: 3.1rem !important;
+  height: 3.1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+body.mass-login-reference-layout form.mass-login-form::after {
+  content: attr(data-mass-footer) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 1rem !important;
+  margin-top: 1.25rem !important;
+  color: var(--md-muted) !important;
+  font-weight: 700 !important;
+  font-size: 0.82rem !important;
+  text-align: center !important;
+}
+
+body.mass-login-reference-layout form.mass-login-form::before {
+  content: "" !important;
+  display: block !important;
+  order: 999 !important;
+}
+
+body.mass-login-reference-layout form.mass-login-form label > span:first-child {
+  font-size: 0 !important;
+  line-height: 1 !important;
+}
+
+body.mass-login-reference-layout form.mass-login-form label > span:first-child::after {
+  content: "Username" !important;
+  font-size: 0.82rem !important;
+  line-height: 1.2 !important;
+  color: #5b4d32 !important;
+  font-weight: 700 !important;
+}
+
+body.mass-login-reference-layout form.mass-login-form label:has(input[type="password"]) > span:first-child::after {
+  content: "Password" !important;
+}
+
+body.mass-login-reference-layout form.mass-login-form label:has(input[name*="first" i]) > span:first-child::after {
+  content: "First name *" !important;
+}
+
+body.mass-login-reference-layout form.mass-login-form label:has(input[name*="last" i]) > span:first-child::after {
+  content: "Last name *" !important;
+}
+
+body.mass-login-reference-layout form.mass-login-form label:has(input[name*="email" i]) > span:first-child::after,
+body.mass-login-reference-layout form.mass-login-form label:has(input[type="email"]) > span:first-child::after {
+  content: "E-mail *" !important;
+}
+
+body.mass-login-reference-layout.mass-login-rtl form.mass-login-form label > span:first-child::after,
+html[dir="rtl"] body.mass-login-reference-layout form.mass-login-form label > span:first-child::after {
+  content: "\0627\0633\0645 \0627\0644\062f\062e\0648\0644" !important;
+}
+
+body.mass-login-reference-layout.mass-login-rtl form.mass-login-form label:has(input[type="password"]) > span:first-child::after,
+html[dir="rtl"] body.mass-login-reference-layout form.mass-login-form label:has(input[type="password"]) > span:first-child::after {
+  content: "\0643\0644\0645\0629 \0627\0644\0645\0631\0648\0631" !important;
+}
+
+body.mass-login-reference-layout form.mass-login-form h1,
+body.mass-login-reference-layout form.mass-login-form h2,
+body.mass-login-reference-layout form.mass-login-form h1 + p,
+body.mass-login-reference-layout form.mass-login-form h2 + p,
+body.mass-login-reference-layout form.mass-login-form a.mass-login-register,
+body.mass-login-reference-layout form.mass-login-form .mass-login-submit,
+body.mass-login-reference-layout form.mass-login-form button[type="submit"],
+body.mass-login-reference-layout form.mass-login-form .mass-login-back {
+  font-size: 0 !important;
+}
+
+body.mass-login-reference-layout form.mass-login-form h1::after,
+body.mass-login-reference-layout form.mass-login-form h2::after {
+  content: "Welcome to Mass Data" !important;
+  display: block !important;
+  color: var(--md-ink) !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: 2rem !important;
+  line-height: 1.15 !important;
+  letter-spacing: 0 !important;
+  font-weight: 700 !important;
+}
+
+body.mass-login-reference-layout.mass-login-register-page form.mass-login-form h1::after,
+body.mass-login-reference-layout.mass-login-register-page form.mass-login-form h2::after {
+  content: "Register" !important;
+}
+
+body.mass-login-reference-layout.mass-login-rtl form.mass-login-form h1::after,
+body.mass-login-reference-layout.mass-login-rtl form.mass-login-form h2::after,
+html[dir="rtl"] body.mass-login-reference-layout form.mass-login-form h1::after,
+html[dir="rtl"] body.mass-login-reference-layout form.mass-login-form h2::after {
+  content: "\0645\0631\062d\0628\0627\064b \0628\0643\A Mass Data" !important;
+  white-space: pre-line !important;
+  direction: rtl !important;
+  unicode-bidi: isolate !important;
+}
+
+
+body.mass-login-reference-layout.mass-login-rtl.mass-login-register-page form.mass-login-form h1::after,
+body.mass-login-reference-layout.mass-login-rtl.mass-login-register-page form.mass-login-form h2::after,
+html[dir="rtl"] body.mass-login-reference-layout.mass-login-register-page form.mass-login-form h1::after,
+html[dir="rtl"] body.mass-login-reference-layout.mass-login-register-page form.mass-login-form h2::after {
+  content: "\062a\0633\062c\064a\0644" !important;
+}
+
+body.mass-login-reference-layout form.mass-login-form h1 + p::after,
+body.mass-login-reference-layout form.mass-login-form h2 + p::after {
+  content: "Sign in securely to continue to your workspace." !important;
+  display: block !important;
+  color: var(--md-muted) !important;
+  font-size: 0.88rem !important;
+  line-height: 1.5 !important;
+}
+
+body.mass-login-reference-layout.mass-login-register-page form.mass-login-form h1 + p::after,
+body.mass-login-reference-layout.mass-login-register-page form.mass-login-form h2 + p::after {
+  content: "Create your Mass Data SSO account." !important;
+}
+
+body.mass-login-reference-layout.mass-login-rtl form.mass-login-form h1 + p::after,
+body.mass-login-reference-layout.mass-login-rtl form.mass-login-form h2 + p::after,
+html[dir="rtl"] body.mass-login-reference-layout form.mass-login-form h1 + p::after,
+html[dir="rtl"] body.mass-login-reference-layout form.mass-login-form h2 + p::after {
+  content: "ط³ط¬ظ„ ط§ظ„ط¯ط®ظˆظ„ ط¨ط£ظ…ط§ظ† ظ„ظ„ظ…طھط§ط¨ط¹ط© ط¥ظ„ظ‰ ظ…ط³ط§ط­ط© ط¹ظ…ظ„ظƒ." !important;
+}
+
+body.mass-login-reference-layout.mass-login-rtl.mass-login-register-page form.mass-login-form h1 + p::after,
+body.mass-login-reference-layout.mass-login-rtl.mass-login-register-page form.mass-login-form h2 + p::after,
+html[dir="rtl"] body.mass-login-reference-layout.mass-login-register-page form.mass-login-form h1 + p::after,
+html[dir="rtl"] body.mass-login-reference-layout.mass-login-register-page form.mass-login-form h2 + p::after {
+  content: "ط£ظ†ط´ط¦ ط­ط³ط§ط¨ Mass Data SSO ط§ظ„ط®ط§طµ ط¨ظƒ." !important;
+}
+
+body.mass-login-reference-layout form.mass-login-form a.mass-login-register::after {
+  content: "Register new user" !important;
+  font-size: 0.98rem !important;
+}
+
+body.mass-login-reference-layout.mass-login-rtl form.mass-login-form a.mass-login-register::after,
+html[dir="rtl"] body.mass-login-reference-layout form.mass-login-form a.mass-login-register::after {
+  content: "\062a\0633\062c\064a\0644 \0645\0633\062a\062e\062f\0645 \062c\062f\064a\062f" !important;
+}
+
+body.mass-login-reference-layout form.mass-login-form .mass-login-submit::before,
+body.mass-login-reference-layout form.mass-login-form button[type="submit"]::before {
+  content: "Continue" !important;
+  font-size: 1rem !important;
+  font-weight: 800 !important;
+}
+
+body.mass-login-reference-layout.mass-login-rtl form.mass-login-form .mass-login-submit::before,
+body.mass-login-reference-layout.mass-login-rtl form.mass-login-form button[type="submit"]::before,
+html[dir="rtl"] body.mass-login-reference-layout form.mass-login-form .mass-login-submit::before,
+html[dir="rtl"] body.mass-login-reference-layout form.mass-login-form button[type="submit"]::before {
+  content: "\0645\062a\0627\0628\0639\0629" !important;
+}
+
+body.mass-login-reference-layout form.mass-login-form .mass-login-back::after {
+  content: "Back" !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+}
+
+body.mass-login-reference-layout.mass-login-rtl form.mass-login-form .mass-login-back::after,
+html[dir="rtl"] body.mass-login-reference-layout form.mass-login-form .mass-login-back::after {
+  content: "\0631\062c\0648\0639" !important;
+}
+
+body.mass-login-reference-layout.mass-login-rtl form.mass-login-form .mass-login-action-row,
+html[dir="rtl"] body.mass-login-reference-layout form.mass-login-form .mass-login-action-row {
+  grid-template-columns: 1fr 1.75fr !important;
+}
+
+body.mass-login-reference-layout > .mass-login-legal-links,
+body.mass-login-reference-layout .mass-login-legal-links {
+  position: fixed !important;
+  z-index: 7 !important;
+  left: var(--md-split, 53.6vw) !important;
+  right: 0 !important;
+  bottom: clamp(1.35rem, 3.4vh, 2.15rem) !important;
+  inset-block-start: auto !important;
+  top: auto !important;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 1.15rem !important;
+  color: #6a5a3c !important;
+  pointer-events: auto !important;
+}
+
+body.mass-login-reference-layout.mass-login-rtl > .mass-login-legal-links,
+body.mass-login-reference-layout.mass-login-rtl .mass-login-legal-links,
+html[dir="rtl"] body.mass-login-reference-layout > .mass-login-legal-links,
+html[dir="rtl"] body.mass-login-reference-layout .mass-login-legal-links {
+  left: var(--md-split, 56.5vw) !important;
+  right: 0 !important;
+  direction: rtl !important;
+}
+
+@media (max-width: 1100px) {
+  body.mass-login-reference-layout form.mass-login-form .mass-login-action-row .mass-login-submit,
+  body.mass-login-reference-layout form.mass-login-form .mass-login-action-row button[type="submit"] {
+    order: 1 !important;
+    width: 100% !important;
+  }
+
+  body.mass-login-reference-layout form.mass-login-form .mass-login-action-row button:not([type="submit"]) {
+    order: 2 !important;
+    width: 100% !important;
+  }
+
+  body.mass-login-reference-layout > .mass-login-legal-links,
+  body.mass-login-reference-layout .mass-login-legal-links {
+    position: static !important;
+    width: 100% !important;
+    padding: 1rem 0 1.35rem !important;
+  }
+}
+
+body.mass-login-reference-layout .mass-login-card-shell h1,
+body.mass-login-reference-layout .mass-login-card-shell h2,
+body.mass-login-reference-layout .mass-login-card-shell h1 + p,
+body.mass-login-reference-layout .mass-login-card-shell h2 + p {
+  font-size: 0 !important;
+}
+
+body.mass-login-reference-layout .mass-login-card-shell h1::after,
+body.mass-login-reference-layout .mass-login-card-shell h2::after {
+  content: "Welcome to Mass Data" !important;
+  display: block !important;
+  color: var(--md-ink) !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: 2rem !important;
+  line-height: 1.15 !important;
+  letter-spacing: 0 !important;
+  font-weight: 700 !important;
+}
+
+body.mass-login-reference-layout.mass-login-register-page .mass-login-card-shell h1::after,
+body.mass-login-reference-layout.mass-login-register-page .mass-login-card-shell h2::after {
+  content: "Register" !important;
+}
+
+body.mass-login-reference-layout.mass-login-rtl .mass-login-card-shell h1::after,
+body.mass-login-reference-layout.mass-login-rtl .mass-login-card-shell h2::after,
+html[dir="rtl"] body.mass-login-reference-layout .mass-login-card-shell h1::after,
+html[dir="rtl"] body.mass-login-reference-layout .mass-login-card-shell h2::after {
+  content: "ظ…ط±ط­ط¨ط§ظ‹ ط¨ظƒ ظپظٹ\A Mass Data" !important;
+  direction: rtl !important;
+  unicode-bidi: isolate !important;
+  white-space: pre-line !important;
+  font-size: 1.9rem !important;
+  line-height: 1.18 !important;
+}
+
+body.mass-login-reference-layout.mass-login-rtl.mass-login-register-page .mass-login-card-shell h1::after,
+body.mass-login-reference-layout.mass-login-rtl.mass-login-register-page .mass-login-card-shell h2::after,
+html[dir="rtl"] body.mass-login-reference-layout.mass-login-register-page .mass-login-card-shell h1::after,
+html[dir="rtl"] body.mass-login-reference-layout.mass-login-register-page .mass-login-card-shell h2::after {
+  content: "\062a\0633\062c\064a\0644" !important;
+}
+
+body.mass-login-reference-layout .mass-login-card-shell h1 + p::after,
+body.mass-login-reference-layout .mass-login-card-shell h2 + p::after {
+  content: "Sign in securely to continue to your workspace." !important;
+  display: block !important;
+  color: var(--md-muted) !important;
+  font-size: 0.88rem !important;
+  line-height: 1.5 !important;
+}
+
+body.mass-login-reference-layout.mass-login-register-page .mass-login-card-shell h1 + p::after,
+body.mass-login-reference-layout.mass-login-register-page .mass-login-card-shell h2 + p::after {
+  content: "Create your Mass Data SSO account." !important;
+}
+
+body.mass-login-reference-layout.mass-login-rtl .mass-login-card-shell h1 + p::after,
+body.mass-login-reference-layout.mass-login-rtl .mass-login-card-shell h2 + p::after,
+html[dir="rtl"] body.mass-login-reference-layout .mass-login-card-shell h1 + p::after,
+html[dir="rtl"] body.mass-login-reference-layout .mass-login-card-shell h2 + p::after {
+  content: "ط³ط¬ظ„ ط§ظ„ط¯ط®ظˆظ„ ط¨ط£ظ…ط§ظ† ظ„ظ„ظ…طھط§ط¨ط¹ط© ط¥ظ„ظ‰ ظ…ط³ط§ط­ط© ط¹ظ…ظ„ظƒ." !important;
+}
+
+body.mass-login-reference-layout.mass-login-rtl.mass-login-register-page .mass-login-card-shell h1 + p::after,
+body.mass-login-reference-layout.mass-login-rtl.mass-login-register-page .mass-login-card-shell h2 + p::after,
+html[dir="rtl"] body.mass-login-reference-layout.mass-login-register-page .mass-login-card-shell h1 + p::after,
+html[dir="rtl"] body.mass-login-reference-layout.mass-login-register-page .mass-login-card-shell h2 + p::after {
+  content: "ط£ظ†ط´ط¦ ط­ط³ط§ط¨ Mass Data SSO ط§ظ„ط®ط§طµ ط¨ظƒ." !important;
+}
+
+/* Final programmed hero alignment. No baked-text hero images are used. */
+body.mass-login-reference-layout > aside.mass-login-brand-panel {
+  overflow: hidden !important;
+  isolation: isolate !important;
+  background:
+    radial-gradient(circle at 56% 35%, rgba(21, 87, 65, 0.38), transparent 34rem),
+    linear-gradient(180deg, #031f19 0%, #021611 100%) !important;
+}
+
+body.mass-login-reference-layout > aside.mass-login-brand-panel::before,
+body.mass-login-reference-layout > aside.mass-login-brand-panel::after {
+  display: none !important;
+}
+
+body.mass-login-reference-layout > aside.mass-login-brand-panel .mass-hero-layer,
+body.mass-login-reference-layout > aside.mass-login-brand-panel .mass-hero-logo,
+body.mass-login-reference-layout > aside.mass-login-brand-panel .mass-hero-copy,
+body.mass-login-reference-layout > aside.mass-login-brand-panel .mass-hero-content {
+  display: block !important;
+}
+
+body.mass-login-reference-layout .mass-hero-layer {
+  position: absolute !important;
+  pointer-events: none !important;
+  user-select: none !important;
+}
+
+body.mass-login-reference-layout .mass-hero-layer-base {
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  opacity: 0.95 !important;
+}
+
+body.mass-login-reference-layout .mass-hero-layer-pattern {
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  opacity: 0.42 !important;
+}
+
+body.mass-login-reference-layout .mass-hero-layer-map {
+  top: 8.5% !important;
+  left: 8% !important;
+  width: 91% !important;
+  height: 50% !important;
+  object-fit: contain !important;
+  opacity: 0.82 !important;
+  filter: drop-shadow(0 0 18px rgba(211, 169, 88, 0.18)) !important;
+}
+
+body.mass-login-reference-layout .mass-hero-layer-arcs {
+  top: 8% !important;
+  left: 7% !important;
+  width: 92% !important;
+  height: 52% !important;
+  object-fit: contain !important;
+  opacity: 0.9 !important;
+}
+
+body.mass-login-reference-layout .mass-hero-layer-shield {
+  top: 17.5% !important;
+  left: 59% !important;
+  width: 25% !important;
+  height: auto !important;
+  opacity: 0.92 !important;
+  transform: translateX(-50%) !important;
+}
+
+body.mass-login-reference-layout .mass-hero-layer-skyline {
+  left: 20% !important;
+  right: 2% !important;
+  bottom: 5.5% !important;
+  width: 78% !important;
+  height: 25% !important;
+  object-fit: contain !important;
+  object-position: bottom center !important;
+  opacity: 0.68 !important;
+}
+
+body.mass-login-reference-layout .mass-hero-content {
+  position: relative !important;
+  z-index: 6 !important;
+  min-height: 100% !important;
+  height: 100% !important;
+  padding: clamp(4.2rem, 6.1vw, 6.7rem) clamp(4.5rem, 7.1vw, 7.6rem) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+}
+
+body.mass-login-reference-layout .mass-hero-logo {
+  width: clamp(14rem, 19vw, 20rem) !important;
+  max-width: 38% !important;
+  height: auto !important;
+  margin: 0 !important;
+  object-fit: contain !important;
+  filter: drop-shadow(0 6px 18px rgba(211, 169, 88, 0.16)) !important;
+}
+
+body.mass-login-reference-layout .mass-hero-copy {
+  width: min(42rem, 80%) !important;
+  margin-top: clamp(13.4rem, 22vh, 16.6rem) !important;
+}
+
+body.mass-login-reference-layout .mass-hero-title {
+  margin: 0 0 1.05rem !important;
+  color: #fdfdf8 !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-weight: 600 !important;
+  font-size: clamp(4.4rem, 6vw, 6.35rem) !important;
+  line-height: 0.95 !important;
+  letter-spacing: 0 !important;
+  text-shadow: 0 5px 18px rgba(0, 0, 0, 0.38) !important;
+}
+
+body.mass-login-reference-layout .mass-hero-subtitle {
+  margin: 0 0 1.55rem !important;
+  color: #edc777 !important;
+  font-size: clamp(1.08rem, 1.3vw, 1.32rem) !important;
+  line-height: 1.35 !important;
+  font-weight: 600 !important;
+}
+
+body.mass-login-reference-layout .mass-hero-stats {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  width: min(35.5rem, 100%) !important;
+  gap: 0.55rem !important;
+  margin: 0 0 1rem !important;
+}
+
+body.mass-login-reference-layout .mass-hero-stat {
+  min-height: 5rem !important;
+  padding: 1.05rem 1.15rem !important;
+  border: 1px solid rgba(215, 174, 97, 0.34) !important;
+  border-radius: 8px !important;
+  background: rgba(2, 48, 38, 0.62) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04) !important;
+}
+
+body.mass-login-reference-layout .mass-hero-stat strong {
+  display: block !important;
+  color: #f5cf79 !important;
+  font-size: clamp(1.45rem, 1.75vw, 1.85rem) !important;
+  line-height: 1 !important;
+  font-weight: 800 !important;
+}
+
+body.mass-login-reference-layout .mass-hero-stat span {
+  display: block !important;
+  margin-top: 0.5rem !important;
+  color: rgba(255, 255, 255, 0.78) !important;
+  font-size: 0.78rem !important;
+  line-height: 1.25 !important;
+}
+
+body.mass-login-reference-layout .mass-hero-pills {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 0.7rem !important;
+  margin: 0 0 1.45rem !important;
+}
+
+body.mass-login-reference-layout .mass-hero-pill {
+  min-height: 2.25rem !important;
+  padding: 0.48rem 1.05rem !important;
+  border: 1px solid rgba(218, 172, 80, 0.55) !important;
+  border-radius: 999px !important;
+  color: #f0ca75 !important;
+  background: rgba(3, 43, 34, 0.58) !important;
+  font-size: 0.82rem !important;
+  line-height: 1.1 !important;
+  font-weight: 800 !important;
+}
+
+body.mass-login-reference-layout .mass-hero-status {
+  width: min(28rem, 74%) !important;
+  min-height: 4.35rem !important;
+  padding: 0.9rem 1.15rem !important;
+  border: 1px solid rgba(64, 205, 128, 0.25) !important;
+  border-radius: 999px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.75rem !important;
+  background: rgba(4, 75, 56, 0.7) !important;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.18) !important;
+}
+
+body.mass-login-reference-layout .mass-hero-status i {
+  width: 1rem !important;
+  height: 1rem !important;
+  border-radius: 50% !important;
+  background: #4fe080 !important;
+  box-shadow: 0 0 0 0.65rem rgba(79, 224, 128, 0.12), 0 0 18px rgba(79, 224, 128, 0.55) !important;
+  flex: none !important;
+}
+
+body.mass-login-reference-layout .mass-hero-status strong,
+body.mass-login-reference-layout .mass-hero-status span {
+  display: block !important;
+}
+
+body.mass-login-reference-layout .mass-hero-status strong {
+  color: #fff !important;
+  font-size: 1rem !important;
+  line-height: 1.2 !important;
+  font-weight: 800 !important;
+}
+
+body.mass-login-reference-layout .mass-hero-status span {
+  margin-top: 0.2rem !important;
+  color: rgba(255, 255, 255, 0.72) !important;
+  font-size: 0.9rem !important;
+}
+
+body.mass-login-reference-layout.mass-login-rtl .mass-hero-content,
+html[dir="rtl"] body.mass-login-reference-layout .mass-hero-content {
+  align-items: flex-end !important;
+  text-align: right !important;
+}
+
+body.mass-login-reference-layout.mass-login-rtl .mass-hero-copy,
+html[dir="rtl"] body.mass-login-reference-layout .mass-hero-copy {
+  direction: rtl !important;
+}
+
+body.mass-login-reference-layout.mass-login-rtl .mass-hero-title,
+html[dir="rtl"] body.mass-login-reference-layout .mass-hero-title {
+  font-family: Tahoma, Arial, sans-serif !important;
+  font-size: clamp(3.7rem, 5.15vw, 5.5rem) !important;
+  line-height: 1.08 !important;
+}
+
+@media (max-width: 1100px) {
+  body.mass-login-reference-layout .mass-hero-content {
+    padding: clamp(1.75rem, 6vw, 3.3rem) clamp(1.65rem, 6.5vw, 4.5rem) !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  body.mass-login-reference-layout .mass-hero-logo {
+    width: clamp(13.5rem, 42vw, 18rem) !important;
+    max-width: 66% !important;
+  }
+
+  body.mass-login-reference-layout .mass-hero-copy {
+    width: min(48rem, 86%) !important;
+    margin-top: clamp(1.1rem, 4.8vw, 2.5rem) !important;
+  }
+
+  body.mass-login-reference-layout .mass-hero-title {
+    font-size: clamp(2.9rem, 9.4vw, 5rem) !important;
+    line-height: 0.94 !important;
+  }
+
+  body.mass-login-reference-layout .mass-hero-subtitle {
+    font-size: clamp(1rem, 2.6vw, 1.25rem) !important;
+    margin-bottom: 0 !important;
+  }
+
+  body.mass-login-reference-layout .mass-hero-layer-map {
+    top: 11% !important;
+    left: 12% !important;
+    width: 78% !important;
+    height: 43% !important;
+  }
+
+  body.mass-login-reference-layout .mass-hero-layer-arcs {
+    top: 11% !important;
+    left: 10% !important;
+    width: 82% !important;
+    height: 45% !important;
+  }
+
+  body.mass-login-reference-layout .mass-hero-layer-shield {
+    top: 29% !important;
+    left: 50% !important;
+    width: 16% !important;
+  }
+
+  body.mass-login-reference-layout .mass-hero-layer-skyline {
+    left: 9% !important;
+    right: 9% !important;
+    bottom: 5% !important;
+    width: 82% !important;
+    height: 24% !important;
+  }
+}
+
+@media (max-width: 1100px) {
+  html.mass-login-enhanced,
+  html.mass-login-enhanced body.mass-login-reference-layout,
+  body.mass-login-reference-layout {
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 100svh !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+  }
+
+  body.mass-login-reference-layout {
+    display: block !important;
+    background: var(--md-dark-950) !important;
+  }
+
+  body.mass-login-reference-layout > aside.mass-login-brand-panel,
+  body.mass-login-reference-layout.mass-login-rtl > aside.mass-login-brand-panel,
+  html[dir="rtl"] body.mass-login-reference-layout > aside.mass-login-brand-panel {
+    position: relative !important;
+    inset: auto !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    width: 100vw !important;
+    min-width: 100vw !important;
+    max-width: none !important;
+    height: clamp(405px, 52svh, 520px) !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    border-radius: 0 !important;
+    transform: none !important;
+  }
+
+  body.mass-login-reference-layout > div.mass-login-page-shell,
+  body.mass-login-reference-layout.mass-login-rtl > div.mass-login-page-shell,
+  html[dir="rtl"] body.mass-login-reference-layout > div.mass-login-page-shell,
+  body.mass-login-reference-layout > div.mass-login-page-shell:not(.mass-login-brand-panel) {
+    position: relative !important;
+    inset: auto !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    width: 100vw !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: -34px 0 0 !important;
+    padding: 0 14px 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 1rem !important;
+  }
+
+  body.mass-login-reference-layout .mass-login-card-path,
+  body.mass-login-reference-layout .mass-login-card-frame,
+  body.mass-login-reference-layout .mass-login-card-shell {
+    width: min(92vw, 535px) !important;
+    min-width: 0 !important;
+    max-width: 535px !important;
+    flex: none !important;
+    align-self: center !important;
+  }
+
+  body.mass-login-reference-layout > .mass-login-legal-links,
+  body.mass-login-reference-layout .mass-login-legal-links {
+    position: static !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 1rem 0 1.35rem !important;
+  }
+}
+
+/* Layer-pack implementation pass. Uses separated SVG layers, not baked screenshots. */
+@media (min-width: 1101px) {
+  html.mass-login-enhanced,
+  html.mass-login-enhanced body.mass-login-reference-layout,
+  body.mass-login-reference-layout {
+    width: 100% !important;
+    height: 100% !important;
+    min-width: 0 !important;
+    min-height: 100vh !important;
+    overflow: hidden !important;
+    background: #fbf7ef !important;
+  }
+
+  body.mass-login-reference-layout {
+    --md-split: 53.6vw;
+    --md-auth-card: clamp(520px, 28vw, 535px);
+    --md-auth-gap: clamp(34px, 4.5vw, 86px);
+  }
+
+  body.mass-login-reference-layout.mass-login-rtl,
+  html[dir="rtl"] body.mass-login-reference-layout {
+    --md-split: 56.5vw;
+  }
+
+  body.mass-login-reference-layout > aside.mass-login-brand-panel,
+  body.mass-login-reference-layout.mass-login-rtl > aside.mass-login-brand-panel,
+  html[dir="rtl"] body.mass-login-reference-layout > aside.mass-login-brand-panel {
+    position: fixed !important;
+    inset: 0 auto 0 0 !important;
+    width: var(--md-split) !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+    max-height: none !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    transform: none !important;
+    overflow: hidden !important;
+    background: #031e18 !important;
+  }
+
+  body.mass-login-reference-layout .mass-hero-layer {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+  }
+
+  body.mass-login-reference-layout > aside.mass-login-brand-panel .mass-hero-mobile-layer,
+  body.mass-login-reference-layout .mass-hero-mobile-layer {
+    display: none !important;
+  }
+
+  body.mass-login-reference-layout .mass-hero-layer-base { z-index: 0 !important; }
+  body.mass-login-reference-layout .mass-hero-layer-pattern { z-index: 1 !important; opacity: 0.85 !important; }
+  body.mass-login-reference-layout .mass-hero-layer-map { z-index: 2 !important; opacity: 0.78 !important; }
+  body.mass-login-reference-layout .mass-hero-layer-arcs { z-index: 3 !important; opacity: 0.78 !important; }
+  body.mass-login-reference-layout .mass-hero-layer-radar { z-index: 4 !important; opacity: 0.58 !important; }
+  body.mass-login-reference-layout .mass-hero-layer-shield {
+    z-index: 5 !important;
+    opacity: 0.72 !important;
+    transform: translate(7%, 5%) scale(0.96) !important;
+  }
+  body.mass-login-reference-layout .mass-hero-layer-skyline { z-index: 6 !important; opacity: 0.9 !important; }
+  body.mass-login-reference-layout .mass-hero-layer-particles { z-index: 7 !important; opacity: 0.88 !important; }
+
+  body.mass-login-reference-layout .mass-hero-content {
+    position: relative !important;
+    z-index: 8 !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+    padding: clamp(72px, 7.3vh, 96px) clamp(70px, 6.45vw, 132px) clamp(66px, 7vh, 92px) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+  }
+
+  body.mass-login-reference-layout.mass-login-rtl .mass-hero-content,
+  html[dir="rtl"] body.mass-login-reference-layout .mass-hero-content {
+    align-items: flex-start !important;
+    text-align: right !important;
+  }
+
+  body.mass-login-reference-layout .mass-hero-logo {
+    width: clamp(220px, 22vw, 340px) !important;
+    max-width: 48% !important;
+    height: auto !important;
+    margin: 0 !important;
+    display: block !important;
+    object-fit: contain !important;
+    filter: drop-shadow(0 12px 26px rgba(221, 178, 94, 0.18)) !important;
+  }
+
+  body.mass-login-reference-layout .mass-hero-copy {
+    width: min(690px, 76%) !important;
+    margin-top: clamp(112px, 14vh, 156px) !important;
+    direction: ltr !important;
+  }
+
+  body.mass-login-reference-layout.mass-login-rtl .mass-hero-copy,
+  html[dir="rtl"] body.mass-login-reference-layout .mass-hero-copy {
+    width: min(720px, 82%) !important;
+    direction: rtl !important;
+  }
+
+  body.mass-login-reference-layout .mass-hero-title {
+    margin: 0 0 18px !important;
+    color: #fffdf7 !important;
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: clamp(68px, 5.6vw, 100px) !important;
+    line-height: 0.9 !important;
+    font-weight: 650 !important;
+    letter-spacing: 0 !important;
+    text-shadow: 0 10px 36px rgba(0, 0, 0, 0.42) !important;
+  }
+
+  body.mass-login-reference-layout.mass-login-rtl .mass-hero-title,
+  html[dir="rtl"] body.mass-login-reference-layout .mass-hero-title {
+    font-family: Tahoma, Arial, sans-serif !important;
+    font-size: clamp(56px, 5.4vw, 94px) !important;
+    line-height: 1.08 !important;
+    font-weight: 800 !important;
+  }
+
+  body.mass-login-reference-layout .mass-hero-subtitle {
+    margin: 0 0 28px !important;
+    color: #f1c873 !important;
+    font-size: clamp(18px, 1.18vw, 22px) !important;
+    line-height: 1.38 !important;
+    font-weight: 700 !important;
+  }
+
+  body.mass-login-reference-layout .mass-hero-stats {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    width: min(675px, 100%) !important;
+    margin: 0 0 22px !important;
+  }
+
+  body.mass-login-reference-layout .mass-hero-stat {
+    min-height: 86px !important;
+    padding: 17px 20px !important;
+    border: 1px solid rgba(220, 174, 88, 0.4) !important;
+    border-radius: 11px !important;
+    background: rgba(2, 49, 39, 0.72) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 20px 48px rgba(0, 0, 0, 0.12) !important;
+    backdrop-filter: blur(11px) !important;
+  }
+
+  body.mass-login-reference-layout .mass-hero-stat strong {
+    display: block !important;
+    color: #f3cd78 !important;
+    font-size: clamp(26px, 1.7vw, 32px) !important;
+    line-height: 1 !important;
+    font-weight: 850 !important;
+  }
+
+  body.mass-login-reference-layout .mass-hero-stat span {
+    display: block !important;
+    margin-top: 9px !important;
+    color: rgba(255, 255, 255, 0.78) !important;
+    font-size: 13px !important;
+    line-height: 1.24 !important;
+  }
+
+  body.mass-login-reference-layout .mass-hero-pills {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 13px !important;
+    margin: 0 0 22px !important;
+  }
+
+  body.mass-login-reference-layout .mass-hero-pill {
+    min-height: 40px !important;
+    padding: 10px 18px !important;
+    border: 1px solid rgba(221, 174, 85, 0.62) !important;
+    border-radius: 999px !important;
+    background: rgba(1, 32, 26, 0.48) !important;
+    color: #f2cc76 !important;
+    font-size: 13px !important;
+    line-height: 1.1 !important;
+    font-weight: 850 !important;
+    backdrop-filter: blur(10px) !important;
+  }
+
+  body.mass-login-reference-layout .mass-hero-status {
+    width: min(530px, 80%) !important;
+    min-height: 75px !important;
+    padding: 14px 22px !important;
+    border: 1px solid rgba(71, 207, 130, 0.28) !important;
+    border-radius: 999px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 15px !important;
+    background: rgba(3, 74, 57, 0.76) !important;
+    box-shadow: 0 24px 56px rgba(0, 0, 0, 0.2) !important;
+    backdrop-filter: blur(14px) !important;
+  }
+
+  body.mass-login-reference-layout .mass-hero-status i {
+    width: 15px !important;
+    height: 15px !important;
+    border-radius: 50% !important;
+    background: #4fe680 !important;
+    box-shadow: 0 0 0 12px rgba(79, 230, 128, 0.12), 0 0 22px rgba(79, 230, 128, 0.64) !important;
+    flex: none !important;
+  }
+
+  body.mass-login-reference-layout .mass-hero-status strong {
+    color: #ffffff !important;
+    font-size: 17px !important;
+    font-weight: 850 !important;
+  }
+
+  body.mass-login-reference-layout .mass-hero-status span {
+    margin-top: 4px !important;
+    color: rgba(255, 255, 255, 0.72) !important;
+    font-size: 14px !important;
+  }
+
+  body.mass-login-reference-layout > div.mass-login-page-shell,
+  body.mass-login-reference-layout > div.mass-login-page-shell:not(.mass-login-brand-panel) {
+    position: fixed !important;
+    inset: 0 0 0 var(--md-split) !important;
+    width: auto !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    padding: clamp(54px, 7vh, 78px) var(--md-auth-gap) clamp(76px, 9vh, 104px) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+    isolation: isolate !important;
+    background-color: #fbf7ef !important;
+    background-image:
+      url("/ui/login-theme/assets/svg/layers/light-desktop/05-ivory-dust-and-micro-highlights-transparent.svg"),
+      url("/ui/login-theme/assets/svg/layers/light-desktop/04-auth-card-ambient-glow-transparent.svg"),
+      url("/ui/login-theme/assets/svg/layers/light-desktop/03-light-dubai-skyline-transparent.svg"),
+      url("/ui/login-theme/assets/svg/layers/light-desktop/02-arabesque-right-border-transparent.svg"),
+      url("/ui/login-theme/assets/svg/layers/light-desktop/01-soft-contour-waves-transparent.svg"),
+      url("/ui/login-theme/assets/svg/layers/light-desktop/00-base-ivory-gradient-opaque.svg") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+  }
+
+  body.mass-login-reference-layout .mass-login-card-path,
+  body.mass-login-reference-layout .mass-login-card-frame {
+    width: auto !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border: 0 !important;
+  }
+
+  body.mass-login-reference-layout .mass-login-card-shell {
+    width: var(--md-auth-card) !important;
+    max-width: calc(100vw - var(--md-split) - (var(--md-auth-gap) * 2)) !important;
+    min-height: 600px !important;
+    max-height: calc(100vh - 138px) !important;
+    overflow: auto !important;
+    padding: 54px 56px 38px !important;
+    border-radius: 22px !important;
+    background: rgba(255, 252, 246, 0.94) !important;
+    border: 1px solid rgba(200, 150, 70, 0.34) !important;
+    box-shadow: 0 30px 80px rgba(96, 73, 37, 0.18), 0 12px 34px rgba(0, 0, 0, 0.08) !important;
+    backdrop-filter: blur(20px) !important;
+  }
+
+  body.mass-login-reference-layout .mass-login-card-shell::before {
+    width: 66px !important;
+    height: 66px !important;
+    margin: 0 auto 28px !important;
+    background: url("/ui/login-theme/assets/svg/components/auth-ornament-badge-gold.svg") center / contain no-repeat !important;
+  }
+
+  body.mass-login-reference-layout.mass-login-register-page .mass-login-card-shell {
+    min-height: 600px !important;
+    padding-top: 46px !important;
+  }
+
+  body.mass-login-reference-layout form.mass-login-form {
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+  }
+
+  body.mass-login-reference-layout .mass-login-card-shell h1::after,
+  body.mass-login-reference-layout .mass-login-card-shell h2::after {
+    font-size: 34px !important;
+    line-height: 1.17 !important;
+    color: #13231e !important;
+  }
+
+  body.mass-login-reference-layout.mass-login-rtl .mass-login-card-shell h1::after,
+  body.mass-login-reference-layout.mass-login-rtl .mass-login-card-shell h2::after,
+  html[dir="rtl"] body.mass-login-reference-layout .mass-login-card-shell h1::after,
+  html[dir="rtl"] body.mass-login-reference-layout .mass-login-card-shell h2::after {
+    content: "\0645\0631\062d\0628\0627\064b \0628\0643\A\0641\064a Mass Data" !important;
+    font-family: Tahoma, Arial, sans-serif !important;
+    font-size: 28px !important;
+    line-height: 1.35 !important;
+    white-space: pre-line !important;
+    direction: rtl !important;
+    unicode-bidi: isolate !important;
+  }
+
+  body.mass-login-reference-layout .mass-login-card-shell h1 + p::after,
+  body.mass-login-reference-layout .mass-login-card-shell h2 + p::after {
+    font-size: 15px !important;
+    color: #70766f !important;
+  }
+
+  body.mass-login-reference-layout.mass-login-rtl .mass-login-card-shell h1 + p::after,
+  body.mass-login-reference-layout.mass-login-rtl .mass-login-card-shell h2 + p::after,
+  html[dir="rtl"] body.mass-login-reference-layout .mass-login-card-shell h1 + p::after,
+  html[dir="rtl"] body.mass-login-reference-layout .mass-login-card-shell h2 + p::after {
+    content: "\0633\062c\0644 \0627\0644\062f\062e\0648\0644 \0628\0623\0645\0627\0646 \0644\0644\0645\062a\0627\0628\0639\0629 \0625\0644\0649 \0645\0633\0627\062d\0629 \0639\0645\0644\0643." !important;
+    font-size: 15px !important;
+    line-height: 1.8 !important;
+    letter-spacing: 0 !important;
+    word-spacing: 0.08em !important;
+  }
+
+  body.mass-login-reference-layout form.mass-login-form label > span:first-child::after {
+    font-size: 14px !important;
+    color: #47391f !important;
+  }
+
+  body.mass-login-reference-layout form.mass-login-form input {
+    min-height: 58px !important;
+    border-radius: 10px !important;
+    border: 1px solid rgba(189, 142, 65, 0.28) !important;
+    background-color: rgba(255, 255, 255, 0.7) !important;
+    color: #1c221e !important;
+    font-size: 15px !important;
+    padding-inline: 54px 16px !important;
+    box-shadow: none !important;
+  }
+
+  body.mass-login-reference-layout form.mass-login-form label:has(input) {
+    position: relative !important;
+  }
+
+  body.mass-login-reference-layout form.mass-login-form label:has(input)::after {
+    content: "" !important;
+    position: absolute !important;
+    left: 16px !important;
+    bottom: 18px !important;
+    width: 23px !important;
+    height: 23px !important;
+    opacity: 0.68 !important;
+    background: #96723b !important;
+    -webkit-mask: url("/ui/login-theme/assets/svg/icons/icon-user-outline-gold.svg") center / contain no-repeat !important;
+    mask: url("/ui/login-theme/assets/svg/icons/icon-user-outline-gold.svg") center / contain no-repeat !important;
+    pointer-events: none !important;
+  }
+
+  body.mass-login-reference-layout form.mass-login-form label:has(input[type="password"])::after {
+    -webkit-mask-image: url("/ui/login-theme/assets/svg/icons/icon-lock-outline-gold.svg") !important;
+    mask-image: url("/ui/login-theme/assets/svg/icons/icon-lock-outline-gold.svg") !important;
+  }
+
+  body.mass-login-reference-layout.mass-login-rtl form.mass-login-form input,
+  html[dir="rtl"] body.mass-login-reference-layout form.mass-login-form input {
+    padding-inline: 16px 54px !important;
+    text-align: right !important;
+  }
+
+  body.mass-login-reference-layout.mass-login-rtl form.mass-login-form label:has(input)::after,
+  html[dir="rtl"] body.mass-login-reference-layout form.mass-login-form label:has(input)::after {
+    left: auto !important;
+    right: 16px !important;
+  }
+
+  body.mass-login-reference-layout form.mass-login-form .mass-login-register {
+    margin: 2px 0 28px !important;
+    color: #8a5d1d !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    text-decoration: underline !important;
+  }
+
+  body.mass-login-reference-layout form.mass-login-form .mass-login-action-row {
+    display: grid !important;
+    grid-template-columns: 1fr 1.55fr !important;
+    gap: 18px !important;
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  body.mass-login-reference-layout form.mass-login-form .mass-login-back,
+  body.mass-login-reference-layout form.mass-login-form .mass-login-submit,
+  body.mass-login-reference-layout form.mass-login-form button[type="submit"] {
+    min-height: 58px !important;
+    border-radius: 10px !important;
+    font-size: 16px !important;
+    font-weight: 800 !important;
+    font-size: 0 !important;
+  }
+
+  body.mass-login-reference-layout form.mass-login-form .mass-login-back::after,
+  body.mass-login-reference-layout form.mass-login-form .mass-login-submit::before,
+  body.mass-login-reference-layout form.mass-login-form button[type="submit"]::before {
+    font-size: 16px !important;
+  }
+
+  body.mass-login-reference-layout form.mass-login-form .mass-login-submit,
+  body.mass-login-reference-layout form.mass-login-form button[type="submit"] {
+    color: #ffffff !important;
+    background: linear-gradient(135deg, #e5bd66 0%, #b57a27 100%) !important;
+    box-shadow: 0 18px 34px rgba(164, 107, 31, 0.28) !important;
+    opacity: 1 !important;
+  }
+
+  body.mass-login-reference-layout form.mass-login-form .mass-login-submit:disabled,
+  body.mass-login-reference-layout form.mass-login-form button[type="submit"]:disabled {
+    background: linear-gradient(135deg, #d8d2c6 0%, #c9c0b1 100%) !important;
+    color: rgba(45, 43, 39, 0.65) !important;
+    box-shadow: none !important;
+  }
+
+  body.mass-login-reference-layout form.mass-login-form .mass-login-back {
+    background: rgba(255, 255, 255, 0.74) !important;
+    color: #292927 !important;
+    border: 1px solid rgba(189, 142, 65, 0.22) !important;
+    box-shadow: 0 10px 26px rgba(86, 66, 32, 0.08) !important;
+  }
+
+  body.mass-login-reference-layout form.mass-login-form::after {
+    margin-top: 34px !important;
+    padding-top: 28px !important;
+    border-top: 1px solid rgba(189, 142, 65, 0.22) !important;
+    color: #76766d !important;
+    font-size: 14px !important;
+  }
+
+  body.mass-login-reference-layout > .mass-login-legal-links,
+  body.mass-login-reference-layout .mass-login-legal-links {
+    position: fixed !important;
+    z-index: 7 !important;
+    left: var(--md-split) !important;
+    right: 0 !important;
+    bottom: 28px !important;
+    width: auto !important;
+    padding: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    gap: 22px !important;
+    color: #796646 !important;
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 1100px) {
+  body.mass-login-reference-layout {
+    background: #031e18 !important;
+  }
+
+  body.mass-login-reference-layout > aside.mass-login-brand-panel .mass-hero-layer:not(.mass-hero-mobile-layer),
+  body.mass-login-reference-layout .mass-hero-layer:not(.mass-hero-mobile-layer) {
+    display: none !important;
+  }
+
+  body.mass-login-reference-layout > aside.mass-login-brand-panel .mass-hero-mobile-layer,
+  body.mass-login-reference-layout .mass-hero-mobile-layer {
+    display: block !important;
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    opacity: 1 !important;
+  }
+
+  body.mass-login-reference-layout > aside.mass-login-brand-panel,
+  body.mass-login-reference-layout.mass-login-rtl > aside.mass-login-brand-panel,
+  html[dir="rtl"] body.mass-login-reference-layout > aside.mass-login-brand-panel {
+    height: clamp(320px, 42svh, 430px) !important;
+    min-height: 320px !important;
+    background: #031e18 !important;
+  }
+
+  body.mass-login-reference-layout > aside.mass-login-brand-panel .mass-hero-content,
+  body.mass-login-reference-layout .mass-hero-content {
+    height: 100% !important;
+    min-height: 0 !important;
+    padding: 34px 26px 30px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    text-align: center !important;
+  }
+
+  body.mass-login-reference-layout.mass-login-rtl .mass-hero-content,
+  html[dir="rtl"] body.mass-login-reference-layout .mass-hero-content {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  body.mass-login-reference-layout > aside.mass-login-brand-panel .mass-hero-logo,
+  body.mass-login-reference-layout .mass-hero-logo {
+    position: absolute !important;
+    top: 30px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: min(242px, 62vw) !important;
+    max-width: 62vw !important;
+    height: auto !important;
+    display: block !important;
+  }
+
+  body.mass-login-reference-layout > aside.mass-login-brand-panel .mass-hero-copy,
+  body.mass-login-reference-layout .mass-hero-copy {
+    width: min(520px, 92vw) !important;
+    margin: 0 !important;
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+  }
+
+  body.mass-login-reference-layout .mass-hero-title {
+    font-size: clamp(44px, 12vw, 70px) !important;
+    line-height: 0.95 !important;
+    margin-bottom: 10px !important;
+  }
+
+  body.mass-login-reference-layout .mass-hero-subtitle {
+    font-size: 16px !important;
+    margin-bottom: 0 !important;
+  }
+
+  body.mass-login-reference-layout .mass-hero-stats,
+  body.mass-login-reference-layout .mass-hero-pills,
+  body.mass-login-reference-layout .mass-hero-status {
+    display: none !important;
+  }
+
+  body.mass-login-reference-layout > div.mass-login-page-shell,
+  body.mass-login-reference-layout > div.mass-login-page-shell:not(.mass-login-brand-panel) {
+    margin: -28px 0 0 !important;
+    padding: 0 14px 0 !important;
+    background: #031e18 !important;
+  }
+
+  body.mass-login-reference-layout .mass-login-card-shell {
+    width: min(92vw, 535px) !important;
+    max-width: 535px !important;
+    min-height: 0 !important;
+    padding: 38px 24px 28px !important;
+    border-radius: 24px !important;
+    background: rgba(255, 252, 246, 0.96) !important;
+    border: 1px solid rgba(200, 150, 70, 0.34) !important;
+  }
+
+  body.mass-login-reference-layout .mass-login-card-shell::before {
+    width: 54px !important;
+    height: 54px !important;
+    margin-bottom: 20px !important;
+    background: url("/ui/login-theme/assets/svg/components/auth-ornament-badge-gold.svg") center / contain no-repeat !important;
+  }
+
+  body.mass-login-reference-layout form.mass-login-form .mass-login-action-row {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  body.mass-login-reference-layout form.mass-login-form .mass-login-action-row .mass-login-submit,
+  body.mass-login-reference-layout form.mass-login-form .mass-login-action-row button[type="submit"] {
+    order: 1 !important;
+  }
+
+  body.mass-login-reference-layout form.mass-login-form .mass-login-action-row button:not([type="submit"]) {
+    order: 2 !important;
+  }
+}
+
+/* Final QA fixes: keep language menu away from the auth form and tighten tablet fold. */
+@media (min-width: 1101px) {
+  body.mass-login-reference-layout > #headlessui-portal-root [role="listbox"] {
+    position: fixed !important;
+    top: 88px !important;
+    right: 28px !important;
+    left: auto !important;
+    bottom: auto !important;
+    width: 148px !important;
+    min-width: 148px !important;
+    max-width: 148px !important;
+    max-height: min(46vh, 340px) !important;
+    overflow-y: auto !important;
+    overscroll-behavior: contain !important;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1100px) {
+  body.mass-login-reference-layout > aside.mass-login-brand-panel,
+  body.mass-login-reference-layout.mass-login-rtl > aside.mass-login-brand-panel,
+  html[dir="rtl"] body.mass-login-reference-layout > aside.mass-login-brand-panel {
+    height: clamp(292px, 39svh, 340px) !important;
+    min-height: 292px !important;
+  }
+
+  body.mass-login-reference-layout > div.mass-login-page-shell,
+  body.mass-login-reference-layout > div.mass-login-page-shell:not(.mass-login-brand-panel) {
+    margin-top: -24px !important;
+  }
+
+  body.mass-login-reference-layout .mass-login-card-shell {
+    padding-top: 28px !important;
+    padding-bottom: 24px !important;
+  }
+
+  body.mass-login-reference-layout .mass-login-card-shell::before {
+    width: 48px !important;
+    height: 48px !important;
+    margin-bottom: 16px !important;
   }
 }

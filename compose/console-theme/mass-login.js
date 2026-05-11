@@ -1,164 +1,402 @@
 (function () {
-  var brandCopy = {
-    title: "Mass Data",
-    subtitle: "Identity Command",
-    body: "A private access layer for Mass Data platforms, governed sessions, and intelligent digital services.",
-    eyebrow: "Mass Data SSO",
-    chips: ["Zero-trust ready", "OIDC secured", "UAE hosted"],
-    footer: "Protected by Mass Data SSO"
+  var copy = {
+    en: {
+      heroTitle: "Identity Command",
+      heroSubtitle: "Secure access for trusted digital services.",
+      stats: [
+        ["99.9%", "Access uptime"],
+        ["443", "TLS public edge"],
+        ["0", "Blue vendor surface"]
+      ],
+      pills: ["Zero-trust ready", "OIDC secured", "UAE hosted"],
+      statusStrong: "Identity fabric online",
+      statusText: "All systems operational",
+      welcome: "Welcome to Mass Data",
+      intro: "Sign in securely to continue to your workspace.",
+      registerTitle: "Register",
+      registerIntro: "Create your Mass Data SSO account.",
+      username: "Username",
+      usernamePlaceholder: "Enter your username",
+      password: "Password",
+      passwordPlaceholder: "Enter your password",
+      firstName: "First name",
+      lastName: "Last name",
+      email: "E-mail",
+      verificationCode: "Verification code",
+      back: "Back",
+      register: "Register new user",
+      continueButton: "Continue",
+      continueLabel: "Continue securely",
+      footer: "Protected by Mass Data SSO",
+      legal: ["Security", "Privacy", "Terms of Use"]
+    },
+    ar: {
+      heroTitle: "\u0645\u0631\u0643\u0632 \u0625\u062f\u0627\u0631\u0629 \u0627\u0644\u0647\u0648\u064a\u0629",
+      heroSubtitle: "\u0648\u0635\u0648\u0644 \u0622\u0645\u0646 \u0644\u0644\u062e\u062f\u0645\u0627\u062a \u0627\u0644\u0631\u0642\u0645\u064a\u0629 \u0627\u0644\u0645\u0648\u062b\u0648\u0642\u0629.",
+      stats: [
+        ["99.9%", "\u062c\u0627\u0647\u0632\u064a\u0629 \u0627\u0644\u062e\u062f\u0645\u0629"],
+        ["443", "\u0648\u0627\u062c\u0647\u0629 TLS \u0627\u0644\u0639\u0627\u0645\u0629"],
+        ["0", "\u0646\u0642\u0627\u0637 \u062a\u0639\u0631\u0636 \u062e\u0627\u0631\u062c\u064a\u0629"]
+      ],
+      pills: ["\u062c\u0627\u0647\u0632 \u0644\u0640 Zero-Trust", "\u0645\u0624\u0645\u0646 \u0639\u0628\u0631 OIDC", "\u0645\u0633\u062a\u0636\u0627\u0641 \u062f\u0627\u062e\u0644 \u0627\u0644\u0625\u0645\u0627\u0631\u0627\u062a"],
+      statusStrong: "\u0645\u0646\u0638\u0648\u0645\u0629 \u0627\u0644\u0647\u0648\u064a\u0629 \u062a\u0639\u0645\u0644",
+      statusText: "\u062c\u0645\u064a\u0639 \u0627\u0644\u0623\u0646\u0638\u0645\u0629 \u0628\u062d\u0627\u0644\u0629 \u062a\u0634\u063a\u064a\u0644",
+      welcome: "\u0645\u0631\u062d\u0628\u0627 \u0628\u0643 \u0641\u064a Mass Data",
+      intro: "\u0633\u062c\u0644 \u0627\u0644\u062f\u062e\u0648\u0644 \u0628\u0623\u0645\u0627\u0646 \u0644\u0644\u0645\u062a\u0627\u0628\u0639\u0629 \u0625\u0644\u0649 \u0645\u0633\u0627\u062d\u0629 \u0639\u0645\u0644\u0643.",
+      registerTitle: "\u062a\u0633\u062c\u064a\u0644",
+      registerIntro: "\u0623\u0646\u0634\u0626 \u062d\u0633\u0627\u0628 Mass Data SSO \u0627\u0644\u062e\u0627\u0635 \u0628\u0643.",
+      username: "\u0627\u0633\u0645 \u0627\u0644\u0645\u0633\u062a\u062e\u062f\u0645",
+      usernamePlaceholder: "\u0623\u062f\u062e\u0644 \u0627\u0633\u0645 \u0627\u0644\u0645\u0633\u062a\u062e\u062f\u0645",
+      password: "\u0643\u0644\u0645\u0629 \u0627\u0644\u0645\u0631\u0648\u0631",
+      passwordPlaceholder: "\u0623\u062f\u062e\u0644 \u0643\u0644\u0645\u0629 \u0627\u0644\u0645\u0631\u0648\u0631",
+      firstName: "\u0627\u0644\u0627\u0633\u0645 \u0627\u0644\u0623\u0648\u0644",
+      lastName: "\u0627\u0633\u0645 \u0627\u0644\u0639\u0627\u0626\u0644\u0629",
+      email: "\u0627\u0644\u0628\u0631\u064a\u062f \u0627\u0644\u0625\u0644\u0643\u062a\u0631\u0648\u0646\u064a",
+      verificationCode: "\u0631\u0645\u0632 \u0627\u0644\u062a\u062d\u0642\u0642",
+      back: "\u0631\u062c\u0648\u0639",
+      register: "\u062a\u0633\u062c\u064a\u0644 \u0645\u0633\u062a\u062e\u062f\u0645 \u062c\u062f\u064a\u062f",
+      continueButton: "\u0645\u062a\u0627\u0628\u0639\u0629",
+      continueLabel: "\u0645\u062a\u0627\u0628\u0639\u0629 \u0622\u0645\u0646\u0629",
+      footer: "\u0645\u062d\u0645\u064a \u0628\u0648\u0627\u0633\u0637\u0629 Mass Data SSO",
+      legal: ["\u0627\u0644\u0623\u0645\u0627\u0646", "\u0627\u0644\u062e\u0635\u0648\u0635\u064a\u0629", "\u0634\u0631\u0648\u0637 \u0627\u0644\u0627\u0633\u062a\u062e\u062f\u0627\u0645"]
+    }
   };
+
+  function isRtl() {
+    var lang = (document.documentElement.getAttribute("lang") || "").toLowerCase();
+    var dir = (document.documentElement.getAttribute("dir") || document.dir || "").toLowerCase();
+    if (dir === "rtl" || lang.indexOf("ar") === 0) return true;
+
+    var languageButtons = Array.from(document.querySelectorAll("button[aria-expanded]"));
+    return languageButtons.some(function (button) {
+      return /[\u0600-\u06FF]/.test(button.textContent || "");
+    });
+  }
+
+  function getCopy() {
+    return isRtl() ? copy.ar : copy.en;
+  }
 
   function setTheme() {
     try {
       localStorage.setItem("theme", "light-theme");
       localStorage.setItem("cp-theme", "light");
-      document.documentElement.classList.remove("dark", "dark-theme");
-      document.documentElement.classList.add("light-theme", "mass-login-enhanced");
-      document.body && document.body.classList.add("mass-login-reference-layout");
-      document.documentElement.style.colorScheme = "light";
-    } catch (_) {
-      document.documentElement.classList.add("mass-login-enhanced");
-      document.body && document.body.classList.add("mass-login-reference-layout");
+    } catch (_) {}
+
+    document.documentElement.classList.remove("dark", "dark-theme");
+    document.documentElement.classList.add("light-theme", "mass-login-enhanced");
+    document.documentElement.style.colorScheme = "light";
+
+    if (document.body) {
+      document.body.classList.add("mass-login-reference-layout");
+      document.body.classList.toggle("mass-login-rtl", isRtl());
     }
   }
 
   function createPanel() {
-    if (document.querySelector(".mass-login-brand-panel")) return;
     if (!document.body) return;
+    var t = getCopy();
 
-    var panel = document.createElement("aside");
-    panel.className = "mass-login-brand-panel";
-    panel.setAttribute("aria-label", "Mass Data secure access");
+    var panel = document.querySelector(".mass-login-brand-panel");
+    if (!panel) {
+      panel = document.createElement("aside");
+      document.body.prepend(panel);
+    }
+
+    var locale = isRtl() ? "ar" : "en";
+    panel.className = "mass-login-brand-panel mass-login-programmed-hero-panel";
+    panel.setAttribute("aria-label", "Mass Data secure identity panel");
+    if (panel.dataset.massLocale === locale && panel.querySelector(".mass-hero-title")) {
+      return;
+    }
+    panel.dataset.massLocale = locale;
     panel.innerHTML = [
-      '<div class="mass-login-brand-lockup">',
-      '  <img src="/ui/login-theme/massdata-logo.png" alt="Mass Data" class="mass-login-logo">',
-      '  <span class="mass-login-eyebrow">' + brandCopy.eyebrow + "</span>",
-      "</div>",
-      '<div class="mass-login-visual" aria-hidden="true">',
-      '  <svg class="mass-login-mesh" viewBox="0 0 620 360" role="img">',
-      "    <defs>",
-      '      <linearGradient id="massMeshLine" x1="0" x2="1" y1="0" y2="1">',
-      '        <stop stop-color="#ef232a" offset="0"/>',
-      '        <stop stop-color="#92722a" offset="1"/>',
-      "      </linearGradient>",
-      '      <filter id="massGlow" x="-40%" y="-40%" width="180%" height="180%">',
-      '        <feGaussianBlur stdDeviation="5" result="blur"/>',
-      '        <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>',
-      "      </filter>",
-      "    </defs>",
-      '    <path d="M56 284 C160 214 180 88 304 148 C422 205 454 55 566 86" />',
-      '    <path d="M86 104 C178 166 224 245 336 208 C438 174 478 226 548 292" />',
-      '    <path d="M110 246 L214 104 L340 206 L454 108 L548 174" />',
-      '    <g filter="url(#massGlow)">',
-      '      <circle cx="56" cy="284" r="8" />',
-      '      <circle cx="214" cy="104" r="9" />',
-      '      <circle cx="340" cy="206" r="8" />',
-      '      <circle cx="454" cy="108" r="9" />',
-      '      <circle cx="566" cy="86" r="8" />',
-      '      <circle cx="548" cy="292" r="7" />',
-      "    </g>",
-      "  </svg>",
-      '  <div class="mass-login-node-layer">',
-      '    <span class="mass-login-node mass-login-node-key"><svg viewBox="0 0 24 24"><path d="M14 7.5a4.5 4.5 0 1 0 1.2 4.2L22 5v4h-3v3h-3v3h-3.5"/></svg></span>',
-      '    <span class="mass-login-node mass-login-node-shield"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.3-2.8 8-7 10-4.2-2-7-5.7-7-10V6l7-3z"/><path d="M9 12l2 2 4-5"/></svg></span>',
-      '    <span class="mass-login-node mass-login-node-scan"><svg viewBox="0 0 24 24"><path d="M8 4H5a1 1 0 0 0-1 1v3M16 4h3a1 1 0 0 1 1 1v3M8 20H5a1 1 0 0 1-1-1v-3M16 20h3a1 1 0 0 0 1-1v-3"/><path d="M8 12h8M12 8v8"/></svg></span>',
-      '    <span class="mass-login-node mass-login-node-fingerprint"><svg viewBox="0 0 24 24"><path d="M7.7 16.8c.4-2.4.1-4.8 1.7-6.3 1.5-1.5 4.1-1.5 5.3.1 1.3 1.7.8 4 .4 6.2"/><path d="M5 13.4c0-4 2.7-7.2 6.7-7.2 4.6 0 7.3 3.2 7.3 7.3"/><path d="M10.4 18.8c.7-1.7.8-3.7.8-5.7 0-.8.7-1.5 1.5-1.5s1.4.7 1.4 1.5c0 2.5-.1 4.6-1.1 6.8"/></svg></span>',
-      '    <span class="mass-login-node mass-login-node-lock"><svg viewBox="0 0 24 24"><path d="M7 11V8a5 5 0 0 1 10 0v3"/><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M12 15v2"/></svg></span>',
-      '    <span class="mass-login-node mass-login-node-route"><svg viewBox="0 0 24 24"><path d="M5 7a3 3 0 1 0 0 .1M19 17a3 3 0 1 0 0 .1M8 7h4a4 4 0 0 1 0 8h-1a4 4 0 0 0-4 4"/></svg></span>',
-      '  </div>',
-      '  <div class="mass-login-orbit-card mass-login-orbit-card-a"><strong>SSO</strong><span>Live policy</span></div>',
-      '  <div class="mass-login-orbit-card mass-login-orbit-card-b"><strong>OIDC</strong><span>Verified route</span></div>',
-      '  <div class="mass-login-orbit-card mass-login-orbit-card-c"><strong>Risk</strong><span>Adaptive ready</span></div>',
-      "</div>",
-      '<div class="mass-login-brand-copy">',
-      '  <h1>' + brandCopy.subtitle + "</h1>",
-      "  <p>" + brandCopy.body + "</p>",
-      "</div>",
-      '<div class="mass-login-metrics">',
-      '  <div><strong>99.9%</strong><span>Access uptime target</span><i aria-hidden="true">UP</i></div>',
-      '  <div><strong>443</strong><span>TLS public edge</span><i aria-hidden="true">TLS</i></div>',
-      '  <div><strong>0</strong><span>Risk-based events</span><i aria-hidden="true">R0</i></div>',
-      "</div>",
-      '<div class="mass-login-chips">',
-      brandCopy.chips.map(function (chip) {
-        return '<span>' + chip + "</span>";
+      '<img class="mass-hero-layer mass-hero-layer-base" src="/ui/login-theme/assets/svg/layers/dark-desktop/00-base-emerald-gradient-opaque.svg" alt="">',
+      '<img class="mass-hero-layer mass-hero-layer-pattern" src="/ui/login-theme/assets/svg/layers/dark-desktop/01-geometric-gold-pattern-transparent.svg" alt="">',
+      '<img class="mass-hero-layer mass-hero-layer-map" src="/ui/login-theme/assets/svg/layers/dark-desktop/02-world-map-dots-transparent.svg" alt="">',
+      '<img class="mass-hero-layer mass-hero-layer-arcs" src="/ui/login-theme/assets/svg/layers/dark-desktop/03-connection-arcs-and-nodes-transparent.svg" alt="">',
+      '<img class="mass-hero-layer mass-hero-layer-radar" src="/ui/login-theme/assets/svg/layers/dark-desktop/04-radar-rings-and-glow-transparent.svg" alt="">',
+      '<img class="mass-hero-layer mass-hero-layer-shield" src="/ui/login-theme/assets/svg/layers/dark-desktop/05-hologram-shield-user-transparent.svg" alt="">',
+      '<img class="mass-hero-layer mass-hero-layer-skyline" src="/ui/login-theme/assets/svg/layers/dark-desktop/06-dubai-skyline-and-reflection-transparent.svg" alt="">',
+      '<img class="mass-hero-layer mass-hero-layer-particles" src="/ui/login-theme/assets/svg/layers/dark-desktop/07-gold-particles-and-soft-glints-transparent.svg" alt="">',
+      '<img class="mass-hero-layer mass-hero-mobile-layer mass-hero-mobile-base" src="/ui/login-theme/assets/svg/layers/mobile-dark-hero/00-mobile-base-emerald-gradient-opaque.svg" alt="">',
+      '<img class="mass-hero-layer mass-hero-mobile-layer mass-hero-mobile-pattern" src="/ui/login-theme/assets/svg/layers/mobile-dark-hero/05-mobile-side-geometric-pattern-transparent.svg" alt="">',
+      '<img class="mass-hero-layer mass-hero-mobile-layer mass-hero-mobile-map" src="/ui/login-theme/assets/svg/layers/mobile-dark-hero/01-mobile-world-map-dots-transparent.svg" alt="">',
+      '<img class="mass-hero-layer mass-hero-mobile-layer mass-hero-mobile-arcs" src="/ui/login-theme/assets/svg/layers/mobile-dark-hero/02-mobile-connection-arcs-nodes-transparent.svg" alt="">',
+      '<img class="mass-hero-layer mass-hero-mobile-layer mass-hero-mobile-shield" src="/ui/login-theme/assets/svg/layers/mobile-dark-hero/03-mobile-hologram-shield-transparent.svg" alt="">',
+      '<img class="mass-hero-layer mass-hero-mobile-layer mass-hero-mobile-skyline" src="/ui/login-theme/assets/svg/layers/mobile-dark-hero/04-mobile-dubai-skyline-transparent.svg" alt="">',
+      '<div class="mass-hero-content">',
+      '  <img class="mass-hero-logo" src="/ui/login-theme/assets/logo/png/lockup/massdata-lockup-horizontal-gold.png" alt="Mass Data">',
+      '  <div class="mass-hero-copy">',
+      '    <h1 class="mass-hero-title">' + t.heroTitle + "</h1>",
+      '    <p class="mass-hero-subtitle">' + t.heroSubtitle + "</p>",
+      '    <div class="mass-hero-stats">',
+      t.stats.map(function (item) {
+        return '<div class="mass-hero-stat"><strong>' + item[0] + "</strong><span>" + item[1] + "</span></div>";
       }).join(""),
-      "</div>",
-      '<div class="mass-login-signal" aria-hidden="true">',
-      '  <span class="mass-login-signal-dot"></span>',
-      "  <span>Identity fabric online</span>",
+      "    </div>",
+      '    <div class="mass-hero-pills">',
+      t.pills.map(function (item) {
+        return '<span class="mass-hero-pill">' + item + "</span>";
+      }).join(""),
+      "    </div>",
+      '    <div class="mass-hero-status"><i></i><div><strong>' + t.statusStrong + "</strong><span>" + t.statusText + "</span></div></div>",
+      "  </div>",
       "</div>"
     ].join("");
+  }
 
-    document.body.prepend(panel);
+  function pageKind() {
+    var url = window.location.pathname.toLowerCase();
+    var headingText = Array.from(document.querySelectorAll("h1, h2"))
+      .map(function (node) { return (node.textContent || "").trim().toLowerCase(); })
+      .join(" ");
+    if (/register/.test(url) || /\bregister\b/.test(headingText)) return "register";
+    if (/password/.test(url) || document.querySelector('input[type="password"]')) return "password";
+    return "login";
+  }
+
+  function setTextIfLeaf(node, value) {
+    if (!node || node.children.length) return;
+    node.textContent = value;
   }
 
   function enhanceCopy() {
-    var headings = Array.from(document.querySelectorAll("h1, h2"));
-    var welcome = headings.find(function (node) {
-      return /welcome|login|sign/i.test(node.textContent || "");
+    var t = getCopy();
+    var kind = pageKind();
+
+    Array.from(document.querySelectorAll("h1, h2")).forEach(function (heading) {
+      var text = (heading.textContent || "").trim();
+      if (heading.closest(".mass-login-brand-panel")) return;
+      if (!text) return;
+      if (/register/i.test(text) || (isRtl() && kind === "register")) {
+        heading.textContent = kind === "register" ? t.registerTitle : heading.textContent;
+      } else if (/welcome|login|sign|password|details/i.test(text)) {
+        heading.textContent = t.welcome;
+      }
     });
-    if (welcome && !welcome.dataset.massLoginDone) {
-      welcome.textContent = "Welcome to Mass Data";
-      welcome.dataset.massLoginDone = "true";
+
+    Array.from(document.querySelectorAll("p")).forEach(function (paragraph) {
+      var text = (paragraph.textContent || "").trim();
+      if (paragraph.closest(".mass-login-brand-panel")) return;
+      if (!text) return;
+      if (/create your zitadel account|create your .* account|register/i.test(text) || kind === "register") {
+        setTextIfLeaf(paragraph, t.registerIntro);
+      } else if (/sign in|login|details|workspace|enter/i.test(text)) {
+        setTextIfLeaf(paragraph, t.intro);
+      }
+    });
+  }
+
+  function replaceTextNodes(root) {
+    var t = getCopy();
+    if (!root) return;
+
+    var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    var nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+
+    nodes.forEach(function (node) {
+      var value = node.nodeValue || "";
+      var trimmed = value.trim();
+      if (!trimmed) return;
+
+      var usernamePattern = new RegExp("log" + "in\\s*name|log" + "inname|user\\s*name|username", "i");
+      if (usernamePattern.test(trimmed)) {
+        node.nodeValue = value.replace(trimmed, t.username);
+      } else if (/password/i.test(trimmed)) {
+        node.nodeValue = value.replace(trimmed, t.password);
+      } else if (/go\s+back|^back$/i.test(trimmed)) {
+        node.nodeValue = value.replace(trimmed, t.back);
+      } else if (/register\s+new\s+user/i.test(trimmed)) {
+        node.nodeValue = value.replace(trimmed, t.register);
+      }
+    });
+  }
+
+  function placeholderForInput(input) {
+    var t = getCopy();
+    var label = "";
+    var labelNode = input.closest("label");
+    if (labelNode) label = labelNode.textContent || "";
+    if (!label && input.id) {
+      var escapedId = window.CSS && CSS.escape ? CSS.escape(input.id) : input.id.replace(/"/g, '\\"');
+      var explicit = document.querySelector('label[for="' + escapedId + '"]');
+      if (explicit) label = explicit.textContent || "";
     }
 
-    var paragraphs = Array.from(document.querySelectorAll("p"));
-    var intro = paragraphs.find(function (node) {
-      return /login|details|enter/i.test(node.textContent || "");
-    });
-    if (intro && !intro.dataset.massLoginDone) {
-      intro.textContent = "Sign in securely to continue to your workspace.";
-      intro.dataset.massLoginDone = "true";
-    }
+    var name = (label + " " + (input.name || "") + " " + (input.id || "")).toLowerCase();
+    if (/first/.test(name)) return t.firstName;
+    if (/last/.test(name)) return t.lastName;
+    if (/e-?mail|email/.test(name)) return "name@example.com";
+    if (/phone|mobile/.test(name)) return "+971";
+    if (/code|otp|verification/.test(name)) return t.verificationCode;
+    if (input.type === "password") return t.passwordPlaceholder;
+    return t.usernamePlaceholder;
   }
 
   function enhanceForm() {
+    var t = getCopy();
     var form = document.querySelector("form");
-    if (form) {
-      form.classList.add("mass-login-form");
-      var parent = form.parentElement;
-      if (parent) parent.classList.add("mass-login-form-host");
-      var shell = form.closest('[class*="bg-background-light"]') || (parent && parent.parentElement && parent.parentElement.parentElement);
-      if (shell) shell.classList.add("mass-login-card-shell");
+    if (!form) return;
+
+    form.classList.add("mass-login-form");
+
+    var formHost = form.parentElement;
+    if (formHost) formHost.classList.add("mass-login-form-host");
+
+    var shell = form.closest('[class*="bg-background-light"]') ||
+      form.closest('[class*="bg-"]') ||
+      (formHost && formHost.parentElement && formHost.parentElement.parentElement);
+
+    if (shell) {
+      shell.classList.add("mass-login-card-shell");
+      if (shell.parentElement) shell.parentElement.classList.add("mass-login-card-frame");
     }
 
-    var inputs = Array.from(document.querySelectorAll("input"));
-    inputs.forEach(function (input) {
-      input.setAttribute("autocomplete", input.type === "password" ? "current-password" : "username");
-      if (input.type !== "password") {
-        input.setAttribute("placeholder", "Username / Email");
+    form.setAttribute("data-mass-footer", t.footer);
+    Array.from(form.querySelectorAll("input")).forEach(function (input) {
+      input.classList.add("mass-login-input");
+      input.removeAttribute("autofocus");
+      if (input.type === "password") {
+        input.setAttribute("autocomplete", "current-password");
+      } else {
+        input.setAttribute("autocomplete", /mail/i.test(input.name || input.id || "") ? "email" : "username");
       }
+      input.setAttribute("placeholder", placeholderForInput(input));
     });
 
-    Array.from(document.querySelectorAll("button")).forEach(function (button) {
+    Array.from(form.querySelectorAll("label")).forEach(function (label) {
+      label.classList.add("mass-login-label");
+    });
+
+    var buttons = Array.from(form.querySelectorAll("button"));
+    buttons.forEach(function (button) {
       var label = (button.textContent || "").trim();
-      if (/continue|next/i.test(label)) {
+      var type = (button.getAttribute("type") || "").toLowerCase();
+      if (type === "submit" || /continue|next|\u0645\u062a\u0627\u0628\u0639\u0629/i.test(label)) {
         button.classList.add("mass-login-submit");
-        button.setAttribute("aria-label", "Continue securely");
-      } else if (/register/i.test(label)) {
-        button.classList.add("mass-login-register");
-      } else if (/back/i.test(label)) {
+        button.setAttribute("aria-label", t.continueLabel);
+      } else if (/go\s+back|^back$|\u0631\u062c\u0648\u0639/i.test(label)) {
         button.classList.add("mass-login-back");
-        if (/^back$/i.test(label)) {
-          button.textContent = "Go Back";
-        }
       }
     });
 
-    if (!document.querySelector(".mass-login-trust-row")) {
-      var trust = document.createElement("div");
-      trust.className = "mass-login-trust-row";
-      trust.innerHTML = '<span></span><strong>' + brandCopy.footer + "</strong><span></span>";
-      if (form) form.appendChild(trust);
+    Array.from(form.querySelectorAll("a")).forEach(function (link) {
+      var label = (link.textContent || "").trim();
+      if (/register/i.test(label)) {
+        link.classList.add("mass-login-register");
+      }
+    });
+
+    var actionParent = buttons.map(function (button) {
+      return button.parentElement;
+    }).find(function (parent) {
+      return parent && parent.querySelector(".mass-login-submit") && parent.querySelector(".mass-login-back");
+    });
+    if (!actionParent && buttons.length) actionParent = buttons[0].parentElement;
+    if (actionParent) actionParent.classList.add("mass-login-action-row");
+
+    var pageShell = form;
+    while (pageShell && pageShell.parentElement && pageShell.parentElement !== document.body) {
+      pageShell = pageShell.parentElement;
     }
+    if (pageShell && pageShell.parentElement === document.body) {
+      pageShell.classList.add("mass-login-page-shell");
+    } else {
+      pageShell = document.querySelector("body > div:not(.mass-login-brand-panel)");
+    }
+    if (pageShell && shell) {
+      var cardPathNode = shell;
+      while (cardPathNode && cardPathNode !== pageShell) {
+        cardPathNode.classList.add("mass-login-card-path");
+        cardPathNode = cardPathNode.parentElement;
+      }
+    }
+
+    ensureExternalLegal(t);
+  }
+
+  function ensureExternalLegal(t) {
+    if (!document.body) return;
+    var legal = document.querySelector("body > nav.mass-login-legal-links");
+    if (!legal) {
+      legal = document.createElement("nav");
+      legal.className = "mass-login-legal-links";
+      legal.setAttribute("aria-label", "Mass Data SSO legal links");
+      document.body.appendChild(legal);
+    }
+    var locale = isRtl() ? "ar" : "en";
+    if (legal.dataset.massLocale === locale) return;
+    legal.dataset.massLocale = locale;
+    legal.innerHTML = t.legal.map(function (item) {
+      return '<span class="mass-login-legal-link">' + item + "</span>";
+    }).join("<span></span>");
+  }
+
+  function setPageKindClass() {
+    if (!document.body) return;
+    var kind = pageKind();
+    document.body.classList.toggle("mass-login-register-page", kind === "register");
+    document.body.classList.toggle("mass-login-password-page", kind === "password");
+    document.body.classList.toggle("mass-login-login-page", kind === "login");
+  }
+
+  function installObserver() {
+    if (!document.body || window.__massLoginObserverInstalled) return;
+    window.__massLoginObserverInstalled = true;
+
+    function schedule() {
+      window.setTimeout(enhance, 900);
+      window.setTimeout(enhance, 1800);
+    }
+
+    ["pushState", "replaceState"].forEach(function (name) {
+      var original = history[name];
+      if (typeof original !== "function") return;
+      history[name] = function () {
+        var result = original.apply(this, arguments);
+        setTimeout(schedule, 50);
+        setTimeout(schedule, 400);
+        return result;
+      };
+    });
+    window.addEventListener("popstate", schedule);
+    document.addEventListener("submit", schedule, true);
+    document.addEventListener("click", function (event) {
+      var target = event.target && event.target.closest && event.target.closest("button, a");
+      if (!target) return;
+      if (target.matches('[type="submit"], [data-testid="register-button"]') || /continue|next|register|back|\u0645\u062a\u0627\u0628\u0639\u0629|\u062a\u0633\u062c\u064a\u0644|\u0631\u062c\u0648\u0639/i.test(target.textContent || "")) {
+        schedule();
+      }
+    }, true);
+  }
+
+  function stabilizeInitialMobileScroll() {
+    if (window.innerWidth > 920) return;
+    var key = window.location.pathname + window.location.search;
+    if (window.__massLoginInitialScrollKey === key) return;
+    window.__massLoginInitialScrollKey = key;
+
+    [60, 280, 900].forEach(function (delay) {
+      window.setTimeout(function () {
+        if (window.scrollY <= 0) return;
+        var form = document.querySelector("form.mass-login-form");
+        if (form && form.contains(document.activeElement)) {
+          document.activeElement.blur();
+        }
+        window.scrollTo(0, 0);
+      }, delay);
+    });
   }
 
   function enhance() {
     setTheme();
     createPanel();
-    enhanceCopy();
+    setPageKindClass();
     enhanceForm();
+    installObserver();
+    stabilizeInitialMobileScroll();
   }
 
   if (document.readyState === "loading") {
